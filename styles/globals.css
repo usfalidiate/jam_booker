@@ -1,26 +1,282 @@
-html,
-body {
+h1{
+  text-align: center;
+  background: none;
+  }
+  
+  html,
+  body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
+    background: rgb(41, 39, 39);
+    color: white;
+  }
+  
+  p {
+  font-size: 10px;
+  background: none;
+  }
+  
+  a {
   color: inherit;
   text-decoration: none;
+  }
+  
+  * {
+  box-sizing: border-box;
+  }
+
+.tableNude {
+  table-layout: fixed;
+  margin: auto;
+  border-collapse: collapse;
+  border: none;
+  background-color: none;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  font-size: .8rem;
+  width: 60%;
+  width: 120px;
+  height: 80px; 
+  }
+  
+  .tableDefault {
+  table-layout: fixed;
+  margin: auto;
+  border-collapse: collapse;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: none;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  font-size: .8rem;
+  width: 60%;
+  width: 120px;
+  height: 80px; 
+  }
+
+th {
+  border: 1px solid rgb(190, 190, 190);
+  padding: 5px;
+  width: 120px;
+  height: 80px;    
 }
 
-* {
-  box-sizing: border-box;
+.thNude {
+  margin: auto;
+  border: none;
+  padding: 5px;
+  width: 120px;
+  height: 60px;    
 }
+
+th[scope="colDate"] {
+  background-color: #696969;
+  color: rgb(37, 32, 32);
+  width: 120px;
+  height: 80px;
+}
+
+th[scope="topRow"] {
+  background-color: #696969;
+  color: rgb(37, 32, 32);
+  width: 120px;
+  height: 80px;
+  font-size: 16px;
+  }
+  
+  
+th[scope="rowDay"] {
+  background-color: #2d2d30;
+  height: 80px;
+}
+
+td {
+text-align: center;
+background-color: none;
+width: 120px;
+height: 60px;
+border: 1px solid rgb(190, 190, 190);
+padding: 5px;
+}
+
+.myButtonUnlocked {
+  background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%); 
+  padding: 12px 12px; 
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-family: Segoe UI, sans-serif;
+  width: 115px; 
+  height: 55px;
+  }
+  
+  .myButtonLocked {
+  background: linear-gradient(91.4deg, #b54900 0%, #ff0505 100%); 
+  padding: 12px 12px; 
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-family: Segoe UI, sans-serif;
+  width: 115px; 
+  height: 55px;
+  }
+  
+  .myButtonSetAllAvail {
+  padding: 2px 2px; 
+  border: none;
+  border-radius: 5px;
+  color: black;
+  background: rgb(124, 180, 124);
+  font-weight: normal;
+  font-family: Segoe UI, sans-serif;
+  width: 115px; 
+  height: 60px; 
+  }
+  
+  .myButtonSetAllUnavail {
+  padding: 2px 2px;  
+  border: none;
+  border-radius: 5px;
+  color: black;
+  background: rgb(228, 165, 165);
+  font-weight: normal;
+  font-family: Segoe UI, sans-serif;
+  width: 115px; 
+  height: 60px; 
+  }
+  
+  
+  
+  .buttonAvail {
+  color: white;
+  background-color:green;
+  width: 110px;
+  height: 75px;
+  border: none;
+  }
+  
+  .buttonUnavail {
+  color: white;
+  background-color:red;
+  width: 110px;
+  height: 75px;
+  border: none;
+  }
+
+  .buttonUndefined {
+    color: white;
+    background-color:rgb(102, 98, 98);
+    width: 110px;
+    height: 75px;
+    border: none;
+    }
+
+  caption {
+    padding: 10px;
+    caption-side: bottom;
+  }
+
+
+
+/* .thNudeSlim {
+margin: auto;
+border: none;
+padding: 5px;
+width: 120px;
+height: 80px;    
+} */
+
+/* th[scope="col"] {
+background-color: #696969;
+color: rgb(37, 32, 32);
+width: 120px;
+height: 80px;
+} */
+
+
+
+/* th[scope="colDay"] {
+background-color: #696969;
+color: rgb(37, 32, 32);
+width: 120px;
+height: 80px;
+} */
+
+
+
+
+
+
+
+
+
+/* .default {
+color: blue;
+background-color: yellow;
+} */
+
+/* .tableButton{
+background-color: none;
+border: none;
+width: 115px;
+height: 115px;
+padding: none;
+position: relative;
+border-radius: 10%;
+} */
+
+/*td:first{
+background-color: #4CAF50;
+text-align: center;
+color: black;
+}
+*/
+
+/* tr:nth-child(even) {
+  background-color: none;
+} */
+
+/* table {
+table-layout: fixed;
+margin: auto;
+border-collapse: collapse;
+border: 2px solid rgb(200, 200, 200);
+letter-spacing: 1px;
+font-family: sans-serif;
+font-size: .8rem;
+width: 60%;
+width: 120px;
+height: 80px; 
+background-color: none;
+} */
+
+
+
+/* .emptyButton{
+background-color: white;
+border: 0px white;
+border-collapse: collapse;
+color: white;
+padding: 5px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+width: 115px;
+height: 115px;
+} */
+
+
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+html {
+  color-scheme: dark;
+}
+body {
+  color: white;
+  background: black;
+}
 }
