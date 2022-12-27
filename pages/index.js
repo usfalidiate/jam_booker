@@ -41,15 +41,15 @@ export default function App() {
 
   let currentDate = new Date();
 
-  const [activeMonth, setActiveMonth] = useState( currentDate.getMonth() );
-  const [activeYear, setActiveYear] = useState( currentDate.getFullYear() );
-  const [activeDay, setActiveDay] = useState( currentDate.getDate() );
+  const [ activeMonth, setActiveMonth ] = useState( currentDate.getMonth() );
+  const [ activeYear, setActiveYear ] = useState( currentDate.getFullYear() );
+  const [ activeDay, setActiveDay ] = useState( currentDate.getDate() );
 
-  const [unlock, setUnlock] = useState({ user1Unlock: true, user2Unlock: true, user3Unlock:true, user4Unlock:true });
+  const [ unlock, setUnlock ] = useState({ user1Unlock: true, user2Unlock: true, user3Unlock:true, user4Unlock:true });
 
-  const docRef = doc( db, 'users', activeYear.toString(), 'Availability', activeMonth.toString() )
+  const docRef = doc ( db, 'users', activeYear.toString(), 'Availability', activeMonth.toString() )
 
-  const [trig, setTrig] = useState( false );
+  const [ trig, setTrig ] = useState( false );
 
 
   /////////////////////////// INITIAL PUSH TO CREATE DOCS IN FIRESTORE //////////////////////////////
@@ -1277,7 +1277,11 @@ const setAllUnAvailUser3 =()=>{
 
 return (
     <div>
-      <h1>warmer</h1>
+      {/* <h1> Jam Booker: 10,001 Days - The Music of Tool </h1> */}
+      <img 
+        className = 'headerImg'
+        src= 'https://i.imgur.com/MJ7Wtvy.jpg'
+      />
 
 
 <h2>Select Year</h2>
