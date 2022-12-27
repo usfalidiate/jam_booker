@@ -1284,9 +1284,9 @@ return (
       />
 
 
-<h2>Select Year</h2>
-        <button onClick={()=> setActiveYear(2022)}> 2022 </button>
-        <button onClick={()=> setActiveYear(2023)}> 2023 </button>
+      <h2>Select Year</h2>
+        <button className = 'buttonYear' onClick={()=> setActiveYear(2022)}> 2022 </button>
+        <button className = 'buttonYear' onClick={()=> setActiveYear(2023)}> 2023 </button>
         {/* <button onClick={()=> setActiveYear(2024)}> 2024 </button>
         <button onClick={()=> setActiveYear(2025)}> 2025 </button>
         <button onClick={()=> setActiveYear(2026)}> 2026 </button>
@@ -1294,18 +1294,18 @@ return (
         <button onClick={()=> setActiveYear(2028)}> 2028 </button> */}
 
       <h2>Select Month</h2>
-        <button onClick ={()=> setActiveMonth(0)}> January </button>
-        <button onClick ={()=> setActiveMonth(1)}> February </button>
-        <button onClick ={()=> setActiveMonth(2)}> March </button>
-        <button onClick ={()=> setActiveMonth(3)}> April </button>
-        <button onClick ={()=> setActiveMonth(4)}> May </button>
-        <button onClick ={()=> setActiveMonth(5)}> June </button>
-        <button onClick ={()=> setActiveMonth(6)}> July </button>
-        <button onClick ={()=> setActiveMonth(7)}> August </button>
-        <button onClick ={()=> setActiveMonth(8)}> September </button>
-        <button onClick ={()=> setActiveMonth(9)}> October </button>
-        <button onClick ={()=> setActiveMonth(10)}> November </button>
-        <button onClick ={()=> setActiveMonth(11)}> December </button>
+        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(0)}> January </button>
+        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(1)}> February </button>
+        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(2)}> March </button>
+        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(3)}> April </button>
+        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(4)}> May </button>
+        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(5)}> June </button>
+        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(6)}> July </button>
+        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(7)}> August </button>
+        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(8)}> September </button>
+        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(9)}> October </button>
+        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(10)}> November </button>
+        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(11)}> December </button>
 
     <h1> You are currently looking at:  { monthToName() } { activeYear }     </h1>
 
