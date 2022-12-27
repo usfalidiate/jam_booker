@@ -406,9 +406,7 @@ function tableDayName (i) {
                 day28: cloudState.user1[27].day28,
                 day29: cloudState.user1[28].day29,
                 day30: cloudState.user1[29].day30,
-                day31: cloudState.user1[30].day31,
-            
-              
+                day31: cloudState.user1[30].day31,               
             },
         
             user2: {
@@ -567,11 +565,7 @@ useEffect(() => {
         {day28: users.user1.day28},
         {day29: users.user1.day29},
         {day30: users.user1.day30},
-        {day31: users.user1.day31},
-
-
-
- 
+        {day31: users.user1.day31}, 
       ],
     })
     } catch {
@@ -960,6 +954,43 @@ const handleClick4 = (i) => {
 
     <h1> You are currently looking at:  { monthToName() } { activeYear }     </h1>
 
+
+    {/* {NUDE TABLE FOR UNLOCKS} */}
+
+<table className='tableNude'>
+    <tbody>
+    <tr>
+      <th className='thNude'></th>
+      <th className='thNude'></th>
+
+
+        <th className ='thNude'>
+          <button onClick={()=>
+        setUnlock(prev=>{return {...prev, user1Unlock: !unlock.user1Unlock};})} 
+        className={ unlock.user1Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
+        > { unlock.user1Unlock ? 'Locked' : 'Unlocked'} </button></th>
+
+      <th className ='thNude'>
+        <button onClick={()=>
+        setUnlock(prev=>{return {...prev, user2Unlock: !unlock.user2Unlock}})} 
+        className={ unlock.user2Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
+        > { unlock.user2Unlock ? 'Locked' : 'Unlocked'} </button></th>
+      
+      <th className ='thNude'>
+        <button onClick={()=>
+        setUnlock(prev=>{return {...prev, user3Unlock: !unlock.user3Unlock}})} 
+        className={ unlock.user3Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
+        > { unlock.user3Unlock ? 'Locked' : 'Unlocked'} </button></th>
+      
+      <th className ='thNude'>
+        <button onClick={()=>
+        setUnlock(prev=>{return {...prev, user4Unlock: !unlock.user4Unlock}})} 
+        className={ unlock.user4Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
+        > { unlock.user4Unlock ? 'Locked' : 'Unlocked'} </button></th>
+    </tr> 
+    </tbody>
+</table>
+
     <table className='tableDefault'>
     <tbody>
     <tr>
@@ -975,7 +1006,9 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[0] }  </th>
       <th scope="rowDay"> { tableDayName(0) }  </th>
         <td>       
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
             handleClick1(1);    
           }} className={ users.user1.day1 ? 'buttonAvail' : 'buttonUnavail' } 
           > user 1 day 1 avail or unavail 
@@ -983,7 +1016,9 @@ const handleClick4 = (i) => {
         </td>
 
         <td>       
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
             handleClick2(1);    
           }} className={ users.user2.day1 ? 'buttonAvail' : 'buttonUnavail' } 
           > user 2 day 1 avail or unavail 
@@ -991,15 +1026,19 @@ const handleClick4 = (i) => {
         </td>
 
         <td>       
-          <button onClick={ () => {
-            handleClick3(1);    
+        <button 
+        disabled={unlock.user3Unlock}
+        onClick={ () => {
+          handleClick3(1);    
           }} className={ users.user3.day1 ? 'buttonAvail' : 'buttonUnavail' } 
           > user 3 day 1 avail or unavail 
           </button>     
         </td>
 
         <td>       
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
             handleClick4(1);    
           }} className={ users.user4.day1 ? 'buttonAvail' : 'buttonUnavail' } 
           > user 4 day 1 avail or unavail 
@@ -1012,14 +1051,18 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[1] }</th>
       <th scope="rowDay"> { tableDayName(1) } </th>
         <td>    
-          <button onClick={ () => {
+          <button
+          disabled={unlock.user1Unlock} 
+          onClick={ () => {
               handleClick1(2); 
             }} className={ users.user1.day2 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 2 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(2); 
             }} className={ users.user2.day2 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 2 avail or unavail 
@@ -1027,16 +1070,20 @@ const handleClick4 = (i) => {
         </td>
 
         <td>    
-          <button onClick={ () => {
-              handleClick3(2); 
+        <button 
+        disabled={unlock.user3Unlock}
+        onClick={ () => {
+          handleClick3(2); 
             }} className={ users.user3.day2 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 2 avail or unavail 
             </button>      
         </td>
 
         <td>    
-          <button onClick={ () => {
-              handleClick4(2); 
+        <button 
+        disabled={unlock.user4Unlock}
+        onClick={ () => {
+          handleClick4(2); 
             }} className={ users.user4.day2 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 2 avail or unavail 
             </button>      
@@ -1048,14 +1095,18 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[2] }</th>
       <th scope="rowDay"> { tableDayName(2) } </th>      
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(3); 
             }} className={ users.user1.day3 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 3 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(3); 
             }} className={ users.user2.day3 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 3 avail or unavail 
@@ -1063,7 +1114,9 @@ const handleClick4 = (i) => {
         </td>
 
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(3); 
             }} className={ users.user3.day3 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 3 avail or unavail 
@@ -1071,7 +1124,9 @@ const handleClick4 = (i) => {
         </td>
 
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(3); 
             }} className={ users.user4.day3 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 3 avail or unavail 
@@ -1084,28 +1139,36 @@ const handleClick4 = (i) => {
       <th scope="colDate">  { monthToName() } { tableDayNameArray[3] } </th>
       <th scope="rowDay"> { tableDayName(3) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(4); 
             }} className={ users.user1.day4 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 4 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(4); 
             }} className={ users.user2.day4 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 4 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(4); 
             }} className={ users.user3.day4 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 4 avail or unavail 
             </button>      
         </td>        
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(4); 
             }} className={ users.user4.day4 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 4 avail or unavail 
@@ -1117,28 +1180,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[4] } </th>
       <th scope="rowDay"> { tableDayName(4) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(5); 
             }} className={ users.user1.day5 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 5 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(5); 
             }} className={ users.user2.day5 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 5 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(5); 
             }} className={ users.user3.day5 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 5 avail or unavail 
             </button>      
         </td>      
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(5); 
             }} className={ users.user4.day5 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 5 avail or unavail 
@@ -1150,28 +1221,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[5] } </th>
       <th scope="rowDay"> { tableDayName(5) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(6); 
             }} className={ users.user1.day6 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 6 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(6); 
             }} className={ users.user2.day6 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 6 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(6); 
             }} className={ users.user3.day6 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 6 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(6); 
             }} className={ users.user4.day6 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 6 avail or unavail 
@@ -1183,28 +1262,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[6] }</th>
       <th scope="rowDay"> { tableDayName(6) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(7); 
             }} className={ users.user1.day7 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 7 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(7); 
             }} className={ users.user2.day7 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 7 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(7); 
             }} className={ users.user3.day7 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 7 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(7); 
             }} className={ users.user4.day7 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 7 avail or unavail 
@@ -1216,28 +1303,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[7] }</th>
       <th scope="rowDay"> { tableDayName(7) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(8); 
             }} className={ users.user1.day8 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 8 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(8); 
             }} className={ users.user2.day8 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 8 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(8); 
             }} className={ users.user3.day8 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 8 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(8); 
             }} className={ users.user4.day8 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 8 avail or unavail 
@@ -1249,28 +1344,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[8] }</th>
       <th scope="rowDay"> { tableDayName(8) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(9); 
             }} className={ users.user1.day9 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 9 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(9); 
             }} className={ users.user2.day9 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 9 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(9); 
             }} className={ users.user3.day9 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 9 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(9); 
             }} className={ users.user4.day9 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 9 avail or unavail 
@@ -1282,28 +1385,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[9] }</th>
       <th scope="rowDay"> { tableDayName(9) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(10); 
             }} className={ users.user1.day10 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 10 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(10); 
             }} className={ users.user2.day10 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 10 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(10); 
             }} className={ users.user3.day10 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 10 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(10); 
             }} className={ users.user4.day10 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 10 avail or unavail 
@@ -1315,28 +1426,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[10] }</th>
       <th scope="rowDay"> { tableDayName(10) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(11); 
             }} className={ users.user1.day11 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 11 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(11); 
             }} className={ users.user2.day11 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 11 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(11); 
             }} className={ users.user3.day11 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 11 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(11); 
             }} className={ users.user4.day11 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 11 avail or unavail 
@@ -1348,28 +1467,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[11] }</th>
       <th scope="rowDay"> { tableDayName(11) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(12); 
             }} className={ users.user1.day12 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 12 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(12); 
             }} className={ users.user2.day12 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 12 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(12); 
             }} className={ users.user3.day12 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 12 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(12); 
             }} className={ users.user4.day12 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 12 avail or unavail 
@@ -1381,28 +1508,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[12] }</th>
       <th scope="rowDay"> { tableDayName(12) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(13); 
             }} className={ users.user1.day13 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 13 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(13); 
             }} className={ users.user2.day13 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 13 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(13); 
             }} className={ users.user3.day13 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 13 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(13); 
             }} className={ users.user4.day13 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 13 avail or unavail 
@@ -1414,28 +1549,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[13] }</th>
       <th scope="rowDay"> { tableDayName(13) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(14); 
             }} className={ users.user1.day14 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 14 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(14); 
             }} className={ users.user2.day14 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 14 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(14); 
             }} className={ users.user3.day14 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 14 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(14); 
             }} className={ users.user4.day14 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 14 avail or unavail 
@@ -1447,28 +1590,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[14] }</th>
       <th scope="rowDay"> { tableDayName(14) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(15); 
             }} className={ users.user1.day15 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 15 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(15); 
             }} className={ users.user2.day15 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 15 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(15); 
             }} className={ users.user3.day15 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 15 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(15); 
             }} className={ users.user4.day15 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 15 avail or unavail 
@@ -1480,28 +1631,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[15] }</th>
       <th scope="rowDay"> { tableDayName(15) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(16); 
             }} className={ users.user1.day16 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 16 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(16); 
             }} className={ users.user2.day16 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 16 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(16); 
             }} className={ users.user3.day16 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 16 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(16); 
             }} className={ users.user4.day16 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 16 avail or unavail 
@@ -1513,28 +1672,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[16] }</th>
       <th scope="rowDay"> { tableDayName(16) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(17); 
             }} className={ users.user1.day17 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 17 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(17); 
             }} className={ users.user2.day17 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 17 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(17); 
             }} className={ users.user3.day17 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 17 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(17); 
             }} className={ users.user4.day17 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 17 avail or unavail 
@@ -1546,28 +1713,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[17] }</th>
       <th scope="rowDay"> { tableDayName(17) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(18); 
             }} className={ users.user1.day18 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 18 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(18); 
             }} className={ users.user2.day18 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 18 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(18); 
             }} className={ users.user3.day18 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 18 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(18); 
             }} className={ users.user4.day18 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 18 avail or unavail 
@@ -1579,28 +1754,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[18] }</th>
       <th scope="rowDay"> { tableDayName(18) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(19); 
             }} className={ users.user1.day19 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 19 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(19); 
             }} className={ users.user2.day19 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 19 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(19); 
             }} className={ users.user3.day19 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 19 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(19); 
             }} className={ users.user4.day19 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 19 avail or unavail 
@@ -1611,28 +1794,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[19] }</th>
       <th scope="rowDay"> { tableDayName(19) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(20); 
             }} className={ users.user1.day20 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 20 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(20); 
             }} className={ users.user2.day20 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 20 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(20); 
             }} className={ users.user3.day20 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 20 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(20); 
             }} className={ users.user4.day20 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 20 avail or unavail 
@@ -1644,28 +1835,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[20] }</th>
       <th scope="rowDay"> { tableDayName(20) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(21); 
             }} className={ users.user1.day21 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 21 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(21); 
             }} className={ users.user2.day21 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 21 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(21); 
             }} className={ users.user3.day21 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 21 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(21); 
             }} className={ users.user4.day21 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 21 avail or unavail 
@@ -1677,28 +1876,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[21] }</th>
       <th scope="rowDay"> { tableDayName(21) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(22); 
             }} className={ users.user1.day22 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 22 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(22); 
             }} className={ users.user2.day22 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 22 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(22); 
             }} className={ users.user3.day22 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 22 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(22); 
             }} className={ users.user4.day22 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 22 avail or unavail 
@@ -1710,28 +1917,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[22] }</th>
       <th scope="rowDay"> { tableDayName(22) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(23); 
             }} className={ users.user1.day23 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 23 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(23); 
             }} className={ users.user2.day23 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 23 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(23); 
             }} className={ users.user3.day23 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 23 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(23); 
             }} className={ users.user4.day23 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 23 avail or unavail 
@@ -1743,28 +1958,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[23] }</th>
       <th scope="rowDay"> { tableDayName(23) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(24); 
             }} className={ users.user1.day24 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 24 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(24); 
             }} className={ users.user2.day24 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 24 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(24); 
             }} className={ users.user3.day24 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 24 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(24); 
             }} className={ users.user4.day24 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 24 avail or unavail 
@@ -1776,28 +1999,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[24] }</th>
       <th scope="rowDay"> { tableDayName(24) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(25); 
             }} className={ users.user1.day25 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 25 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(25); 
             }} className={ users.user2.day25 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 25 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(25); 
             }} className={ users.user3.day25 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 25 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(25); 
             }} className={ users.user4.day25 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 25 avail or unavail 
@@ -1809,28 +2040,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[25] }</th>
       <th scope="rowDay"> { tableDayName(25) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(26); 
             }} className={ users.user1.day26 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 26 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(26); 
             }} className={ users.user2.day26 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 26 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(26); 
             }} className={ users.user3.day26 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 26 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(26); 
             }} className={ users.user4.day26 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 26 avail or unavail 
@@ -1842,28 +2081,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[26] }</th>
       <th scope="rowDay"> { tableDayName(26) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(27); 
             }} className={ users.user1.day27 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 27 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(27); 
             }} className={ users.user2.day27 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 27 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(27); 
             }} className={ users.user3.day27 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 27 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(27); 
             }} className={ users.user4.day27 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 27 avail or unavail 
@@ -1875,28 +2122,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[27] }</th>
       <th scope="rowDay"> { tableDayName(27) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(28); 
             }} className={ users.user1.day28 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 28 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(28); 
             }} className={ users.user2.day28 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 28 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(28); 
             }} className={ users.user3.day28 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 28 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(28); 
             }} className={ users.user4.day28 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 28 avail or unavail 
@@ -1908,28 +2163,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[28] }</th>
       <th scope="rowDay"> { tableDayName(28) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(29); 
             }} className={ users.user1.day29 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 29 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(29); 
             }} className={ users.user2.day29 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 29 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(29); 
             }} className={ users.user3.day29 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 29 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(29); 
             }} className={ users.user4.day29 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 29 avail or unavail 
@@ -1941,28 +2204,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[29] }</th>
       <th scope="rowDay"> { tableDayName(29) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(30); 
             }} className={ users.user1.day30 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 30 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(30); 
             }} className={ users.user2.day30 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 30 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(30); 
             }} className={ users.user3.day30 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 30 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(30); 
             }} className={ users.user4.day30 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 30 avail or unavail 
@@ -1974,28 +2245,36 @@ const handleClick4 = (i) => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[30] }</th>
       <th scope="rowDay"> { tableDayName(30) } </th>
       <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user1Unlock}
+          onClick={ () => {
               handleClick1(31); 
             }} className={ users.user1.day31 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 31 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user2Unlock}
+          onClick={ () => {
               handleClick2(31); 
             }} className={ users.user2.day31 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 2 day 31 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user3Unlock}
+          onClick={ () => {
               handleClick3(31); 
             }} className={ users.user3.day31 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 3 day 31 avail or unavail 
             </button>      
         </td>
         <td>    
-          <button onClick={ () => {
+          <button 
+          disabled={unlock.user4Unlock}
+          onClick={ () => {
               handleClick4(31); 
             }} className={ users.user4.day31 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 4 day 31 avail or unavail 
