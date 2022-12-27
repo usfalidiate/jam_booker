@@ -34,6 +34,11 @@ const db = getFirestore(app);
 
 export default function App() {
 
+  const user1Name = 'Meeks';
+  const user2Name = 'Theuns';
+  const user3Name = 'Nathan';
+  const user4Name = 'Troy';
+
   let currentDate = new Date();
 
   const [activeMonth, setActiveMonth] = useState( currentDate.getMonth() );
@@ -920,11 +925,357 @@ const handleClick4 = (i) => {
 };
 
 
+//////////////   SET ALL AVAIL   //////////////////////
+
+const setAllAvailUser1 =()=>{
+  if (confirm((`${user1Name}, are you SURE that you want to set all dates as AVAILABLE?`)) == true) {
+    setUsers(prev=> { return {
+    ...users,
+      user1: {
+          day1: true, 
+          day2: true, 
+          day3: true, 
+          day4: true, 
+          day5: true, 
+          day6: true, 
+          day7: true, 
+          day8: true, 
+          day9: true, 
+          day10: true,   
+          day11: true, 
+          day12: true, 
+          day13: true, 
+          day14: true, 
+          day15: true, 
+          day16: true, 
+          day17: true, 
+          day18: true, 
+          day19: true, 
+          day20: true, 
+          day21: true, 
+          day22: true, 
+          day23: true, 
+          day24: true, 
+          day25: true, 
+          day26: true, 
+          day27: true, 
+          day28: true, 
+          day29: true, 
+          day30: true, 
+          day31: true                
+      }}   
+  });
+  setTrig(prev=>!prev);
+  }
+  else {}
+  }
+
+const setAllAvailUser2 =()=>{
+  if (confirm((`${user2Name}, are you SURE that you want to set all dates as AVAILABLE?`)) == true) {
+    setUsers(prev=> { return {
+      ...users,
+        user2: {
+            day1: true, 
+            day2: true, 
+            day3: true, 
+            day4: true, 
+            day5: true, 
+            day6: true, 
+            day7: true, 
+            day8: true, 
+            day9: true, 
+            day10: true,   
+            day11: true, 
+            day12: true, 
+            day13: true, 
+            day14: true, 
+            day15: true, 
+            day16: true, 
+            day17: true, 
+            day18: true, 
+            day19: true, 
+            day20: true, 
+            day21: true, 
+            day22: true, 
+            day23: true, 
+            day24: true, 
+            day25: true, 
+            day26: true, 
+            day27: true, 
+            day28: true, 
+            day29: true, 
+            day30: true, 
+            day31: true                
+        }}   
+    });
+    setTrig(prev=>!prev);
+  }
+  else {}
+  }
+  
+const setAllAvailUser3 =()=>{
+  if (confirm((`${user3Name}, are you SURE that you want to set all dates as AVAILABLE?`)) == true) {
+    setUsers(prev=> { return {
+      ...users,
+        user3: {
+            day1: true, 
+            day2: true, 
+            day3: true, 
+            day4: true, 
+            day5: true, 
+            day6: true, 
+            day7: true, 
+            day8: true, 
+            day9: true, 
+            day10: true,   
+            day11: true, 
+            day12: true, 
+            day13: true, 
+            day14: true, 
+            day15: true, 
+            day16: true, 
+            day17: true, 
+            day18: true, 
+            day19: true, 
+            day20: true, 
+            day21: true, 
+            day22: true, 
+            day23: true, 
+            day24: true, 
+            day25: true, 
+            day26: true, 
+            day27: true, 
+            day28: true, 
+            day29: true, 
+            day30: true, 
+            day31: true                
+        }}   
+    });
+    setTrig(prev=>!prev);
+  }
+  else {}
+  }
+  
+  const setAllAvailUser4 =()=>{
+  if (confirm((`${user4Name}, are you SURE that you want to set all dates as AVAILABLE?`)) == true) {
+    setUsers(prev=> { return {
+      ...users,
+        user4: {
+            day1: true, 
+            day2: true, 
+            day3: true, 
+            day4: true, 
+            day5: true, 
+            day6: true, 
+            day7: true, 
+            day8: true, 
+            day9: true, 
+            day10: true,   
+            day11: true, 
+            day12: true, 
+            day13: true, 
+            day14: true, 
+            day15: true, 
+            day16: true, 
+            day17: true, 
+            day18: true, 
+            day19: true, 
+            day20: true, 
+            day21: true, 
+            day22: true, 
+            day23: true, 
+            day24: true, 
+            day25: true, 
+            day26: true, 
+            day27: true, 
+            day28: true, 
+            day29: true, 
+            day30: true, 
+            day31: true                
+        }}   
+    });
+    setTrig(prev=>!prev);
+  }
+  else {}
+  }
+
+  //////////////   SET ALL UNAVAIL   //////////////////////
+
+const setAllUnAvailUser1 =()=>{
+  if (confirm((`${user1Name}, are you SURE that you want to set all dates as UNAVAILABLE?`)) == true) {
+    setUsers(prev=> { return {
+      ...users,
+        user1: {
+            day1: false, 
+            day2: false, 
+            day3: false, 
+            day4: false, 
+            day5: false, 
+            day6: false, 
+            day7: false, 
+            day8: false, 
+            day9: false, 
+            day10: false,   
+            day11: false, 
+            day12: false, 
+            day13: false, 
+            day14: false, 
+            day15: false, 
+            day16: false, 
+            day17: false, 
+            day18: false, 
+            day19: false, 
+            day20: false, 
+            day21: false, 
+            day22: false, 
+            day23: false, 
+            day24: false, 
+            day25: false, 
+            day26: false, 
+            day27: false, 
+            day28: false, 
+            day29: false, 
+            day30: false, 
+            day31: false                
+        }}   
+    });
+    setTrig(prev=>!prev);    
+  }
+  else {}
+  }
+
+const setAllUnAvailUser2 =()=>{
+  if (confirm((`${user2Name}, are you SURE that you want to set all dates as UNAVAILABLE?`)) == true) {
+    setUsers(prev=> { return {
+      ...users,
+        user2: {
+            day1: false, 
+            day2: false, 
+            day3: false, 
+            day4: false, 
+            day5: false, 
+            day6: false, 
+            day7: false, 
+            day8: false, 
+            day9: false, 
+            day10: false,   
+            day11: false, 
+            day12: false, 
+            day13: false, 
+            day14: false, 
+            day15: false, 
+            day16: false, 
+            day17: false, 
+            day18: false, 
+            day19: false, 
+            day20: false, 
+            day21: false, 
+            day22: false, 
+            day23: false, 
+            day24: false, 
+            day25: false, 
+            day26: false, 
+            day27: false, 
+            day28: false, 
+            day29: false, 
+            day30: false, 
+            day31: false                
+        }}   
+    });
+    setTrig(prev=>!prev);     
+  }
+  else {}
+  }
+  
+const setAllUnAvailUser3 =()=>{
+  if (confirm((`${user3Name}, are you SURE that you want to set all dates as UNAVAILABLE?`)) == true) {
+    setUsers(prev=> { return {
+      ...users,
+        user3: {
+            day1: false, 
+            day2: false, 
+            day3: false, 
+            day4: false, 
+            day5: false, 
+            day6: false, 
+            day7: false, 
+            day8: false, 
+            day9: false, 
+            day10: false,   
+            day11: false, 
+            day12: false, 
+            day13: false, 
+            day14: false, 
+            day15: false, 
+            day16: false, 
+            day17: false, 
+            day18: false, 
+            day19: false, 
+            day20: false, 
+            day21: false, 
+            day22: false, 
+            day23: false, 
+            day24: false, 
+            day25: false, 
+            day26: false, 
+            day27: false, 
+            day28: false, 
+            day29: false, 
+            day30: false, 
+            day31: false                
+        }}   
+    });
+    setTrig(prev=>!prev);     
+  }
+  else {}
+  }
+  
+  const setAllUnAvailUser4 =()=>{
+  if (confirm((`${user4Name}, are you SURE that you want to set all dates as UNAVAILABLE?`)) == true) {
+    setUsers(prev=> { return {
+      ...users,
+        user4: {
+            day1: false, 
+            day2: false, 
+            day3: false, 
+            day4: false, 
+            day5: false, 
+            day6: false, 
+            day7: false, 
+            day8: false, 
+            day9: false, 
+            day10: false,   
+            day11: false, 
+            day12: false, 
+            day13: false, 
+            day14: false, 
+            day15: false, 
+            day16: false, 
+            day17: false, 
+            day18: false, 
+            day19: false, 
+            day20: false, 
+            day21: false, 
+            day22: false, 
+            day23: false, 
+            day24: false, 
+            day25: false, 
+            day26: false, 
+            day27: false, 
+            day28: false, 
+            day29: false, 
+            day30: false, 
+            day31: false                
+        }}   
+    });
+    setTrig(prev=>!prev);     
+  }
+  else {}
+  }
 
 
 
-
-  return (
+return (
     <div>
       <h1>warmer</h1>
 
@@ -988,6 +1339,66 @@ const handleClick4 = (i) => {
         className={ unlock.user4Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
         > { unlock.user4Unlock ? 'Locked' : 'Unlocked'} </button></th>
     </tr> 
+
+                {/* {NUDE TABLE FOR SET ALL AVAILABLE} */}
+
+                <tr>
+      <th className='thNude'></th>
+      <th className='thNude'></th>
+      <th className='thNude'><button disabled={ unlock.user1Unlock } 
+        className='myButtonSetAllAvail' 
+          onClick={ setAllAvailUser1 }>
+            Set All Available <br></br> { user1Name }
+            </button></th>
+      
+      <th className='thNude'><button disabled={ unlock.user2Unlock } 
+        className='myButtonSetAllAvail' 
+          onClick={ setAllAvailUser2 }>
+            Set All Available <br></br> { user2Name }
+            </button></th>
+      
+      <th className='thNude'><button disabled={ unlock.user3Unlock } 
+        className='myButtonSetAllAvail' 
+          onClick={ setAllAvailUser3 }>
+            Set All Available <br></br> { user3Name }
+            </button></th>
+      
+      <th className='thNude'><button disabled={ unlock.user4Unlock } 
+        className='myButtonSetAllAvail' 
+          onClick={ setAllAvailUser4 }>
+            Set All Available <br></br>{ user4Name }
+            </button></th> 
+    </tr>
+            {/* {NUDE TABLE FOR SET ALL UNAVAILABLE} */}
+
+    <tr>
+      <th className='thNude'></th>
+      <th className='thNude'></th>
+      <th className='thNude'><button disabled={ unlock.user1Unlock } 
+      className='myButtonSetAllUnavail' 
+        onClick={ setAllUnAvailUser1 }>
+          Set All Unavailable <br></br> { user1Name }
+          </button></th>
+      
+      <th className='thNude'><button disabled={ unlock.user2Unlock } 
+      className='myButtonSetAllUnavail' 
+        onClick={ setAllUnAvailUser2 }>
+          Set All Unavailable <br></br> { user2Name }
+          </button></th>
+      
+      <th className='thNude'><button disabled={ unlock.user3Unlock } 
+      className='myButtonSetAllUnavail' 
+        onClick={ setAllUnAvailUser3 }>
+          Set All Unavailable <br></br> { user3Name }
+          </button></th>
+      
+      <th className='thNude'><button disabled={ unlock.user4Unlock } 
+      className='myButtonSetAllUnavail' 
+        onClick={ setAllUnAvailUser4 }>
+          Set All Unavailable <br></br>{ user4Name }
+          </button></th> 
+    </tr>
+
     </tbody>
 </table>
 
@@ -1011,7 +1422,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
             handleClick1(1);    
           }} className={ users.user1.day1 ? 'buttonAvail' : 'buttonUnavail' } 
-          > user 1 day 1 avail or unavail 
+          > { users.user1.day1  ? 'Available' : 'Unavailable' }
           </button>     
         </td>
 
@@ -1021,7 +1432,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
             handleClick2(1);    
           }} className={ users.user2.day1 ? 'buttonAvail' : 'buttonUnavail' } 
-          > user 2 day 1 avail or unavail 
+          >{ users.user2.day1  ? 'Available' : 'Unavailable' } 
           </button>     
         </td>
 
@@ -1031,7 +1442,7 @@ const handleClick4 = (i) => {
         onClick={ () => {
           handleClick3(1);    
           }} className={ users.user3.day1 ? 'buttonAvail' : 'buttonUnavail' } 
-          > user 3 day 1 avail or unavail 
+          >{ users.user3.day1  ? 'Available' : 'Unavailable' } 
           </button>     
         </td>
 
@@ -1041,7 +1452,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
             handleClick4(1);    
           }} className={ users.user4.day1 ? 'buttonAvail' : 'buttonUnavail' } 
-          > user 4 day 1 avail or unavail 
+          >{ users.user4.day1  ? 'Available' : 'Unavailable' } 
           </button>     
         </td>
 
@@ -1056,7 +1467,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(2); 
             }} className={ users.user1.day2 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 2 avail or unavail 
+            >{ users.user1.day2  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1065,7 +1476,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(2); 
             }} className={ users.user2.day2 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 2 avail or unavail 
+            >{ users.user2.day2  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
 
@@ -1075,7 +1486,7 @@ const handleClick4 = (i) => {
         onClick={ () => {
           handleClick3(2); 
             }} className={ users.user3.day2 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 2 avail or unavail 
+            >{ users.user3.day2  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
 
@@ -1085,7 +1496,7 @@ const handleClick4 = (i) => {
         onClick={ () => {
           handleClick4(2); 
             }} className={ users.user4.day2 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 2 avail or unavail 
+            >{ users.user4.day2  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
 
@@ -1100,7 +1511,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(3); 
             }} className={ users.user1.day3 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 3 avail or unavail 
+            >{ users.user1.day3  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1109,7 +1520,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(3); 
             }} className={ users.user2.day3 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 3 avail or unavail 
+            >{ users.user2.day3  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
 
@@ -1119,7 +1530,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(3); 
             }} className={ users.user3.day3 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 3 avail or unavail 
+            >{ users.user3.day3  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
 
@@ -1129,7 +1540,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(3); 
             }} className={ users.user4.day3 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 3 avail or unavail 
+            >{ users.user4.day3  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
 
@@ -1144,7 +1555,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(4); 
             }} className={ users.user1.day4 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 4 avail or unavail 
+            >{ users.user1.day4  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1153,7 +1564,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(4); 
             }} className={ users.user2.day4 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 4 avail or unavail 
+            >{ users.user2.day4  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1162,7 +1573,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(4); 
             }} className={ users.user3.day4 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 4 avail or unavail 
+            >{ users.user3.day4  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>        
         <td>    
@@ -1171,7 +1582,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(4); 
             }} className={ users.user4.day4 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 4 avail or unavail 
+            >{ users.user4.day4  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1185,7 +1596,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(5); 
             }} className={ users.user1.day5 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 5 avail or unavail 
+            >{ users.user1.day5  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1194,7 +1605,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(5); 
             }} className={ users.user2.day5 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 5 avail or unavail 
+            >{ users.user2.day5  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1203,7 +1614,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(5); 
             }} className={ users.user3.day5 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 5 avail or unavail 
+            >{ users.user3.day5  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>      
         <td>    
@@ -1212,7 +1623,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(5); 
             }} className={ users.user4.day5 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 5 avail or unavail 
+            >{ users.user4.day5  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1226,7 +1637,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(6); 
             }} className={ users.user1.day6 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 6 avail or unavail 
+            >{ users.user1.day6  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1235,7 +1646,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(6); 
             }} className={ users.user2.day6 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 6 avail or unavail 
+            >{ users.user2.day6  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1244,7 +1655,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(6); 
             }} className={ users.user3.day6 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 6 avail or unavail 
+            >{ users.user3.day6  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1253,7 +1664,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(6); 
             }} className={ users.user4.day6 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 6 avail or unavail 
+            >{ users.user4.day6  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1267,7 +1678,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(7); 
             }} className={ users.user1.day7 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 7 avail or unavail 
+            >{ users.user1.day7  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1276,7 +1687,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(7); 
             }} className={ users.user2.day7 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 7 avail or unavail 
+            >{ users.user2.day7  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1285,7 +1696,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(7); 
             }} className={ users.user3.day7 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 7 avail or unavail 
+            >{ users.user3.day7  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1294,7 +1705,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(7); 
             }} className={ users.user4.day7 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 7 avail or unavail 
+            >{ users.user4.day7  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1308,7 +1719,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(8); 
             }} className={ users.user1.day8 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 8 avail or unavail 
+            >{ users.user1.day8  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1317,7 +1728,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(8); 
             }} className={ users.user2.day8 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 8 avail or unavail 
+            >{ users.user2.day8  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1326,7 +1737,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(8); 
             }} className={ users.user3.day8 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 8 avail or unavail 
+            >{ users.user3.day8  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1335,7 +1746,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(8); 
             }} className={ users.user4.day8 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 8 avail or unavail 
+            >{ users.user4.day8  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1349,7 +1760,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(9); 
             }} className={ users.user1.day9 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 9 avail or unavail 
+            >{ users.user1.day9  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1358,7 +1769,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(9); 
             }} className={ users.user2.day9 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 9 avail or unavail 
+            >{ users.user2.day9  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1367,7 +1778,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(9); 
             }} className={ users.user3.day9 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 9 avail or unavail 
+            >{ users.user3.day9  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1376,7 +1787,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(9); 
             }} className={ users.user4.day9 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 9 avail or unavail 
+            >{ users.user4.day9  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1390,7 +1801,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(10); 
             }} className={ users.user1.day10 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 10 avail or unavail 
+            > { users.user1.day10  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1399,7 +1810,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(10); 
             }} className={ users.user2.day10 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 10 avail or unavail 
+            > { users.user2.day10  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1408,7 +1819,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(10); 
             }} className={ users.user3.day10 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 10 avail or unavail 
+            > { users.user3.day10  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1417,7 +1828,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(10); 
             }} className={ users.user4.day10 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 10 avail or unavail 
+            > { users.user4.day10  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1431,7 +1842,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(11); 
             }} className={ users.user1.day11 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 11 avail or unavail 
+            > { users.user1.day11  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1440,7 +1851,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(11); 
             }} className={ users.user2.day11 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 11 avail or unavail 
+            > { users.user2.day11  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1449,7 +1860,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(11); 
             }} className={ users.user3.day11 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 11 avail or unavail 
+            > { users.user3.day11  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1458,7 +1869,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(11); 
             }} className={ users.user4.day11 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 11 avail or unavail 
+            > { users.user4.day11  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1472,7 +1883,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(12); 
             }} className={ users.user1.day12 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 12 avail or unavail 
+            > { users.user1.day12  ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1481,7 +1892,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(12); 
             }} className={ users.user2.day12 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 12 avail or unavail 
+            > { users.user2.day12 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1490,7 +1901,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(12); 
             }} className={ users.user3.day12 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 12 avail or unavail 
+            > { users.user3.day12 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1499,7 +1910,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(12); 
             }} className={ users.user4.day12 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 12 avail or unavail 
+            > { users.user4.day12 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1513,7 +1924,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(13); 
             }} className={ users.user1.day13 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 13 avail or unavail 
+            > { users.user1.day13 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1522,7 +1933,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(13); 
             }} className={ users.user2.day13 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 13 avail or unavail 
+            > { users.user2.day13 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1531,7 +1942,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(13); 
             }} className={ users.user3.day13 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 13 avail or unavail 
+            > { users.user3.day13 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1540,7 +1951,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(13); 
             }} className={ users.user4.day13 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 13 avail or unavail 
+            > { users.user4.day13 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1554,7 +1965,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(14); 
             }} className={ users.user1.day14 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 14 avail or unavail 
+            > { users.user1.day14 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1563,7 +1974,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(14); 
             }} className={ users.user2.day14 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 14 avail or unavail 
+            > { users.user2.day14 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1572,7 +1983,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(14); 
             }} className={ users.user3.day14 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 14 avail or unavail 
+            > { users.user3.day14 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1581,7 +1992,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(14); 
             }} className={ users.user4.day14 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 14 avail or unavail 
+            > { users.user4.day14 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1595,7 +2006,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(15); 
             }} className={ users.user1.day15 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 15 avail or unavail 
+            > { users.user1.day15 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1604,7 +2015,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(15); 
             }} className={ users.user2.day15 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 15 avail or unavail 
+            > { users.user2.day15 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1613,7 +2024,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(15); 
             }} className={ users.user3.day15 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 15 avail or unavail 
+            > { users.user3.day15 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1622,7 +2033,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(15); 
             }} className={ users.user4.day15 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 15 avail or unavail 
+            > { users.user4.day15 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1636,7 +2047,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(16); 
             }} className={ users.user1.day16 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 16 avail or unavail 
+            > { users.user1.day16 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1645,7 +2056,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(16); 
             }} className={ users.user2.day16 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 16 avail or unavail 
+            > { users.user2.day16 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1654,7 +2065,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(16); 
             }} className={ users.user3.day16 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 16 avail or unavail 
+            > { users.user3.day16 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1663,7 +2074,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(16); 
             }} className={ users.user4.day16 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 16 avail or unavail 
+            > { users.user4.day16 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1677,7 +2088,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(17); 
             }} className={ users.user1.day17 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 17 avail or unavail 
+            > { users.user1.day17 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1686,7 +2097,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(17); 
             }} className={ users.user2.day17 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 17 avail or unavail 
+            > { users.user2.day17 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1695,7 +2106,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(17); 
             }} className={ users.user3.day17 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 17 avail or unavail 
+            > { users.user3.day17 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1704,7 +2115,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(17); 
             }} className={ users.user4.day17 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 17 avail or unavail 
+            > { users.user4.day17 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1718,7 +2129,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(18); 
             }} className={ users.user1.day18 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 18 avail or unavail 
+            > { users.user1.day18 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1727,7 +2138,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(18); 
             }} className={ users.user2.day18 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 18 avail or unavail 
+            > { users.user2.day18 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1736,7 +2147,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(18); 
             }} className={ users.user3.day18 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 18 avail or unavail 
+            > { users.user3.day18 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1745,7 +2156,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(18); 
             }} className={ users.user4.day18 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 18 avail or unavail 
+            > { users.user4.day18 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1759,7 +2170,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(19); 
             }} className={ users.user1.day19 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 19 avail or unavail 
+            > { users.user1.day19 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1768,7 +2179,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(19); 
             }} className={ users.user2.day19 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 19 avail or unavail 
+            > { users.user2.day19 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1777,7 +2188,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(19); 
             }} className={ users.user3.day19 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 19 avail or unavail 
+            > { users.user3.day19 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1786,7 +2197,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(19); 
             }} className={ users.user4.day19 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 19 avail or unavail 
+            > { users.user4.day19 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1799,7 +2210,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(20); 
             }} className={ users.user1.day20 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 20 avail or unavail 
+            > { users.user1.day20 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1808,7 +2219,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(20); 
             }} className={ users.user2.day20 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 20 avail or unavail 
+            > { users.user2.day20 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1817,7 +2228,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(20); 
             }} className={ users.user3.day20 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 20 avail or unavail 
+            > { users.user3.day20 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1826,7 +2237,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(20); 
             }} className={ users.user4.day20 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 20 avail or unavail 
+            > { users.user4.day20 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1840,7 +2251,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(21); 
             }} className={ users.user1.day21 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 21 avail or unavail 
+            > { users.user1.day21 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1849,7 +2260,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(21); 
             }} className={ users.user2.day21 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 21 avail or unavail 
+            > { users.user2.day21 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1858,7 +2269,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(21); 
             }} className={ users.user3.day21 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 21 avail or unavail 
+            > { users.user3.day21 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1867,7 +2278,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(21); 
             }} className={ users.user4.day21 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 21 avail or unavail 
+            > { users.user4.day21 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1881,7 +2292,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(22); 
             }} className={ users.user1.day22 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 22 avail or unavail 
+            > { users.user1.day22 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1890,7 +2301,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(22); 
             }} className={ users.user2.day22 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 22 avail or unavail 
+            > { users.user2.day22 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1899,7 +2310,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(22); 
             }} className={ users.user3.day22 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 22 avail or unavail 
+            > { users.user3.day22 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1908,7 +2319,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(22); 
             }} className={ users.user4.day22 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 22 avail or unavail 
+            > { users.user4.day22 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1922,7 +2333,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(23); 
             }} className={ users.user1.day23 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 23 avail or unavail 
+            > { users.user1.day23 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1931,7 +2342,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(23); 
             }} className={ users.user2.day23 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 23 avail or unavail 
+            > { users.user2.day23 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1940,7 +2351,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(23); 
             }} className={ users.user3.day23 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 23 avail or unavail 
+            > { users.user3.day23 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1949,7 +2360,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(23); 
             }} className={ users.user4.day23 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 23 avail or unavail 
+            > { users.user4.day23 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -1963,7 +2374,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(24); 
             }} className={ users.user1.day24 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 24 avail or unavail 
+            > { users.user1.day24 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1972,7 +2383,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(24); 
             }} className={ users.user2.day24 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 24 avail or unavail 
+            > { users.user2.day24 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1981,7 +2392,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(24); 
             }} className={ users.user3.day24 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 24 avail or unavail 
+            > { users.user3.day24 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -1990,7 +2401,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(24); 
             }} className={ users.user4.day24 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 24 avail or unavail 
+            > { users.user4.day24 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -2004,7 +2415,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(25); 
             }} className={ users.user1.day25 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 25 avail or unavail 
+            > { users.user1.day25 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2013,7 +2424,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(25); 
             }} className={ users.user2.day25 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 25 avail or unavail 
+            > { users.user2.day25 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2022,7 +2433,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(25); 
             }} className={ users.user3.day25 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 25 avail or unavail 
+            > { users.user3.day25 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2031,7 +2442,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(25); 
             }} className={ users.user4.day25 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 25 avail or unavail 
+            > { users.user4.day25 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -2045,7 +2456,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(26); 
             }} className={ users.user1.day26 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 26 avail or unavail 
+            > { users.user1.day26 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2054,7 +2465,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(26); 
             }} className={ users.user2.day26 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 26 avail or unavail 
+            > { users.user2.day26 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2063,7 +2474,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(26); 
             }} className={ users.user3.day26 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 26 avail or unavail 
+            > { users.user3.day26 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2072,7 +2483,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(26); 
             }} className={ users.user4.day26 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 26 avail or unavail 
+            > { users.user4.day26 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -2086,7 +2497,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(27); 
             }} className={ users.user1.day27 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 27 avail or unavail 
+            > { users.user1.day27 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2095,7 +2506,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(27); 
             }} className={ users.user2.day27 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 27 avail or unavail 
+            > { users.user2.day27 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2104,7 +2515,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(27); 
             }} className={ users.user3.day27 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 27 avail or unavail 
+            > { users.user3.day27 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2113,7 +2524,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(27); 
             }} className={ users.user4.day27 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 27 avail or unavail 
+            > { users.user4.day27 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -2127,7 +2538,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(28); 
             }} className={ users.user1.day28 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 28 avail or unavail 
+            > { users.user1.day28 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2136,7 +2547,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(28); 
             }} className={ users.user2.day28 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 28 avail or unavail 
+            > { users.user2.day28 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2145,7 +2556,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(28); 
             }} className={ users.user3.day28 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 28 avail or unavail 
+            > { users.user3.day28 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2154,7 +2565,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(28); 
             }} className={ users.user4.day28 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 28 avail or unavail 
+            > { users.user4.day28 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -2168,7 +2579,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(29); 
             }} className={ users.user1.day29 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 29 avail or unavail 
+            > { users.user1.day29 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2177,7 +2588,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(29); 
             }} className={ users.user2.day29 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 29 avail or unavail 
+            > { users.user2.day29 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2186,7 +2597,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(29); 
             }} className={ users.user3.day29 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 29 avail or unavail 
+            > { users.user3.day29 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2195,7 +2606,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(29); 
             }} className={ users.user4.day29 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 29 avail or unavail 
+            > { users.user4.day29 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -2209,7 +2620,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(30); 
             }} className={ users.user1.day30 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 30 avail or unavail 
+            > { users.user1.day30 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2218,7 +2629,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(30); 
             }} className={ users.user2.day30 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 30 avail or unavail 
+            > { users.user2.day30 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2227,7 +2638,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(30); 
             }} className={ users.user3.day30 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 30 avail or unavail 
+            > { users.user3.day30 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2236,7 +2647,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(30); 
             }} className={ users.user4.day30 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 30 avail or unavail 
+            > { users.user4.day30 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -2250,7 +2661,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick1(31); 
             }} className={ users.user1.day31 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 31 avail or unavail 
+            > { users.user1.day31 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2259,7 +2670,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick2(31); 
             }} className={ users.user2.day31 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 2 day 31 avail or unavail 
+            > { users.user2.day31 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2268,7 +2679,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick3(31); 
             }} className={ users.user3.day31 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 3 day 31 avail or unavail 
+            > { users.user3.day31 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2277,7 +2688,7 @@ const handleClick4 = (i) => {
           onClick={ () => {
               handleClick4(31); 
             }} className={ users.user4.day31 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 4 day 31 avail or unavail 
+            > { users.user4.day31 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
