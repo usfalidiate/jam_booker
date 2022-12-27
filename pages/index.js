@@ -32,7 +32,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-
 export default function App() {
 
   let currentDate = new Date();
@@ -41,274 +40,44 @@ export default function App() {
   const [activeYear, setActiveYear] = useState( currentDate.getFullYear() );
   const [activeDay, setActiveDay] = useState( currentDate.getDate() );
 
-  const [listOfAvails, setListOfAvails] = useState([]);
-  const [load, setLoad] = useState();
   const [unlock, setUnlock] = useState({ user1Unlock: true, user2Unlock: true, user3Unlock:true, user4Unlock:true });
 
-  const [buttonState1, setButtonState1] = useState();
-  const [buttonState2, setButtonState2] = useState();
-  const [buttonState3, setButtonState3] = useState();
-  const [buttonState4, setButtonState4] = useState();
+  const docRef = doc( db, 'users', activeYear.toString(), 'Availability', activeMonth.toString() )
+
+  const [trig, setTrig] = useState( false );
 
   const [users, setUsers] = useState({
     user1: {
-      available: {
         day1: null,
         day2: null,
         day3: null,
-        day4: null,
-        day5: null,
-        day6: null,
-        day7: null,
-        day8: null,
-        day9: null,
-        day10: null,
-      }
+      
     },
 
     user2: {
-      availabile: {
         day1: null,
         day2: null,
         day3: null,
-      }
+      
     },
 
     user3: {
-      availabile: {
         day1: null,
         day2: null,
         day3: null,
-      }
+      
     },
 
     user4: {
-      availabile: {
         day1: null,
         day2: null,
         day3: null,
-      }
+      
     }
 
   })
-
-  const colRefTest = collection( db, 'users', 'user1', 'year', activeYear.toString(), 'month', activeMonth.toString(), 'day' )
-
-  const colRef1 = collection( db, 'users', 'user1', 'year', activeYear.toString(), 'month', activeMonth.toString(), 'day' )
-  const docRef1 = doc( db, 'users', 'user1', 'year', activeYear.toString(), 'month', activeMonth.toString(), 'day', activeDay.toString() )
-
-  const colRef2 = collection( db, 'users', 'user2', 'year', activeYear.toString(), 'month', activeMonth.toString(), 'day' )
-  const docRef2 = doc( db, 'user2', 'year', activeYear.toString(), 'month', activeMonth.toString(), 'day', activeDay.toString(), 'button' )
-
-  const colRef3 = collection( db, 'users', 'user3', 'year', activeYear.toString(), 'month', activeMonth.toString(), 'day' )
-  const docRef3 = doc( db, 'user3', 'year', activeYear.toString(), 'month', activeMonth.toString(), 'day', activeDay.toString(), 'button' )
-
-  const colRef4 = collection( db, 'users', 'user4', 'year', activeYear.toString(), 'month', activeMonth.toString(), 'day' )
-  const docRef4 = doc( db, 'user4', 'year', activeYear.toString(), 'month', activeMonth.toString(), 'day', activeDay.toString(), 'button' )
-
-
-
-useEffect(() => {
-  let list1 = [];
-
-  const loadData = async () => {
-    const querySnapshot = await getDocs(colRef1);
-    querySnapshot.forEach((doc) => {
-      const cloudState = doc.data();
-      cloudState.id = doc.id;
-      list1.push(cloudState);
-    });
-
-    setListOfAvails([...list1]);
-
-    
-    let day1 = list1.find(obj => {
-      return obj.id ==='1';
-    });
-    let day2 = list1.find(obj => {
-      return obj.id ==='2';
-    });
-    let day3 = list1.find(obj => {
-      return obj.id ==='3';
-    });
-    let day4 = list1.find(obj => {
-      return obj.id ==='4';
-    });
-    let day5 = list1.find(obj => {
-      return obj.id ==='5';
-    });
-    let day6 = list1.find(obj => {
-      return obj.id ==='6';
-    });
-    let day7 = list1.find(obj => {
-      return obj.id ==='7';
-    });
-    let day8 = list1.find(obj => {
-      return obj.id ==='8';
-    });
-    let day9 = list1.find(obj => {
-      return obj.id ==='9';
-    });
-    let day10 = list1.find(obj => {
-      return obj.id ==='10';
-    });
-
-
-    setUsers(prev => ({
-      ...users, user1: {
-        ...users.user1, available: {
-          ...users.user1.available, 
-          day1: day1.buttonState,
-          day2: day2.buttonState,
-          day3: day3.buttonState,
-          day4: day4.buttonState,
-          day5: day5.buttonState,
-          day6: day6.buttonState,
-          day7: day7.buttonState,
-          day8: day8.buttonState,
-          day9: day9.buttonState,
-          day10: day10.buttonState,
-
-        }
-      }
-      
-    }));
-  }
-
-  loadData();
-}, [load])
-
-
-
-
-
-//INITIAL AVAILABILITIES LOAD USER 1 where one at a time works
-
-//   useEffect (() => {
-//     getDocs(colRef1)
-//     .then((snapshot) => {
-//       let cloudState = [];
-//       snapshot.docs.forEach((doc) => {
-//         cloudState.push({ ...doc.data(), id: doc.id})
-//       });
-
-//         let day1 = cloudState.find(obj => {
-//           return obj.id === '1';          
-//         });
-    
-//         setUsers({
-//           ...users, user1: {
-//             ...users.user1, available: {
-//               ...users.user1.available, day1: day1.buttonState,
-//             }
-//           }
-//         });
-
-//     })
-   
-//     .catch(err => {
-//       console.warn('stateuser1', err.message)
-//     })
-// }, []);
-
-///////////////////////////////////////////////////////////////////
-
-
-
-
-// useEffect (() => {
-//   getDocs(colRef1)
-//   .then((snapshot) => {
-//     let cloudState = [];
-//     snapshot.docs.forEach((doc) => {
-//       cloudState.push({ ...doc.data(), id: doc.id})
-//     });
-
-//       let day2 = cloudState.find(obj => {
-//         return obj.id === '2';          
-//       });
-  
-//       setUsers({
-//         ...users, user1: {
-//           ...users.user1, available: {
-//             ...users.user1.available, day2: day2.buttonState,
-//           }
-//         }
-//       });
-
-//   })
-//   .catch(err => {
-//     console.warn('stateuser1', err.message)
-//   })
-// }, []);
-
-
-//INITIAL AVAIL USER 
-
-//   useEffect (() => {
-//     getDocs(colRef1)
-//     .then((snapshot) => {
-//       let cloudState = []
-//       snapshot.docs.forEach((doc) => {
-//         cloudState.push({ ...doc.data(), id: doc.id})
-//       })
-//       setButtonState1(cloudState[0].buttonState);
-//       setUsers({
-//         ...users, user1: {
-//           ...users.user1, available: {
-//             ...users.user1.available, day1: cloudState[0].buttonState
-//           }
-//         }
-//       });
-
-//     })
-//     .catch(err => {
-//       console.warn('state1', err.message)
-//     })
-// }, []);
-
-// useEffect (() => {
-//   getDocs(colRef2)
-//   .then((snapshot) => {
-//     let cloudState = []
-//     snapshot.docs.forEach((doc) => {
-//       cloudState.push({ ...doc.data(), id: doc.id})
-//     })
-//     setButtonState2(cloudState[0].buttonState)
-//   })
-//   .catch(err => {
-//     console.warn('state2', err.message)
-//   })
-// }, []);
-
-// useEffect (() => {
-//   getDocs(colRef3)
-//   .then((snapshot) => {
-//     let cloudState = []
-//     snapshot.docs.forEach((doc) => {
-//       cloudState.push({ ...doc.data(), id: doc.id})
-//     })
-//     setButtonState3(cloudState[0].buttonState)
-//   })
-//   .catch(err => {
-//     console.warn('state3', err.message)
-//   })
-// }, []);
-
-// useEffect (() => {
-//   getDocs(colRef4)
-//   .then((snapshot) => {
-//     let cloudState = []
-//     snapshot.docs.forEach((doc) => {
-//       cloudState.push({ ...doc.data(), id: doc.id})
-//     })
-//     setButtonState4(cloudState[0].buttonState)
-//   })
-//   .catch(err => {
-//     console.warn('state4', err.message)
-//   })
-// }, []);
-
+ 
+/////////////////// CHANGE MONTH & WEEK DAY NUMBERS TO NAMES /////////////////////
 const monthToName = () => {
   if (activeMonth == 0) { return 'January' }
   if (activeMonth == 1) { return 'February' }
@@ -339,165 +108,232 @@ function tableDayName (i) {
       if (activeDate.getDay() == 6) { return 'Saturday' }
 }
 
-// useEffect(() => {
-//   if (buttonState1 === true) {
-//     try {
-//     setDoc(docRef1, {
-//       buttonState: true
-//     })
-//     } catch {
-//     addDoc(docRef1, {
-//       buttonState: true
-//     })
-//     }
-//   }
-//   if (buttonState1 === false) {
-//     try {
-//     setDoc(docRef1, {
-//       buttonState: false
-//     })
-//     } catch {
-//       addDoc(docRef1, {
-//         buttonState: false
-//       })
-//     }
-//   }
-// });
+///////////// SET INIT DATA FROM FIRESTORE ON LOAD //////////////////////////
+  
+  useEffect(()=> {
+    const loadDoc = async () => {
+      let initList = []
+      try {
+        const docSnap = await getDoc(docRef);
 
-//////////////////////////////////////////
+        if (docSnap.exists()) {
+        const cloudState = docSnap.data();
+        cloudState.id = docSnap.id;
+        initList.push(cloudState);
+          setUsers({
+            user1: {
+                day1: cloudState.user1[0].day1,
+                day2: cloudState.user1[1].day2,
+                day3: cloudState.user1[2].day3,
+              
+            },
+        
+            user2: {
+                day1: cloudState.user2[0].day1,
+                day2: cloudState.user2[1].day2,
+                day3: cloudState.user2[2].day3,
+              
+            },
+        
+            user3: {
+                day1: cloudState.user3[0].day1,
+                day2: cloudState.user3[1].day2,
+                day3: cloudState.user3[2].day3,
+              
+            },
+        
+            user4: {
+                day1: cloudState.user4[0].day1,
+                day2: cloudState.user4[1].day2,
+                day3: cloudState.user4[2].day3,
+              
+            }
+            
+        })         
+                     
+        } else {
+          console.log('loadDoc shat the bed')
+        }
+
+      } catch(error) {
+        console.log(error)
+      }
+    };
+    loadDoc();
+  }, [activeYear, activeMonth])
+
+ 
+
+
+//////////////////    UPDATING FIRESTORE ON CLICK    ////////////////////////
+
+//////////    NEED TO MAKE THIS ONLY HAPPEN WHEN SOMETHING IS CLICKED??    /////
 useEffect(() => {
-  let x = activeDay;
-  if (users.user1.available[`day${x}`] === true) {
+  let x = activeDay.toString();
+  if (users.user1[`day${x}`] === true) {
     try {
-    setDoc(docRef1, {
-  buttonState: true
+    updateDoc(docRef, {
+      user1:[ 
+        {day1: users.user1.day1},
+        {day2: users.user1.day2}, 
+        {day3: users.user1.day3} 
+      ],
     })
     } catch {
-    addDoc(docRef1, {
-      buttonState: true
-    })
-    }
-  }
-  if (users.user1.available[`day${x}`] === false) {
+      console.log('no user1 update firestore on click true')
+
+    }};
+  
+  if (users.user1[`day${x}`] === false) {
     try {
-    setDoc(docRef1, {
-      buttonState: false
+    updateDoc(docRef, {
+      user1:[ 
+        {day1: users.user1.day1},
+        {day2: users.user1.day2}, 
+        {day3: users.user1.day3} 
+      ],   
     })
     } catch {
-      addDoc(docRef1, {
-        buttonState: false
-      })
+      console.log('no user1 update firestore on click false')
+
     }
   }
-});
 
-//////////////////////////////
+  if (users.user2[`day${x}`] === true) {
+    try {
+    updateDoc(docRef, {
+      user2:[ 
+        {day1: users.user2.day1},
+        {day2: users.user2.day2}, 
+        {day3: users.user2.day3} 
+      ],   
+    })
+    } catch {
+      console.log('no user2 update firestore on click true')
+
+    }
+  }
+  if (users.user2[`day${x}`] === false) {
+    try {
+    updateDoc(docRef, {
+      user2:[ 
+        {day1: users.user2.day1},
+        {day2: users.user2.day2}, 
+        {day3: users.user2.day3} 
+      ],   
+    })
+    } catch {
+      console.log('no user2 update firestore on click false')
+
+    }
+  }
+
+  if (users.user3[`day${x}`] === true) {
+    try {
+    updateDoc(docRef, {
+      user3:[ 
+        {day1: users.user3.day1},
+        {day2: users.user3.day2}, 
+        {day3: users.user3.day3} 
+      ],   
+    })
+    } catch {
+      console.log('no user3 update firestore on click true')
+
+    }
+  }
+  if (users.user3[`day${x}`] === false) {
+    try {
+    updateDoc(docRef, {
+      user3:[ 
+        {day1: users.user3.day1},
+        {day2: users.user3.day2}, 
+        {day3: users.user3.day3} 
+      ],   
+    })
+    } catch {
+      console.log('no user3 update firestore on click false')
+
+    }
+  }
+
+  if (users.user4[`day${x}`] === true) {
+    try {
+    updateDoc(docRef, {
+      user4:[ 
+        {day1: users.user4.day1},
+        {day2: users.user4.day2}, 
+        {day3: users.user4.day3} 
+      ],   
+    })
+    } catch {
+      console.log('no user4 update firestore on click true')
+
+    }
+  }
+  if (users.user4[`day${x}`] === false) {
+    try {
+    updateDoc(docRef, {
+      user4:[ 
+        {day1: users.user4.day1},
+        {day2: users.user4.day2}, 
+        {day3: users.user4.day3} 
+      ],   
+    })
+    } catch {
+      console.log('no user4 update firestore on click false')
+
+    }
+  }
+}, [ trig ]);
 
 
-// useEffect(() => {
-//   if (buttonState2 === true) {
-//     try {
-//     setDoc(docRef2, {
-//       buttonState: true
-//     })
-//     } catch {
-//     addDoc(docRef2, {
-//       buttonState: true
-//     })
-//     }
-//   }
-//   if (buttonState2 === false) {
-//     try {
-//     setDoc(docRef2, {
-//       buttonState: false
-//     })
-//     } catch {
-//       addDoc(docRef2, {
-//         buttonState: false
-//       })
-//     }
-//   }
-// });
-
-
-// useEffect(() => {
-//   if (buttonState3 === true) {
-//     try {
-//     setDoc(docRef3, {
-//       buttonState: true
-//     })
-//     } catch {
-//     addDoc(docRef3, {
-//       buttonState: true
-//     })
-//     }
-//   }
-//   if (buttonState3 === false) {
-//     try {
-//     setDoc(docRef3, {
-//       buttonState: false
-//     })
-//     } catch {
-//       addDoc(docRef3, {
-//         buttonState: false
-//       })
-//     }
-//   }
-// });
-
-// useEffect(() => {
-//   if (buttonState4 === true) {
-//     try {
-//     setDoc(docRef4, {
-//       buttonState: true
-//     })
-//     } catch {
-//     addDoc(docRef4, {
-//       buttonState: true
-//     })
-//     }
-//   }
-//   if (buttonState4 === false) {
-//     try {
-//     setDoc(docRef4, {
-//       buttonState: false
-//     })
-//     } catch {
-//       addDoc(docRef4, {
-//         buttonState: false
-//       })
-//     }
-//   }
-// });
-
+/////// HANDLE CLICKS TO UPDATE USERS' STATE //////////////
 
 const handleClick1 = (i) => {
   setActiveDay(i);
-  // setButtonState1 (prev => !prev);
+  setTrig(prev=> !prev);
   setUsers (prev=>{return{
     ...users, user1: {
-      ...users.user1, available: {
-        ...users.user1.available, [`day${i}`]: !users.user1.available[`day${i}`]
-      }
+        ...users.user1, [`day${i}`]: !users.user1[`day${i}`]
+      
     }
   }})
 };
 
-const handleClick2 = () => {
-  // setButtonState2 (prev => !prev);
-}
+const handleClick2 = (i) => {
+  setActiveDay(i);
+  setTrig(prev=> !prev);
+  setUsers (prev=>{return{
+    ...users, user2: {
+        ...users.user2, [`day${i}`]: !users.user2[`day${i}`]
+      
+    }
+  }})
+};
 
-const handleClick3 = () => {
-  // setButtonState3 (prev => !prev);
-}
+const handleClick3 = (i) => {
+  setActiveDay(i);
+  setTrig(prev=> !prev);
+  setUsers (prev=>{return{
+    ...users, user3: {
+        ...users.user3, [`day${i}`]: !users.user3[`day${i}`]
+      
+    }
+  }})
+};
 
-const handleClick4 = () => {
-  // setButtonState4 (prev => !prev);
-}
+const handleClick4 = (i) => {
+  setActiveDay(i);
+  setTrig(prev=> !prev);
+  setUsers (prev=>{return{
+    ...users, user4: {
+        ...users.user4, [`day${i}`]: !users.user4[`day${i}`]
+      
+    }
+  }})
+};
 
-// console.log('end users.user1.available.day1', users.user1.available.day1);
-// console.log('end users.user1.available.day2', users.user1.available.day2);
-// console.log('end users.user1.available.day3', users.user1.available.day3);
 
 
 
@@ -505,31 +341,17 @@ const handleClick4 = () => {
 
   return (
     <div>
-      <h1>try again</h1>
-      {/* <button onClick={ () => {
-        handleClick1();    
-      }} className={ buttonState1 ? 'buttonAvail' : 'buttonUnavail' } > user 1 avail or unavail </button> 
+      <h1>warmer</h1>
 
-       <button onClick={ () => {
-        handleClick2();    
-      }} className={ buttonState2 ? 'buttonAvail' : 'buttonUnavail' } > user 2 avail or unavail </button> 
-
-      <button onClick={ () => {
-        handleClick3();    
-      }} className={ buttonState3 ? 'buttonAvail' : 'buttonUnavail' } > user 3 avail or unavail </button> 
-
-      <button onClick={ () => {
-        handleClick4();    
-      }} className={ buttonState4 ? 'buttonAvail' : 'buttonUnavail' } > user 4 avail or unavail </button>  */}
 
 <h2>Select Year</h2>
         <button onClick={()=> setActiveYear(2022)}> 2022 </button>
         <button onClick={()=> setActiveYear(2023)}> 2023 </button>
-        <button onClick={()=> setActiveYear(2024)}> 2024 </button>
+        {/* <button onClick={()=> setActiveYear(2024)}> 2024 </button>
         <button onClick={()=> setActiveYear(2025)}> 2025 </button>
         <button onClick={()=> setActiveYear(2026)}> 2026 </button>
         <button onClick={()=> setActiveYear(2027)}> 2027 </button>
-        <button onClick={()=> setActiveYear(2028)}> 2028 </button>
+        <button onClick={()=> setActiveYear(2028)}> 2028 </button> */}
 
       <h2>Select Month</h2>
         <button onClick ={()=> setActiveMonth(0)}> January </button>
@@ -564,14 +386,35 @@ const handleClick4 = () => {
         <td>       
           <button onClick={ () => {
             handleClick1(1);    
-          }} className={ users.user1.available.day1 ? 'buttonAvail' : 'buttonUnavail' } 
+          }} className={ users.user1.day1 ? 'buttonAvail' : 'buttonUnavail' } 
           > user 1 day 1 avail or unavail 
           </button>     
         </td>
 
-        <td>    </td>
-        <td>    </td>        
-        <td>    </td> 
+        <td>       
+          <button onClick={ () => {
+            handleClick2(1);    
+          }} className={ users.user2.day1 ? 'buttonAvail' : 'buttonUnavail' } 
+          > user 2 day 1 avail or unavail 
+          </button>     
+        </td>
+
+        <td>       
+          <button onClick={ () => {
+            handleClick3(1);    
+          }} className={ users.user3.day1 ? 'buttonAvail' : 'buttonUnavail' } 
+          > user 3 day 1 avail or unavail 
+          </button>     
+        </td>
+
+        <td>       
+          <button onClick={ () => {
+            handleClick4(1);    
+          }} className={ users.user4.day1 ? 'buttonAvail' : 'buttonUnavail' } 
+          > user 4 day 1 avail or unavail 
+          </button>     
+        </td>
+
     </tr>
 
     <tr>
@@ -580,13 +423,34 @@ const handleClick4 = () => {
         <td>    
           <button onClick={ () => {
               handleClick1(2); 
-            }} className={ users.user1.available.day2 ? 'buttonAvail' : 'buttonUnavail' } 
+            }} className={ users.user1.day2 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 2 avail or unavail 
             </button>      
         </td>
-        <td>    </td>
-        <td>    </td>        
-        <td>    </td>    
+        <td>    
+          <button onClick={ () => {
+              handleClick2(2); 
+            }} className={ users.user2.day2 ? 'buttonAvail' : 'buttonUnavail' } 
+            > user 2 day 2 avail or unavail 
+            </button>      
+        </td>
+
+        <td>    
+          <button onClick={ () => {
+              handleClick3(2); 
+            }} className={ users.user3.day2 ? 'buttonAvail' : 'buttonUnavail' } 
+            > user 3 day 2 avail or unavail 
+            </button>      
+        </td>
+
+        <td>    
+          <button onClick={ () => {
+              handleClick4(2); 
+            }} className={ users.user4.day2 ? 'buttonAvail' : 'buttonUnavail' } 
+            > user 4 day 2 avail or unavail 
+            </button>      
+        </td>
+
     </tr>
  
     <tr>
@@ -595,24 +459,41 @@ const handleClick4 = () => {
       <td>    
           <button onClick={ () => {
               handleClick1(3); 
-            }} className={ users.user1.available.day3 ? 'buttonAvail' : 'buttonUnavail' } 
+            }} className={ users.user1.day3 ? 'buttonAvail' : 'buttonUnavail' } 
             > user 1 day 3 avail or unavail 
             </button>      
         </td>
-        <td>    </td>
-        <td>    </td>        
-        <td>    </td>
+        <td>    
+          <button onClick={ () => {
+              handleClick2(3); 
+            }} className={ users.user2.day3 ? 'buttonAvail' : 'buttonUnavail' } 
+            > user 2 day 3 avail or unavail 
+            </button>      
+        </td>
+
+      <td>    
+          <button onClick={ () => {
+              handleClick3(3); 
+            }} className={ users.user3.day3 ? 'buttonAvail' : 'buttonUnavail' } 
+            > user 3 day 3 avail or unavail 
+            </button>      
+        </td>
+
+      <td>    
+          <button onClick={ () => {
+              handleClick4(3); 
+            }} className={ users.user4.day3 ? 'buttonAvail' : 'buttonUnavail' } 
+            > user 4 day 3 avail or unavail 
+            </button>      
+        </td>
+
     </tr>
     
     <tr>
       <th scope="colDate">  { monthToName() } { tableDayNameArray[3] } </th>
       <th scope="rowDay"> { tableDayName(3) } </th>
       <td>    
-          <button onClick={ () => {
-              handleClick1(4); 
-            }} className={ users.user1.available.day4 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 4 avail or unavail 
-            </button>      
+    
         </td>
         <td>    </td>
         <td>    </td>        
@@ -623,11 +504,7 @@ const handleClick4 = () => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[4] } </th>
       <th scope="rowDay"> { tableDayName(4) } </th>
       <td>    
-          <button onClick={ () => {
-              handleClick1(5); 
-            }} className={ users.user1.available.day5 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 5 avail or unavail 
-            </button>      
+    
         </td>
         <td>      </td>
         <td>      </td>       
@@ -638,11 +515,7 @@ const handleClick4 = () => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[5] } </th>
       <th scope="rowDay"> { tableDayName(5) } </th>
       <td>    
-          <button onClick={ () => {
-              handleClick1(6); 
-            }} className={ users.user1.available.day6 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 6 avail or unavail 
-            </button>      
+     
         </td>
         <td>      </td>
         <td>      </td>       
@@ -653,11 +526,7 @@ const handleClick4 = () => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[6] }</th>
       <th scope="rowDay"> { tableDayName(6) } </th>
       <td>    
-          <button onClick={ () => {
-              handleClick1(7); 
-            }} className={ users.user1.available.day7 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 7 avail or unavail 
-            </button>      
+     
         </td>
         <td>      </td>
         <td>      </td>       
@@ -668,11 +537,7 @@ const handleClick4 = () => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[7] }</th>
       <th scope="rowDay"> { tableDayName(7) } </th>
       <td>    
-          <button onClick={ () => {
-              handleClick1(8); 
-            }} className={ users.user1.available.day8 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 8 avail or unavail 
-            </button>      
+     
         </td>
         <td>      </td>
         <td>      </td>       
@@ -683,11 +548,7 @@ const handleClick4 = () => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[8] }</th>
       <th scope="rowDay"> { tableDayName(8) } </th>
       <td>    
-          <button onClick={ () => {
-              handleClick1(9); 
-            }} className={ users.user1.available.day9 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 9 avail or unavail 
-            </button>      
+
         </td>
         <td>      </td>
         <td>      </td>       
@@ -698,11 +559,7 @@ const handleClick4 = () => {
       <th scope="colDate"> { monthToName() } { tableDayNameArray[9] }</th>
       <th scope="rowDay"> { tableDayName(9) } </th>
       <td>    
-          <button onClick={ () => {
-              handleClick1(10); 
-            }} className={ users.user1.available.day10 ? 'buttonAvail' : 'buttonUnavail' } 
-            > user 1 day 10 avail or unavail 
-            </button>      
+      
         </td>
         <td>      </td>
         <td>      </td>       
@@ -903,3 +760,4 @@ const handleClick4 = () => {
     </div>
   );
 }
+
