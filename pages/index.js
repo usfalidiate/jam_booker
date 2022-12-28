@@ -1280,13 +1280,11 @@ return (
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       
       <header>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
         <h1> Jam Booker Presents... </h1>
-      <img 
-        className = 'headerImg'
-        src= 'https://i.imgur.com/MJ7Wtvy.jpg'
-      />
+          <img 
+            className = 'headerImg'
+            src= 'https://i.imgur.com/MJ7Wtvy.jpg'
+          />
       </header>
 
 
@@ -1319,7 +1317,6 @@ return (
     {/* {NUDE TABLE FOR UNLOCKS} */}
 
 <table className='tableNude'>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <tbody>
     <tr>
@@ -1415,7 +1412,7 @@ return (
 </table>
 
     <table className='tableDefault'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
 
     <tbody>
     <tr>
