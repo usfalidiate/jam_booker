@@ -13,7 +13,7 @@ h1 {
 }
 
 div {
-  background: linear-gradient(91.4deg, #000000 0%, #c20909 100%); 
+  background: linear-gradient(0deg, #3e1c1c, #c20909 50%, #3e1c1c ); 
 
   /* background-image: url('https://www.alexgrey.com/art-images/Collective-Vision-1995-Alex-Grey-watermarked.jpg');
   width: 100%; */

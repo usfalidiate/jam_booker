@@ -1277,11 +1277,11 @@ const setAllUnAvailUser3 =()=>{
 
 return (
     <div>
-      {/* <h1> Jam Booker: 10,001 Days - The Music of Tool </h1> */}
-      <img 
+      <h1> Jam Booker: 10,001 Days - The Music of Tool </h1>
+      {/* <img 
         className = 'headerImg'
         src= 'https://i.imgur.com/MJ7Wtvy.jpg'
-      />
+      /> */}
 
 
       <h2>Select Year</h2>
