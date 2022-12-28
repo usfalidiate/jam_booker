@@ -1366,23 +1366,13 @@ const setAllUnAvailUser3 =()=>{
       
   },[ trig, activeMonth, activeYear ]);
 
-
-
-console.log( 'hide29', hide29 );
-console.log( 'hide30', hide30 );
-console.log( 'hide31', hide31 );
-
-
-  
-
-
 return (
     <div className = 'myDiv'>
       {/* <meta name="viewport" content="width=device-width, initial-scale=1.0"/> */}
 
       
       <header>
-        <h1> Powered by Jam Booker... </h1>
+        <h1 className = 'h1Jam'> Powered by Jam Booker... </h1>
           <img 
             className = 'headerImg'
             src= 'https://i.imgur.com/MJ7Wtvy.jpg'

@@ -1,9 +1,18 @@
+.h1Jam {
+  font-size: 15px;
+  text-align: left;
+  background: none;
+  width: 100vw;
+  font-weight: normal;
+  /* height: 100vw; */
+}
+
 h1 {
   text-align: center;
   background: none;
   width: 100vw;
   /* height: 100vw; */
-  }
+}
 
 h2 {
   /* position: center; */
