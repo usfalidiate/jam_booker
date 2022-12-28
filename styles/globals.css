@@ -4,8 +4,10 @@ h1 {
   }
   
 .headerImg {
-  position: static;
-  width: 100%;
+  position: relative;
+  z-index: auto;
+  left: 20%;
+  width: 60%;
   opacity: 1;
 }
 
