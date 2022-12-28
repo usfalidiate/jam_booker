@@ -1,3 +1,4 @@
+//////   INITIAL IMPORTS   //////
 import styles from '../styles/Home.module.css'
 import {useState, useEffect, useRef} from 'react';
 import { initializeApp } from 'firebase/app';
@@ -20,6 +21,7 @@ import {
   querySnapshot,
 } from 'firebase/firestore';
 
+//////   FIRESTORE/FIREBASE CONFIG   //////
 const firebaseConfig = {
   apiKey: "AIzaSyCZYEob1Y7WfewV1jcSeeCkiJ9PBBgwe4s",
   authDomain: "jambooker-c1e75.firebaseapp.com",
@@ -28,180 +30,35 @@ const firebaseConfig = {
   messagingSenderId: "553558722528",
   appId: "1:553558722528:web:2f9b3c8480ca632b248d85"
 };
-
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 export default function App() {
 
-  const user1Name = 'Meeks';
-  const user2Name = 'Theuns';
-  const user3Name = 'Nathan';
-  const user4Name = 'Troy';
+//////   CURRENT DATE   //////
+let currentDate = new Date();
 
-  let currentDate = new Date();
+//////   USERS' NAMES   /////////
+const user1Name = 'Meeks';
+const user2Name = 'Theuns';
+const user3Name = 'Nathan';
+const user4Name = 'Troy';
 
-  const [ activeMonth, setActiveMonth ] = useState( currentDate.getMonth() );
-  const [ activeYear, setActiveYear ] = useState( currentDate.getFullYear() );
-  const [ activeDay, setActiveDay ] = useState( currentDate.getDate() );
+//////   INITIAL SET STATES   //////
+const [ activeMonth, setActiveMonth ] = useState( currentDate.getMonth() );
+const [ activeYear, setActiveYear ] = useState( currentDate.getFullYear() );
+const [ activeDay, setActiveDay ] = useState( currentDate.getDate() );
+const [ unlock, setUnlock ] = useState({ user1Unlock: true, user2Unlock: true, user3Unlock:true, user4Unlock:true });
+const [ trig, setTrig ] = useState( false );
+const [ hide29, setHide29 ] = useState( false );
+const [ hide30, setHide30 ] = useState( false );
+const [ hide31, setHide31 ] = useState( false );
 
-  const [ unlock, setUnlock ] = useState({ user1Unlock: true, user2Unlock: true, user3Unlock:true, user4Unlock:true });
+//////   FIRESTORE DOCREF   //////
+const docRef = doc ( db, 'users', activeYear.toString(), 'Availability', activeMonth.toString() )
 
-  const docRef = doc ( db, 'users', activeYear.toString(), 'Availability', activeMonth.toString() )
-
-  const [ trig, setTrig ] = useState( false );
-
-  const [ hide29, setHide29 ] = useState( false );
-  const [ hide30, setHide30 ] = useState( false );
-  const [ hide31, setHide31 ] = useState( false );
-
-
-  /////////////////////////// INITIAL PUSH TO CREATE DOCS IN FIRESTORE //////////////////////////////
-// const docRefPush = doc( db, 'users', '2022', 'Availability', '10' );
-
-// useEffect(() => {
-//   setDoc( docRefPush, {
-//     user1: [
-//       {day1: false},
-//       {day2: false},
-//       {day3: false},
-//       {day4: false},
-//       {day5: false},
-//       {day6: false},
-//       {day7: false},
-//       {day8: false},
-//       {day9: false},
-//       {day10: false},
-//       {day11: false},
-//       {day12: false},
-//       {day13: false},
-//       {day14: false},
-//       {day15: false},
-//       {day16: false},
-//       {day17: false},
-//       {day18: false},
-//       {day19: false},
-//       {day20: false},
-//       {day21: false},
-//       {day22: false},
-//       {day23: false},
-//       {day24: false},
-//       {day25: false},
-//       {day26: false},
-//       {day27: false},
-//       {day28: false},
-//       {day29: false},
-//       {day30: false},
-//       {day31: false},
-
-//     ],
-
-//     user2: [
-//       {day1: true},
-//       {day2: true},
-//       {day3: true},
-//       {day4: true},
-//       {day5: true},
-//       {day6: true},
-//       {day7: true},
-//       {day8: true},
-//       {day9: true},
-//       {day10: true},
-//       {day11: true},
-//       {day12: true},
-//       {day13: true},
-//       {day14: true},
-//       {day15: true},
-//       {day16: true},
-//       {day17: true},
-//       {day18: true},
-//       {day19: true},
-//       {day20: true},
-//       {day21: true},
-//       {day22: true},
-//       {day23: true},
-//       {day24: true},
-//       {day25: true},
-//       {day26: true},
-//       {day27: true},
-//       {day28: true},
-//       {day29: true},
-//       {day30: true},
-//       {day31: true},
-//     ],
-
-//     user3: [
-//       {day1: true},
-//       {day2: true},
-//       {day3: true},
-//       {day4: true},
-//       {day5: true},
-//       {day6: true},
-//       {day7: true},
-//       {day8: true},
-//       {day9: true},
-//       {day10: true},
-//       {day11: true},
-//       {day12: true},
-//       {day13: true},
-//       {day14: true},
-//       {day15: true},
-//       {day16: true},
-//       {day17: true},
-//       {day18: true},
-//       {day19: true},
-//       {day20: true},
-//       {day21: true},
-//       {day22: true},
-//       {day23: true},
-//       {day24: true},
-//       {day25: true},
-//       {day26: true},
-//       {day27: true},
-//       {day28: true},
-//       {day29: true},
-//       {day30: true},
-//       {day31: true},
-//     ],
-
-//     user4: [
-//       {day1: false},
-//       {day2: false},
-//       {day3: false},
-//       {day4: false},
-//       {day5: false},
-//       {day6: false},
-//       {day7: false},
-//       {day8: false},
-//       {day9: false},
-//       {day10: false},
-//       {day11: false},
-//       {day12: false},
-//       {day13: false},
-//       {day14: false},
-//       {day15: false},
-//       {day16: false},
-//       {day17: false},
-//       {day18: false},
-//       {day19: false},
-//       {day20: false},
-//       {day21: false},
-//       {day22: false},
-//       {day23: false},
-//       {day24: false},
-//       {day25: false},
-//       {day26: false},
-//       {day27: false},
-//       {day28: false},
-//       {day29: false},
-//       {day30: false},
-//       {day31: false},
-//     ] 
-//   });
-// },[]);
-// /////////////////////////////////////////////////////////////////////////////////
-
-  const [users, setUsers] = useState({
+//////   INITIAL SET USERS DAY AVAILS TO NULL   //////
+const [users, setUsers] = useState({
     user1: {
         day1: null,
         day2: null,
@@ -338,9 +195,9 @@ export default function App() {
         day31: null 
       }
 
-  })
+})
  
-/////////////////// CHANGE MONTH & WEEK DAY NUMBERS TO NAMES /////////////////////
+//////   CHANGE MONTH NUMBERS TO NAMES   //////
 const monthToName = () => {
   if (activeMonth == 0) { return 'January' }
   if (activeMonth == 1) { return 'February' }
@@ -357,6 +214,7 @@ const monthToName = () => {
   if (activeMonth == undefined) { return currentDate.getMonth }  
 }
 
+//////   CHANGE WEEK DAY NUMBERS TO NAMES   //////
 const tableDayNameArray = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ];
 
 function tableDayName (i) {
@@ -371,9 +229,8 @@ function tableDayName (i) {
       if (activeDate.getDay() == 6) { return 'Saturday' }
 }
 
-///////////// SET INIT DATA FROM FIRESTORE ON LOAD //////////////////////////
-  
-  useEffect(()=> {
+//////   SET INIT DATA FROM FIRESTORE ON LOAD   //////
+useEffect(()=> {
     const loadDoc = async () => {
       let initList = []
       try {
@@ -531,13 +388,10 @@ function tableDayName (i) {
       }
     };
     loadDoc();
-  }, [activeYear, activeMonth])
-
- 
+}, [activeYear, activeMonth]);
 
 
-//////////////////    UPDATING FIRESTORE ON CLICK    ////////////////////////
-
+//////   UPDATING FIRESTORE ON CLICK   //////
 useEffect(() => {
   let x = activeDay.toString();
   if (users.user1[`day${x}`] === true) {
@@ -882,8 +736,7 @@ useEffect(() => {
 }, [ trig ]);
 
 
-/////// HANDLE CLICKS TO UPDATE USERS' STATE //////////////
-
+//////   HANDLE CLICKS TO UPDATE USERS' STATE   //////
 const handleClick1 = (i) => {
   setActiveDay(i);
   setTrig(prev=> !prev);
@@ -929,8 +782,7 @@ const handleClick4 = (i) => {
 };
 
 
-//////////////   SET ALL AVAIL   //////////////////////
-
+//////   SET ALL AVAIL   //////
 const setAllAvailUser1 =()=>{
   if (confirm((`${user1Name}, are you SURE that you want to set all dates as AVAILABLE?`)) == true) {
     setUsers(prev=> { return {
@@ -972,7 +824,7 @@ const setAllAvailUser1 =()=>{
   setTrig(prev=>!prev);
   }
   else {}
-  }
+}
 
 const setAllAvailUser2 =()=>{
   if (confirm((`${user2Name}, are you SURE that you want to set all dates as AVAILABLE?`)) == true) {
@@ -1015,7 +867,7 @@ const setAllAvailUser2 =()=>{
     setTrig(prev=>!prev);
   }
   else {}
-  }
+}
   
 const setAllAvailUser3 =()=>{
   if (confirm((`${user3Name}, are you SURE that you want to set all dates as AVAILABLE?`)) == true) {
@@ -1058,9 +910,9 @@ const setAllAvailUser3 =()=>{
     setTrig(prev=>!prev);
   }
   else {}
-  }
+}
   
-  const setAllAvailUser4 =()=>{
+const setAllAvailUser4 =()=>{
   if (confirm((`${user4Name}, are you SURE that you want to set all dates as AVAILABLE?`)) == true) {
     setUsers(prev=> { return {
       ...users,
@@ -1101,10 +953,9 @@ const setAllAvailUser3 =()=>{
     setTrig(prev=>!prev);
   }
   else {}
-  }
+}
 
-  //////////////   SET ALL UNAVAIL   //////////////////////
-
+//////   SET ALL UNAVAIL   //////
 const setAllUnAvailUser1 =()=>{
   if (confirm((`${user1Name}, are you SURE that you want to set all dates as UNAVAILABLE?`)) == true) {
     setUsers(prev=> { return {
@@ -1146,7 +997,7 @@ const setAllUnAvailUser1 =()=>{
     setTrig(prev=>!prev);    
   }
   else {}
-  }
+}
 
 const setAllUnAvailUser2 =()=>{
   if (confirm((`${user2Name}, are you SURE that you want to set all dates as UNAVAILABLE?`)) == true) {
@@ -1189,7 +1040,7 @@ const setAllUnAvailUser2 =()=>{
     setTrig(prev=>!prev);     
   }
   else {}
-  }
+}
   
 const setAllUnAvailUser3 =()=>{
   if (confirm((`${user3Name}, are you SURE that you want to set all dates as UNAVAILABLE?`)) == true) {
@@ -1232,9 +1083,9 @@ const setAllUnAvailUser3 =()=>{
     setTrig(prev=>!prev);     
   }
   else {}
-  }
+}
   
-  const setAllUnAvailUser4 =()=>{
+const setAllUnAvailUser4 =()=>{
   if (confirm((`${user4Name}, are you SURE that you want to set all dates as UNAVAILABLE?`)) == true) {
     setUsers(prev=> { return {
       ...users,
@@ -1275,9 +1126,9 @@ const setAllUnAvailUser3 =()=>{
     setTrig(prev=>!prev);     
   }
   else {}
-  }
+}
 
-  ////////////////////////   HIDE EXTRA DAYS OF MONTHS   //////////////////
+//////   HIDE EXTRA DAYS OF MONTHS   //////
   // 31 Days: January, March, May, July, August, October, December
   // 30 Days: April, June, Sept, November
   // 28 Days: February when NOT 2024, 2028, 2032...
@@ -1286,13 +1137,8 @@ const setAllUnAvailUser3 =()=>{
   // 31 Days: 0, 2, 4, 6, 7, 9, 11
   // 30 Days: 3, 5, 8, 10
   // 28 Days: 1 when activeYear != 2024, 2028, 2032...
-  // 29 Days: 1 when activeYear = 2024, 2028, 2032...
-
-  
-
-
-
-  useEffect(() => {
+  // 29 Days: 1 when activeYear = 2024, 2028, 2032...;
+useEffect(() => {
       if ( activeMonth == 0 ) {
         setHide29( false );
         setHide30( false );
@@ -1364,7 +1210,7 @@ const setAllUnAvailUser3 =()=>{
         setHide31( false );
       }
       
-  },[ trig, activeMonth, activeYear ]);
+},[ trig, activeMonth, activeYear ]);
 
 return (
     <div className = 'myDiv'>
@@ -2801,6 +2647,6 @@ return (
     </div>
 
   
-  );
+);
 }
 
