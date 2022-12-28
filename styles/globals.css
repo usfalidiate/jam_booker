@@ -19,7 +19,8 @@ h1 {
 } */
 
 .myDiv {
-  background: linear-gradient(0deg, #3e1c1c, #c20909 50%, #3e1c1c ); 
+  /* background: linear-gradient(0deg, #3e1c1c, #c20909 50%, #3e1c1c );  */
+  background: black;
   /* outline: solid black;
   border: solid black; */
   padding: 0;
