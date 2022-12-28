@@ -2690,8 +2690,8 @@ return (
           disabled={unlock.user1Unlock || hide29 }
           onClick={ () => {
               handleClick1(29); 
-            }} className={ users.user1.day29 ? 'buttonAvail' : 'buttonUnavail' } 
-            > { users.user1.day29 ? 'Available' : 'Unavailable' } 
+            }} className={ hide29 ? 'buttonUndefined' : users.user1.day29 ? 'buttonAvail' : 'buttonUnavail' } 
+            > { hide29 ? 'N/A' : users.user1.day29 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2699,8 +2699,8 @@ return (
           disabled={unlock.user2Unlock || hide29 }
           onClick={ () => {
               handleClick2(29); 
-            }} className={ users.user2.day29 ? 'buttonAvail' : 'buttonUnavail' } 
-            > { users.user2.day29 ? 'Available' : 'Unavailable' } 
+            }} className={ hide29 ? 'buttonUndefined' : users.user2.day29 ? 'buttonAvail' : 'buttonUnavail' } 
+            > { hide29 ? 'N/A' : users.user2.day29 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2708,8 +2708,8 @@ return (
           disabled={unlock.user3Unlock || hide29 }
           onClick={ () => {
               handleClick3(29); 
-            }} className={ users.user3.day29 ? 'buttonAvail' : 'buttonUnavail' } 
-            > { users.user3.day29 ? 'Available' : 'Unavailable' } 
+            }} className={ hide29 ? 'buttonUndefined' : users.user3.day29 ? 'buttonAvail' : 'buttonUnavail' } 
+            > { hide29 ? 'N/A' : users.user3.day29 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2717,8 +2717,8 @@ return (
           disabled={unlock.user4Unlock || hide29 }
           onClick={ () => {
               handleClick4(29); 
-            }} className={ users.user4.day29 ? 'buttonAvail' : 'buttonUnavail' } 
-            > { users.user4.day29 ? 'Available' : 'Unavailable' } 
+            }} className={ hide29 ? 'buttonUndefined' : users.user4.day29 ? 'buttonAvail' : 'buttonUnavail' } 
+            > { hide29 ? 'N/A' : users.user4.day29 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -2731,8 +2731,8 @@ return (
           disabled={unlock.user1Unlock || hide30 }
           onClick={ () => {
               handleClick1(30); 
-            }} className={ users.user1.day30 ? 'buttonAvail' : 'buttonUnavail' } 
-            > { users.user1.day30 ? 'Available' : 'Unavailable' } 
+            }} className={ hide30 ? 'buttonUndefined' : users.user1.day30 ? 'buttonAvail' : 'buttonUnavail' } 
+            > { hide30 ? 'N/A' : users.user1.day30 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2740,8 +2740,8 @@ return (
           disabled={unlock.user2Unlock || hide30}
           onClick={ () => {
               handleClick2(30); 
-            }} className={ users.user2.day30 ? 'buttonAvail' : 'buttonUnavail' } 
-            > { users.user2.day30 ? 'Available' : 'Unavailable' } 
+            }} className={ hide30 ? 'buttonUndefined' : users.user2.day30 ? 'buttonAvail' : 'buttonUnavail' } 
+            > { hide30 ? 'N/A' : users.user2.day30 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2749,8 +2749,8 @@ return (
           disabled={unlock.user3Unlock || hide30}
           onClick={ () => {
               handleClick3(30); 
-            }} className={ users.user3.day30 ? 'buttonAvail' : 'buttonUnavail' } 
-            > { users.user3.day30 ? 'Available' : 'Unavailable' } 
+            }} className={ hide30 ? 'buttonUndefined' : users.user3.day30 ? 'buttonAvail' : 'buttonUnavail' } 
+            > { hide30 ? 'N/A' : users.user3.day30 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2758,8 +2758,8 @@ return (
           disabled={unlock.user4Unlock || hide30}
           onClick={ () => {
               handleClick4(30); 
-            }} className={ users.user4.day30 ? 'buttonAvail' : 'buttonUnavail' } 
-            > { users.user4.day30 ? 'Available' : 'Unavailable' } 
+            }} className={ hide30 ? 'buttonUndefined' : users.user4.day30 ? 'buttonAvail' : 'buttonUnavail' } 
+            > { hide30 ? 'N/A' : users.user4.day30 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>
@@ -2772,8 +2772,8 @@ return (
           disabled={unlock.user1Unlock || hide31 }
           onClick={ () => {
               handleClick1(31); 
-            }} className={ users.user1.day31 ? 'buttonAvail' : 'buttonUnavail' } 
-            > { users.user1.day31 ? 'Available' : 'Unavailable' } 
+            }} className={ hide31 ? 'buttonUndefined' : users.user1.day31 ? 'buttonAvail' : 'buttonUnavail' } 
+            > { hide31 ? 'N/A' : users.user1.day31 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2781,8 +2781,8 @@ return (
           disabled={unlock.user2Unlock || hide31 }
           onClick={ () => {
               handleClick2(31); 
-            }} className={ users.user2.day31 ? 'buttonAvail' : 'buttonUnavail' } 
-            > { users.user2.day31 ? 'Available' : 'Unavailable' } 
+            }} className={ hide31 ? 'buttonUndefined' : users.user2.day31 ? 'buttonAvail' : 'buttonUnavail' } 
+            > { hide31 ? 'N/A' : users.user2.day31 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2790,8 +2790,8 @@ return (
           disabled={unlock.user3Unlock || hide31 }
           onClick={ () => {
               handleClick3(31); 
-            }} className={ users.user3.day31 ? 'buttonAvail' : 'buttonUnavail' } 
-            > { users.user3.day31 ? 'Available' : 'Unavailable' } 
+            }} className={ hide31 ? 'buttonUndefined' : users.user3.day31 ? 'buttonAvail' : 'buttonUnavail' } 
+            > { hide31 ? 'N/A' : users.user3.day31 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
         <td>    
@@ -2799,8 +2799,8 @@ return (
           disabled={unlock.user4Unlock || hide31 }
           onClick={ () => {
               handleClick4(31); 
-            }} className={ users.user4.day31 ? 'buttonAvail' : 'buttonUnavail' } 
-            > { users.user4.day31 ? 'Available' : 'Unavailable' } 
+            }} className={ hide31 ? 'buttonUndefined' : users.user4.day31 ? 'buttonAvail' : 'buttonUnavail' } 
+            > { hide31 ? 'N/A' : users.user4.day31 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
     </tr>

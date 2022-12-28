@@ -137,9 +137,11 @@ padding: 5px;
 }
 
 .buttonYear {
+  font-weight: bold;
   align-self: center;
   align-items: center;
-  width: 66px;
+  border-radius: 5px;
+  width: 88px;
   height: 66px;
   background-color: rgb(216,203,203);
   border: 1px solid black;
@@ -150,8 +152,10 @@ padding: 5px;
 }
 
 .buttonMonth {
-  width: 79px;
+  font-weight: bold;
+  width: 88px;
   height: 66px;
+  border-radius: 5px;
   background-color: rgb(216, 203, 203);
   border: 1px solid black;
   /* margin: auto; */
@@ -277,10 +281,11 @@ padding: 5px;
 
   .buttonUndefined {
     color: white;
-    background-color:rgb(102, 98, 98);
+    background-color:rgb(39, 37, 37);
     width: 110px;
     height: 75px;
-    border: none;
+    border: 1.5px solid black;
+    opacity: 0.95;
     }
 
   caption {
