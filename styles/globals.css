@@ -20,8 +20,8 @@ h1 {
 
 .myDiv {
   background: linear-gradient(0deg, #3e1c1c, #c20909 50%, #3e1c1c ); 
-  outline: solid black;
-  border: solid black;
+  /* outline: solid black;
+  border: solid black; */
   padding: 0;
   margin: 0;
   width: 100vw;
@@ -148,7 +148,7 @@ padding: 5px;
   padding: 12px 12px; 
   border: none;
   border-radius: 30px;
-  color: white;
+  color: black;
   font-weight: bold;
   font-family: Segoe UI, sans-serif;
   width: 115px; 
@@ -164,7 +164,7 @@ padding: 5px;
     transform: scale(1.2); */
     opacity: 1;
     outline: 2px solid black;
-    color: black;
+    color: rgb(118, 9, 9);
     }
   
   .myButtonLocked {
@@ -186,7 +186,7 @@ padding: 5px;
   .myButtonLocked:hover {
     opacity:1;
     outline: 2px solid black;
-    color: black;
+    color: rgb(241, 201, 201);
   }
   
   .myButtonSetAllAvail {
@@ -195,7 +195,7 @@ padding: 5px;
   border-radius: 5px;
   color: black;
   background: rgb(124, 180, 124);
-  font-weight: normal;
+  font-weight: bold;
   font-family: Segoe UI, sans-serif;
   width: 115px; 
   height: 60px;
@@ -206,7 +206,7 @@ padding: 5px;
   .myButtonSetAllAvail:hover {
     opacity: 1;
     outline: 2px solid black;
-    color: black;
+    color: rgb(118, 9, 9);
   }
   
   .myButtonSetAllUnavail {
@@ -215,7 +215,7 @@ padding: 5px;
   border-radius: 5px;
   color: black;
   background: rgb(228, 165, 165);
-  font-weight: normal;
+  font-weight: bold;
   font-family: Segoe UI, sans-serif;
   width: 115px; 
   height: 60px; 
@@ -226,7 +226,7 @@ padding: 5px;
   .myButtonSetAllUnavail:hover {
     opacity: 1;
     outline: 2px solid black;
-    color: black;
+    color: rgb(118, 9, 9);
   }
   
   
