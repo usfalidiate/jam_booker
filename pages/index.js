@@ -51,9 +51,9 @@ export default function App() {
 
   const [ trig, setTrig ] = useState( false );
 
-  const [ hide29, setHide29 ] = useState(false);
-  const [ hide30, setHide30 ] = useState(false);
-  const [ hide31, setHide31 ] = useState(false);
+  const [ hide29, setHide29 ] = useState( false );
+  const [ hide30, setHide30 ] = useState( false );
+  const [ hide31, setHide31 ] = useState( false );
 
 
   /////////////////////////// INITIAL PUSH TO CREATE DOCS IN FIRESTORE //////////////////////////////
@@ -1293,43 +1293,84 @@ const setAllUnAvailUser3 =()=>{
 
 
   useEffect(() => {
-      if ( activeMonth == 0 || 2 || 4 || 6 || 7 || 9 || 11 ) {
-        setHide29(false);
-        setHide30(false);
-        setHide31(false);
-      };
+      if ( activeMonth == 0 ) {
+        setHide29( false );
+        setHide30( false );
+        setHide31( false );
+      }
+      if ( activeMonth == 1 ) {
+        setHide29( true );
+        setHide30( true );
+        setHide31( true );
+      }
 
-      if ( activeMonth == 3 || 5 || 8 || 10 ) {
-        setHide29(false);
-        setHide30(false);
-        setHide31(true);
-      };
+      if ( activeMonth == 2 ) {
+        setHide29( false );
+        setHide30( false );
+        setHide31( false );
+      }
 
-      if ( activeMonth == 1 && activeYear == 2024 || 2028 || 2032 ) {
-          setHide29(false);
-          setHide30(true);
-          setHide31(true);
-      }; 
-        
-      if ( activeMonth == 1 && activeYear !== 2024 || 2028 || 2032) {
-          setHide29(true);
-          setHide30(true);
-          setHide31(true);
-      };   
+      if ( activeMonth == 3 ) {
+        setHide29( false );
+        setHide30( false );
+        setHide31( true );
+      }
 
-      console.log('hide29', hide29);
-      console.log('hide30', hide30);
-      console.log('hide31', hide31);
+      if ( activeMonth == 4 ) {
+        setHide29( false );
+        setHide30( false );
+        setHide31( false );
+      }
 
-  },[ activeMonth, activeYear ]);
+      if ( activeMonth == 5 ) {
+        setHide29( false );
+        setHide30( false );
+        setHide31( true );
+      }
+
+      if ( activeMonth == 6 ) {
+        setHide29( false );
+        setHide30( false );
+        setHide31( false );
+      }
+
+      if ( activeMonth == 7 ) {
+        setHide29( false );
+        setHide30( false );
+        setHide31( false );
+      }
+
+      if ( activeMonth == 8 ) {
+        setHide29( false );
+        setHide30( false );
+        setHide31( true );
+      }
+
+      if ( activeMonth == 9 ) {
+        setHide29( false );
+        setHide30( false );
+        setHide31( false );
+      }
+
+      if ( activeMonth == 10 ) {
+        setHide29( false );
+        setHide30( false );
+        setHide31( true );
+      }
+
+      if ( activeMonth == 11 ) {
+        setHide29( false );
+        setHide30( false );
+        setHide31( false );
+      }
+      
+  },[ trig, activeMonth, activeYear ]);
 
 
 
-  console.log('out hide29', hide29);
-  console.log('out hide30', hide30);
-  console.log('out hide31', hide31);
-
-
+console.log( 'hide29', hide29 );
+console.log( 'hide30', hide30 );
+console.log( 'hide31', hide31 );
 
 
   
