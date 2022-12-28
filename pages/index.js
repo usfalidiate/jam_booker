@@ -1277,7 +1277,7 @@ const setAllUnAvailUser3 =()=>{
 
 return (
     <div class = 'myDiv'>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      {/* <meta name="viewport" content="width=device-width, initial-scale=1.0"/> */}
 
       
       <header>
