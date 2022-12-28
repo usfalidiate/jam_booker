@@ -51,6 +51,10 @@ export default function App() {
 
   const [ trig, setTrig ] = useState( false );
 
+  const [ hide29, setHide29 ] = useState(false);
+  const [ hide30, setHide30 ] = useState(false);
+  const [ hide31, setHide31 ] = useState(false);
+
 
   /////////////////////////// INITIAL PUSH TO CREATE DOCS IN FIRESTORE //////////////////////////////
 // const docRefPush = doc( db, 'users', '2022', 'Availability', '10' );
@@ -1273,15 +1277,71 @@ const setAllUnAvailUser3 =()=>{
   else {}
   }
 
+  ////////////////////////   HIDE EXTRA DAYS OF MONTHS   //////////////////
+  // 31 Days: January, March, May, July, August, October, December
+  // 30 Days: April, June, Sept, November
+  // 28 Days: February when NOT 2024, 2028, 2032...
+  // 29 Days: February when 2024, 2028, 2032...
+
+  // 31 Days: 0, 2, 4, 6, 7, 9, 11
+  // 30 Days: 3, 5, 8, 10
+  // 28 Days: 1 when activeYear != 2024, 2028, 2032...
+  // 29 Days: 1 when activeYear = 2024, 2028, 2032...
+
+  
+
+
+
+  useEffect(() => {
+      if ( activeMonth == 0 || 2 || 4 || 6 || 7 || 9 || 11 ) {
+        setHide29(false);
+        setHide30(false);
+        setHide31(false);
+      };
+
+      if ( activeMonth == 3 || 5 || 8 || 10 ) {
+        setHide29(false);
+        setHide30(false);
+        setHide31(true);
+      };
+
+      if ( activeMonth == 1 && activeYear == 2024 || 2028 || 2032 ) {
+          setHide29(false);
+          setHide30(true);
+          setHide31(true);
+      }; 
+        
+      if ( activeMonth == 1 && activeYear !== 2024 || 2028 || 2032) {
+          setHide29(true);
+          setHide30(true);
+          setHide31(true);
+      };   
+
+      console.log('hide29', hide29);
+      console.log('hide30', hide30);
+      console.log('hide31', hide31);
+
+  },[ activeMonth, activeYear ]);
+
+
+
+  console.log('out hide29', hide29);
+  console.log('out hide30', hide30);
+  console.log('out hide31', hide31);
+
+
+
+
+  
 
 
 return (
-    <div class = 'myDiv'>
+    <div className = 'myDiv'>
       {/* <meta name="viewport" content="width=device-width, initial-scale=1.0"/> */}
 
       
       <header>
-        <h1> Jam Booker Presents... </h1>
+        <h1> Powered by Jam Booker... </h1>
           <img 
             className = 'headerImg'
             src= 'https://i.imgur.com/MJ7Wtvy.jpg'
@@ -2586,7 +2646,7 @@ return (
       <th scope="rowDay"> { tableDayName(28) } </th>
       <td>    
           <button 
-          disabled={unlock.user1Unlock}
+          disabled={unlock.user1Unlock || hide29 }
           onClick={ () => {
               handleClick1(29); 
             }} className={ users.user1.day29 ? 'buttonAvail' : 'buttonUnavail' } 
@@ -2595,7 +2655,7 @@ return (
         </td>
         <td>    
           <button 
-          disabled={unlock.user2Unlock}
+          disabled={unlock.user2Unlock || hide29 }
           onClick={ () => {
               handleClick2(29); 
             }} className={ users.user2.day29 ? 'buttonAvail' : 'buttonUnavail' } 
@@ -2604,7 +2664,7 @@ return (
         </td>
         <td>    
           <button 
-          disabled={unlock.user3Unlock}
+          disabled={unlock.user3Unlock || hide29 }
           onClick={ () => {
               handleClick3(29); 
             }} className={ users.user3.day29 ? 'buttonAvail' : 'buttonUnavail' } 
@@ -2613,7 +2673,7 @@ return (
         </td>
         <td>    
           <button 
-          disabled={unlock.user4Unlock}
+          disabled={unlock.user4Unlock || hide29 }
           onClick={ () => {
               handleClick4(29); 
             }} className={ users.user4.day29 ? 'buttonAvail' : 'buttonUnavail' } 
@@ -2627,7 +2687,7 @@ return (
       <th scope="rowDay"> { tableDayName(29) } </th>
       <td>    
           <button 
-          disabled={unlock.user1Unlock}
+          disabled={unlock.user1Unlock || hide30 }
           onClick={ () => {
               handleClick1(30); 
             }} className={ users.user1.day30 ? 'buttonAvail' : 'buttonUnavail' } 
@@ -2636,7 +2696,7 @@ return (
         </td>
         <td>    
           <button 
-          disabled={unlock.user2Unlock}
+          disabled={unlock.user2Unlock || hide30}
           onClick={ () => {
               handleClick2(30); 
             }} className={ users.user2.day30 ? 'buttonAvail' : 'buttonUnavail' } 
@@ -2645,7 +2705,7 @@ return (
         </td>
         <td>    
           <button 
-          disabled={unlock.user3Unlock}
+          disabled={unlock.user3Unlock || hide30}
           onClick={ () => {
               handleClick3(30); 
             }} className={ users.user3.day30 ? 'buttonAvail' : 'buttonUnavail' } 
@@ -2654,7 +2714,7 @@ return (
         </td>
         <td>    
           <button 
-          disabled={unlock.user4Unlock}
+          disabled={unlock.user4Unlock || hide30}
           onClick={ () => {
               handleClick4(30); 
             }} className={ users.user4.day30 ? 'buttonAvail' : 'buttonUnavail' } 
@@ -2668,7 +2728,7 @@ return (
       <th scope="rowDay"> { tableDayName(30) } </th>
       <td>    
           <button 
-          disabled={unlock.user1Unlock}
+          disabled={unlock.user1Unlock || hide31 }
           onClick={ () => {
               handleClick1(31); 
             }} className={ users.user1.day31 ? 'buttonAvail' : 'buttonUnavail' } 
@@ -2677,7 +2737,7 @@ return (
         </td>
         <td>    
           <button 
-          disabled={unlock.user2Unlock}
+          disabled={unlock.user2Unlock || hide31 }
           onClick={ () => {
               handleClick2(31); 
             }} className={ users.user2.day31 ? 'buttonAvail' : 'buttonUnavail' } 
@@ -2686,7 +2746,7 @@ return (
         </td>
         <td>    
           <button 
-          disabled={unlock.user3Unlock}
+          disabled={unlock.user3Unlock || hide31 }
           onClick={ () => {
               handleClick3(31); 
             }} className={ users.user3.day31 ? 'buttonAvail' : 'buttonUnavail' } 
@@ -2695,7 +2755,7 @@ return (
         </td>
         <td>    
           <button 
-          disabled={unlock.user4Unlock}
+          disabled={unlock.user4Unlock || hide31 }
           onClick={ () => {
               handleClick4(31); 
             }} className={ users.user4.day31 ? 'buttonAvail' : 'buttonUnavail' } 
