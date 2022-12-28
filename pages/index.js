@@ -1280,6 +1280,8 @@ return (
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       
       <header>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
         <h1> Jam Booker Presents... </h1>
       <img 
         className = 'headerImg'
@@ -1317,6 +1319,8 @@ return (
     {/* {NUDE TABLE FOR UNLOCKS} */}
 
 <table className='tableNude'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <tbody>
     <tr>
       <th className='thNude'></th>
@@ -1411,6 +1415,8 @@ return (
 </table>
 
     <table className='tableDefault'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <tbody>
     <tr>
       <th scope="topRow"> Date </th>
