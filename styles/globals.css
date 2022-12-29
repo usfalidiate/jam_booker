@@ -110,27 +110,27 @@ body {
 }
 
 .thHeadDate {
-  font-size: 1em;
+  font-size: 0.7em;
   border: solid black 1px;
-  background: rgb(50, 47, 47);
+  background: rgb(25, 25, 25);
   width: 16.6666%;
   height: 80px;
 
 }
 
 .thHeadDay {
-  font-size: 1em;
+  font-size: 0.7em; 
   border: 1px solid black;
-  background: rgb(145, 137, 137);
+  background: rgb(25, 25, 25);
   width: 16.6666%;
   height: 80px;
 
 }
 
 .thHeadUser {
-  font-size: 1em;
+  font-size: 0.7em;
   border: 1px solid black;
-  background: rgb(167, 156, 156);
+  background: rgb(25, 25, 25);
   width: 16.6666%;
   height: 80px;
 
@@ -148,7 +148,7 @@ body {
 .thDay {
   font-size: 1em;
   border: 1px solid black;
-  background: rgb(145, 137, 137);
+  background: rgb(72, 72, 72);
   width: 16.6666%;
   height: 80px;
 
@@ -156,7 +156,7 @@ body {
 
 .tdUser {
   border: 1px solid black;
-  background: rgb(167, 156, 156);
+  background: rgb(108, 107, 107);
   width: 16.6666%;
   height: 80px;
   text-align: center;
@@ -244,14 +244,12 @@ outline: 2px solid rgb(180, 178, 178);
   height: 55px;
   border: 0.5px solid black;
   border-radius: 30px;
-  opacity: 0.95;
+  opacity: 1;
   
 }
 
 .myButtonUnlocked:hover{
-  opacity: 1;
-  outline: 2px solid black;
-  color: rgb(118, 9, 9);
+  outline: 2px solid rgb(35, 96, 187);
 }
   
 .myButtonLocked {
@@ -265,15 +263,13 @@ outline: 2px solid rgb(180, 178, 178);
   font-family: Segoe UI, sans-serif;
   width: 95%; 
   height: 55px;
-  opacity: 0.95;
+  opacity: 1;
   outline: 1px solid black;
 
 }
 
 .myButtonLocked:hover {
-  opacity:1;
-  outline: 2px solid black;
-  color: rgb(241, 201, 201);
+  outline: 2px solid rgb(187, 96, 27);
 }
 
 .myButtonSetAllAvail {
@@ -281,21 +277,19 @@ outline: 2px solid rgb(180, 178, 178);
   padding: 0;  
   border: none;
   border-radius: 5px;
-  color: white;
-  background: green;
+  color: black;
+  background: rgb(52, 176, 52);
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
   width: 95%; 
   height: 60px;
   outline: 1px solid black;
-  opacity: 0.95;
+  opacity: 1;
 
 }
 
 .myButtonSetAllAvail:hover {
-  opacity: 1;
-  outline: 2px solid black;
-  color: rgb(118, 9, 9);
+  outline: 2px solid rgb(72, 97, 76);
 }
 
 .myButtonSetAllUnavail {
@@ -304,20 +298,18 @@ outline: 2px solid rgb(180, 178, 178);
   border: none;
   border-radius: 5px;
   color: white;
-  background: red;
+  background: rgb(116, 40, 40);
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
   width: 95%; 
   height: 60px; 
   outline: 1px solid black;
-  opacity: 0.95;
+  opacity: 1;
 
   }
 
 .myButtonSetAllUnavail:hover {
-  opacity: 1;
-  outline: 2px solid black;
-  color: rgb(118, 9, 9);
+  outline: 2px solid rgb(119, 69, 69);
 }
 
 .buttonAvail {
@@ -331,6 +323,7 @@ outline: 2px solid rgb(180, 178, 178);
   border: 1.5px solid black;
   border-radius: 5px;
   opacity: 0.95;
+  padding: 1px 1px;
  }
 
 .buttonAvail:hover {
@@ -342,12 +335,13 @@ outline: 2px solid rgb(180, 178, 178);
 .buttonUnavail {
   font-size: 1em;
   color: white;
-  background-color:red;
+  background-color:rgb(113, 5, 5);
   width: 95%;
   height: 75px;
   border: 1.5px solid black;
   opacity: 0.95;
   border-radius: 5px;
+  padding: 1px 1px;
 
 
 }
