@@ -1242,7 +1242,8 @@ return (
 
 <article className = 'bandLogoArticle'>
     <img className = 'headerImg'
-      src= 'https://i.imgur.com/MJ7Wtvy.jpg'
+      src= 'https://i.imgur.com/MJ7Wtvy.jpg' //black bg image
+      // src= 'https://i.imgur.com/ALUVQWE.gif' //transparent bg allegedly
     />
 </article>
 
@@ -1270,7 +1271,7 @@ return (
 </article>
 
 <article className = 'activeDateArticle'>
-  <h2> You are currently booking for: </h2>
+  <h2> You are currently looking at: </h2>
   <h1> { monthToNameLong() } { activeYear } </h1>
 </article>
 

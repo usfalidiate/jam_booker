@@ -278,7 +278,8 @@ outline: 2px solid rgb(180, 178, 178);
   border: none;
   border-radius: 5px;
   color: black;
-  background: rgb(52, 176, 52);
+  background: linear-gradient(91.4deg, rgb(105, 180, 105) 0%, rgb(52, 176, 52) 100%); 
+
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
   width: 95%; 
@@ -298,7 +299,9 @@ outline: 2px solid rgb(180, 178, 178);
   border: none;
   border-radius: 5px;
   color: white;
-  background: rgb(116, 40, 40);
+ 
+  background: linear-gradient(91.4deg, rgb(157, 3, 3) 0%, rgb(116, 40, 40) 100%); 
+
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
   width: 95%; 
@@ -313,7 +316,7 @@ outline: 2px solid rgb(180, 178, 178);
 }
 
 .buttonAvail {
-  font-size: 0.7em;
+  font-size: 0.6em;
   background-color:green;
   color: white;
   font-weight: normal;
