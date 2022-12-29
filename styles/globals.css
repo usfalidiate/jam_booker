@@ -149,8 +149,8 @@ margin: auto;
 
 /* Nude Table */
 .tableNude {
-  table-layout: fixed;
-  /* margin: auto; */
+  table-layout: auto;
+  margin: 0px;
   border-collapse: collapse;
   background-color: black;
   letter-spacing: 1px;
@@ -164,21 +164,21 @@ margin: auto;
 
 
 .thNudeDate {
-  /* margin: auto; */
+  margin: 0px;
   padding: 0px;
   width: 10%;
   height: 100px;    
 }
 
 .thNudeDay {
-  /* margin: auto; */
+  margin: 0px;
   padding: 0px;
   width: 5%;
   height: 100px;    
 }
 
 .thNudeUser {
-  /* margin: auto; */
+  margin: 0px;
   padding: 0px;
   width: 17%;
   height: 100px;    
