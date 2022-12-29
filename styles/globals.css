@@ -235,7 +235,7 @@ outline: 2px solid rgb(180, 178, 178);
 }
 
 .myButtonUnlocked {
-  font-size: 0.8em;
+  font-size: 0.5em;
   background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%); 
   color: black;
   font-weight: bold;
@@ -253,7 +253,7 @@ outline: 2px solid rgb(180, 178, 178);
 }
   
 .myButtonLocked {
-  font-size: 0.8em;
+  font-size: 0.5em;
   background: linear-gradient(91.4deg, #b54900 0%, #ff0505 100%); 
   padding: 0;  
   border: none;
@@ -313,7 +313,7 @@ outline: 2px solid rgb(180, 178, 178);
 }
 
 .buttonAvail {
-  font-size: 1em;
+  font-size: 0.7em;
   background-color:green;
   color: white;
   font-weight: normal;
@@ -333,7 +333,7 @@ outline: 2px solid rgb(180, 178, 178);
 
 
 .buttonUnavail {
-  font-size: 1em;
+  font-size: 0.7em;
   color: white;
   background-color:rgb(113, 5, 5);
   width: 95%;
