@@ -98,7 +98,7 @@ caption {
   align-self: center;
   align-items: center;
   border-radius: 5px;
-  width: 88px;
+  /* width: 88px; */
   height: 66px;
   background-color: rgb(216,203,203);
   border: 1px solid black;
@@ -116,7 +116,7 @@ margin: auto;
 
 .buttonMonth {
   font-weight: bold;
-  width: 88px;
+  /* width: 88px; */
   height: 66px;
   border-radius: 5px;
   background-color: rgb(216, 203, 203);
@@ -151,7 +151,7 @@ margin: auto;
   margin: auto;
   border: none;
   padding: 5px;
-  width: 120px;
+  /* width: 120px; */
   height: 60px;    
 }
 
@@ -165,7 +165,7 @@ margin: auto;
   color: black;
   font-weight: bold;
   font-family: Segoe UI, sans-serif;
-  width: 115px; 
+  /* width: 115px;  */
   height: 55px;
   opacity: 0.95;
   outline: 1px solid black;
@@ -185,7 +185,7 @@ margin: auto;
   color: white;
   font-weight: bold;
   font-family: Segoe UI, sans-serif;
-  width: 115px; 
+  /* width: 115px;  */
   height: 55px;
   opacity: 0.95;
   outline: 1px solid black;
@@ -206,7 +206,7 @@ margin: auto;
   background: green;
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
-  width: 115px; 
+  /* width: 115px;  */
   height: 60px;
   outline: 1px solid black;
   opacity: 0.95;
@@ -226,7 +226,7 @@ margin: auto;
   background: red;
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
-  width: 115px; 
+  /* width: 115px;  */
   height: 60px; 
   outline: 1px solid black;
   opacity: 0.95;
@@ -257,21 +257,21 @@ margin: auto;
 th {
   border: 1px solid rgb(190, 190, 190);
   padding: 5px;
-  width: 120px;
+  /* width: 120px; */
   height: 80px;    
 }
 
 th[scope="colDate"] {
   background-color: #696969;
   color: rgb(37, 32, 32);
-  width: 120px;
+  /* width: 120px; */
   height: 80px;
 }
 
 th[scope="topRow"] {
   background-color: #696969;
   color: rgb(37, 32, 32);
-  width: 120px;
+  /* width: 120px; */
   height: 80px;
   font-size: 16px;
 }
@@ -284,7 +284,7 @@ th[scope="rowDay"] {
 td {
   text-align: center;
   background-color: none;
-  width: 120px;
+  /* width: 120px; */
   height: 60px;
   border: 1px solid rgb(190, 190, 190);
   padding: 5px;
@@ -294,7 +294,7 @@ td {
 .buttonAvail {
   color: white;
   background-color:green;
-  width: 110px;
+  /* width: 110px; */
   height: 75px;
   border: 1.5px solid black;
   opacity: 0.95;
@@ -311,7 +311,7 @@ td {
 .buttonUnavail {
   color: white;
   background-color:red;
-  width: 110px;
+  /* width: 110px; */
   height: 75px;
   border: 1.5px solid black;
   opacity: 0.95;
@@ -326,7 +326,7 @@ td {
 .buttonUndefined {
   color: white;
   background-color:rgb(39, 37, 37);
-  width: 110px;
+  /* width: 110px; */
   height: 75px;
   border: 1.5px solid black;
   opacity: 0.95;
