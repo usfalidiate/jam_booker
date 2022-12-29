@@ -199,18 +199,18 @@ const [users, setUsers] = useState({
  
 //////   CHANGE MONTH NUMBERS TO NAMES   //////
 const monthToName = () => {
-  if (activeMonth == 0) { return 'January' }
-  if (activeMonth == 1) { return 'February' }
-  if (activeMonth == 2) { return 'March' }
-  if (activeMonth == 3) { return 'April' }
+  if (activeMonth == 0) { return 'Jan' }
+  if (activeMonth == 1) { return 'Feb' }
+  if (activeMonth == 2) { return 'Mar' }
+  if (activeMonth == 3) { return 'Apr' }
   if (activeMonth == 4) { return 'May' }
-  if (activeMonth == 5) { return 'June' }
-  if (activeMonth == 6) { return 'July' }
-  if (activeMonth == 7) { return 'August' }
-  if (activeMonth == 8) { return 'September' }
-  if (activeMonth == 9) { return 'October' }
-  if (activeMonth == 10) { return 'November' }
-  if (activeMonth == 11) { return 'December' }
+  if (activeMonth == 5) { return 'Jun' }
+  if (activeMonth == 6) { return 'Jul' }
+  if (activeMonth == 7) { return 'Aug' }
+  if (activeMonth == 8) { return 'Sep' }
+  if (activeMonth == 9) { return 'Oct' }
+  if (activeMonth == 10) { return 'Nov' }
+  if (activeMonth == 11) { return 'Dec' }
   if (activeMonth == undefined) { return currentDate.getMonth }  
 }
 
@@ -220,13 +220,13 @@ const tableDayNameArray = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1
 function tableDayName (i) {
   let activeDate = new Date(activeYear, activeMonth, tableDayNameArray[i]);
       activeDate.getDay();
-      if (activeDate.getDay() == 0) { return 'Sunday' }
-      if (activeDate.getDay() == 1) { return 'Monday' }
-      if (activeDate.getDay() == 2) { return 'Tuesday' }
-      if (activeDate.getDay() == 3) { return 'Wednesday' }
-      if (activeDate.getDay() == 4) { return 'Thursday' }
-      if (activeDate.getDay() == 5) { return 'Friday' }
-      if (activeDate.getDay() == 6) { return 'Saturday' }
+      if (activeDate.getDay() == 0) { return 'Sun' }
+      if (activeDate.getDay() == 1) { return 'Mon' }
+      if (activeDate.getDay() == 2) { return 'Tue' }
+      if (activeDate.getDay() == 3) { return 'Wed' }
+      if (activeDate.getDay() == 4) { return 'Thu' }
+      if (activeDate.getDay() == 5) { return 'Fri' }
+      if (activeDate.getDay() == 6) { return 'Sat' }
 }
 
 //////   SET INIT DATA FROM FIRESTORE ON LOAD   //////
