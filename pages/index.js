@@ -1262,9 +1262,17 @@ return (
 <table className='tableToggle'>
   <tbody>
     <tr>
-      <th className='thNudeDate'></th>
-      <th className='thNudeDay'></th>
-      <th className ='thNudeUser'>
+    <th scope="topRowDate"> Date </th>
+      <th scope="topRowDay"> Day </th>
+      <th scope="topRowUser"> Meeks </th>
+      <th scope="topRowUser"> Theuns </th>  
+      <th scope="topRowUser"> Nathan </th>
+      <th scope="topRowUser"> Troy </th>
+    </tr>
+    <tr>
+      <th scope='thNudeDate'></th>
+      <th scope='thNudeDay'></th>
+      <th scope='thNudeUser'>
         <button onClick={()=>
           setUnlock(prev=>{return {...prev, user1Unlock: !unlock.user1Unlock};})} 
           className={ unlock.user1Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
