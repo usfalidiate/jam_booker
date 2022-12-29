@@ -1260,9 +1260,9 @@ return (
 <table className='tableNude'>
   <tbody>
     <tr>
-      <th className='thNude'></th>
-      <th className='thNude'></th>
-      <th className ='thNude'>
+      <th className='thNudeDate'></th>
+      <th className='thNudeDay'></th>
+      <th className ='thNudeUser'>
         <button onClick={()=>
           setUnlock(prev=>{return {...prev, user1Unlock: !unlock.user1Unlock};})} 
           className={ unlock.user1Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
@@ -1270,7 +1270,7 @@ return (
         </button>
       </th>
 
-      <th className ='thNude'>
+      <th className ='thNudeUser'>
         <button onClick={()=>
           setUnlock(prev=>{return {...prev, user2Unlock: !unlock.user2Unlock}})} 
           className={ unlock.user2Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
@@ -1278,7 +1278,7 @@ return (
         </button>
       </th>
       
-      <th className ='thNude'>
+      <th className ='thNudeUser'>
         <button onClick={()=>
           setUnlock(prev=>{return {...prev, user3Unlock: !unlock.user3Unlock}})} 
           className={ unlock.user3Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
@@ -1286,7 +1286,7 @@ return (
         </button>
       </th>
       
-      <th className ='thNude'>
+      <th className ='thNudeUser'>
         <button onClick={()=>
           setUnlock(prev=>{return {...prev, user4Unlock: !unlock.user4Unlock}})} 
           className={ unlock.user4Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
@@ -1376,17 +1376,17 @@ return (
 <table className='tableDefault'>
   <tbody>
     <tr>
-      <th scope="topRow"> Date </th>
-      <th scope="topRow"> Day </th>
-      <th scope="topRow"> Meeks </th>
-      <th scope="topRow"> Theuns </th>  
-      <th scope="topRow"> Nathan </th>
-      <th scope="topRow"> Troy </th>
+      <th scope="topRowDate"> Date </th>
+      <th scope="topRowDay"> Day </th>
+      <th scope="topRowUser"> Meeks </th>
+      <th scope="topRowUser"> Theuns </th>  
+      <th scope="topRowUser"> Nathan </th>
+      <th scope="topRowUser"> Troy </th>
     </tr>
  
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[0] }  </th>
-      <th scope="rowDay"> { tableDayName(0) }  </th>
+      <th scope="colDay"> { tableDayName(0) }  </th>
         <td>       
           <button 
           disabled={unlock.user1Unlock}
@@ -1431,7 +1431,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[1] }</th>
-      <th scope="rowDay"> { tableDayName(1) } </th>
+      <th scope="colDay"> { tableDayName(1) } </th>
         <td>    
           <button
           disabled={unlock.user1Unlock} 
@@ -1475,7 +1475,7 @@ return (
  
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[2] }</th>
-      <th scope="rowDay"> { tableDayName(2) } </th>      
+      <th scope="colDay"> { tableDayName(2) } </th>      
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -1519,7 +1519,7 @@ return (
     
     <tr>
       <th scope="colDate">  { monthToName() } { tableDayNameArray[3] } </th>
-      <th scope="rowDay"> { tableDayName(3) } </th>
+      <th scope="colDay"> { tableDayName(3) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -1560,7 +1560,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[4] } </th>
-      <th scope="rowDay"> { tableDayName(4) } </th>
+      <th scope="colDay"> { tableDayName(4) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -1601,7 +1601,7 @@ return (
     
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[5] } </th>
-      <th scope="rowDay"> { tableDayName(5) } </th>
+      <th scope="colDay"> { tableDayName(5) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -1642,7 +1642,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[6] }</th>
-      <th scope="rowDay"> { tableDayName(6) } </th>
+      <th scope="colDay"> { tableDayName(6) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -1683,7 +1683,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[7] }</th>
-      <th scope="rowDay"> { tableDayName(7) } </th>
+      <th scope="colDay"> { tableDayName(7) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -1724,7 +1724,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[8] }</th>
-      <th scope="rowDay"> { tableDayName(8) } </th>
+      <th scope="colDay"> { tableDayName(8) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -1765,7 +1765,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[9] }</th>
-      <th scope="rowDay"> { tableDayName(9) } </th>
+      <th scope="colDay"> { tableDayName(9) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -1806,7 +1806,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[10] }</th>
-      <th scope="rowDay"> { tableDayName(10) } </th>
+      <th scope="colDay"> { tableDayName(10) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -1847,7 +1847,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[11] }</th>
-      <th scope="rowDay"> { tableDayName(11) } </th>
+      <th scope="colDay"> { tableDayName(11) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -1888,7 +1888,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[12] }</th>
-      <th scope="rowDay"> { tableDayName(12) } </th>
+      <th scope="colDay"> { tableDayName(12) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -1929,7 +1929,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[13] }</th>
-      <th scope="rowDay"> { tableDayName(13) } </th>
+      <th scope="colDay"> { tableDayName(13) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -1970,7 +1970,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[14] }</th>
-      <th scope="rowDay"> { tableDayName(14) } </th>
+      <th scope="colDay"> { tableDayName(14) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -2011,7 +2011,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[15] }</th>
-      <th scope="rowDay"> { tableDayName(15) } </th>
+      <th scope="colDay"> { tableDayName(15) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -2052,7 +2052,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[16] }</th>
-      <th scope="rowDay"> { tableDayName(16) } </th>
+      <th scope="colDay"> { tableDayName(16) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -2093,7 +2093,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[17] }</th>
-      <th scope="rowDay"> { tableDayName(17) } </th>
+      <th scope="colDay"> { tableDayName(17) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -2134,7 +2134,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[18] }</th>
-      <th scope="rowDay"> { tableDayName(18) } </th>
+      <th scope="colDay"> { tableDayName(18) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -2174,7 +2174,7 @@ return (
     </tr>
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[19] }</th>
-      <th scope="rowDay"> { tableDayName(19) } </th>
+      <th scope="colDay"> { tableDayName(19) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -2215,7 +2215,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[20] }</th>
-      <th scope="rowDay"> { tableDayName(20) } </th>
+      <th scope="colDay"> { tableDayName(20) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -2256,7 +2256,7 @@ return (
 
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[21] }</th>
-      <th scope="rowDay"> { tableDayName(21) } </th>
+      <th scope="colDay"> { tableDayName(21) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -2297,7 +2297,7 @@ return (
     
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[22] }</th>
-      <th scope="rowDay"> { tableDayName(22) } </th>
+      <th scope="colDay"> { tableDayName(22) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -2338,7 +2338,7 @@ return (
     
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[23] }</th>
-      <th scope="rowDay"> { tableDayName(23) } </th>
+      <th scope="colDay"> { tableDayName(23) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -2379,7 +2379,7 @@ return (
     
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[24] }</th>
-      <th scope="rowDay"> { tableDayName(24) } </th>
+      <th scope="colDay"> { tableDayName(24) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -2420,7 +2420,7 @@ return (
     
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[25] }</th>
-      <th scope="rowDay"> { tableDayName(25) } </th>
+      <th scope="colDay"> { tableDayName(25) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -2461,7 +2461,7 @@ return (
     
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[26] }</th>
-      <th scope="rowDay"> { tableDayName(26) } </th>
+      <th scope="colDay"> { tableDayName(26) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -2502,7 +2502,7 @@ return (
     
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[27] }</th>
-      <th scope="rowDay"> { tableDayName(27) } </th>
+      <th scope="colDay"> { tableDayName(27) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock}
@@ -2543,7 +2543,7 @@ return (
     
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[28] }</th>
-      <th scope="rowDay"> { tableDayName(28) } </th>
+      <th scope="colDay"> { tableDayName(28) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock || hide29 }
@@ -2584,7 +2584,7 @@ return (
     
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[29] }</th>
-      <th scope="rowDay"> { tableDayName(29) } </th>
+      <th scope="colDay"> { tableDayName(29) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock || hide30 }
@@ -2625,7 +2625,7 @@ return (
     
     <tr>
       <th scope="colDate"> { monthToName() } { tableDayNameArray[30] }</th>
-      <th scope="rowDay"> { tableDayName(30) } </th>
+      <th scope="colDay"> { tableDayName(30) } </th>
       <td>    
           <button 
           disabled={unlock.user1Unlock || hide31 }

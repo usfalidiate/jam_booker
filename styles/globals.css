@@ -98,7 +98,7 @@ caption {
   align-self: center;
   align-items: center;
   border-radius: 5px;
-  /* width: 88px; */
+  width: 50%;
   height: 66px;
   background-color: rgb(216,203,203);
   border: 1px solid black;
@@ -118,7 +118,7 @@ margin: auto;
 
 .buttonMonth {
   font-weight: bold;
-  /* width: 88px; */
+  width: 8.3333%;
   height: 66px;
   border-radius: 5px;
   background-color: rgb(216, 203, 203);
@@ -159,6 +159,30 @@ margin: auto;
   height: 60px;    
 }
 
+.thNudeDate {
+  margin: auto;
+  border: none;
+  padding: 5px;
+  width: 10%;
+  height: 60px;    
+}
+
+.thNudeDay {
+  margin: auto;
+  border: none;
+  padding: 5px;
+  width: 5%;
+  height: 60px;    
+}
+
+.thNudeUser {
+  margin: auto;
+  border: none;
+  padding: 5px;
+  width: 17%;
+  height: 60px;    
+}
+
 /* Lock & Unlock */
 
 .myButtonUnlocked {
@@ -169,7 +193,7 @@ margin: auto;
   color: black;
   font-weight: bold;
   font-family: Segoe UI, sans-serif;
-  /* width: 115px;  */
+  width: 85%; 
   height: 55px;
   opacity: 0.95;
   outline: 1px solid black;
@@ -190,7 +214,7 @@ margin: auto;
   color: white;
   font-weight: bold;
   font-family: Segoe UI, sans-serif;
-  /* width: 115px;  */
+  width: 85%; 
   height: 55px;
   opacity: 0.95;
   outline: 1px solid black;
@@ -213,7 +237,7 @@ margin: auto;
   background: green;
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
-  /* width: 115px;  */
+  width: 85%; 
   height: 60px;
   outline: 1px solid black;
   opacity: 0.95;
@@ -235,7 +259,7 @@ margin: auto;
   background: red;
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
-  /* width: 115px;  */
+  width: 85%; 
   height: 60px; 
   outline: 1px solid black;
   opacity: 0.95;
@@ -259,7 +283,7 @@ margin: auto;
   background-color: #696969;
   letter-spacing: 1px;
   font-family: sans-serif;
-  font-size: 6px;
+  /* font-size: 6px; */
   width: 100%;
   /* width: 220px; */
   height: 80px; 
@@ -269,31 +293,46 @@ th {
   border: 1px solid rgb(190, 190, 190);
   padding: 5px;
   /* width: 120px; */
-  height: 80px;    
+  height: 80px;
+  font-size: 1em;
 }
 
 th[scope="colDate"] {
-  background-color: #696969;
-  color: rgb(37, 32, 32);
-  /* width: 120px; */
+  background-color: #4a4a4a;
+  color: rgb(196, 193, 193);
   height: 80px;
-  font-size: 6px;
+  font-size: 0.8em;
 
 }
 
-th[scope="topRow"] {
-  background-color: #696969;
-  color: rgb(37, 32, 32);
-  /* width: 120px; */
+th[scope="topRowDate"] {
+  background-color: #1b1a1a;
+  color: rgb(218, 214, 214);
+  width: 10%;
   height: 80px;
-  font-size: 6px;
+  font-size: 1em;
+}
 
+th[scope="topRowDay"] {
+  background-color: #1b1a1a;
+  color: rgb(218, 214, 214);
+  width: 5%;
+  height: 80px;
+  font-size: 1em;
+}
+
+th[scope="topRowUser"] {
+  background-color: #1b1a1a;
+  color: rgb(218, 214, 214);
+  width: 17%;
+  height: 80px;
+  font-size: 1em;
 }
  
-th[scope="rowDay"] {
+th[scope="colDay"] {
   background-color: #2d2d30;
   height: 80px;
-  font-size: 6px;
+  font-size: 0.8em;
 
 }
 
@@ -304,7 +343,7 @@ td {
   height: 60px;
   border: 1px solid rgb(190, 190, 190);
   padding: 5px;
-  font-size: 6px;
+  font-size: 2em;
 
 }
 
@@ -312,7 +351,7 @@ td {
 .buttonAvail {
   color: white;
   background-color:green;
-  /* width: 110px; */
+  width: 85%;
   height: 75px;
   border: 1.5px solid black;
   opacity: 0.95;
@@ -331,7 +370,7 @@ td {
 .buttonUnavail {
   color: white;
   background-color:red;
-  /* width: 110px; */
+  width: 85%;
   height: 75px;
   border: 1.5px solid black;
   opacity: 0.95;
