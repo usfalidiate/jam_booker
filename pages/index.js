@@ -1212,146 +1212,169 @@ useEffect(() => {
       
 },[ trig, activeMonth, activeYear ]);
 
+
+//////   RETURN ELEMENTS   //////
 return (
-    <div className = 'myDiv'>
-      {/* <meta name="viewport" content="width=device-width, initial-scale=1.0"/> */}
+<div className = 'myDiv'>
+  {/* <meta name="viewport" content="width=device-width, initial-scale=1.0"/> */}
 
       
-      <header>
-        <h1 className = 'h1Jam'> Powered by Jam Booker... </h1>
-          <img 
-            className = 'headerImg'
-            src= 'https://i.imgur.com/MJ7Wtvy.jpg'
-          />
-      </header>
+<header>
+  <h1 className = 'h1Jam'> Powered by Jam Booker... </h1>
+</header>
 
-      <h2>Select Year</h2>
-        <button className = 'buttonYear' onClick={()=> setActiveYear(2022)}> 2022 </button>
-        <button className = 'buttonYear' onClick={()=> setActiveYear(2023)}> 2023 </button>
-        {/* <button onClick={()=> setActiveYear(2024)}> 2024 </button>
-        <button onClick={()=> setActiveYear(2025)}> 2025 </button>
-        <button onClick={()=> setActiveYear(2026)}> 2026 </button>
-        <button onClick={()=> setActiveYear(2027)}> 2027 </button>
-        <button onClick={()=> setActiveYear(2028)}> 2028 </button> */}
+<article className = 'bandLogoArticle'>
+    <img className = 'headerImg'
+      src= 'https://i.imgur.com/MJ7Wtvy.jpg'
+    />
+</article>
 
-      <h2>Select Month</h2>
-        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(0)}> January </button>
-        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(1)}> February </button>
-        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(2)}> March </button>
-        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(3)}> April </button>
-        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(4)}> May </button>
-        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(5)}> June </button>
-        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(6)}> July </button>
-        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(7)}> August </button>
-        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(8)}> September </button>
-        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(9)}> October </button>
-        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(10)}> November </button>
-        <button className = 'buttonMonth' onClick ={()=> setActiveMonth(11)}> December </button>
+<article className = 'yearArticle' >
+  <h2 className = 'h2Year'>Select Year</h2>
+    <button className = 'buttonYear' onClick={()=> setActiveYear(2022)}> 2022 </button>
+    <button className = 'buttonYear' onClick={()=> setActiveYear(2023)}> 2023 </button>
+</article>
 
-    <h1> You are currently looking at:  { monthToName() } { activeYear }     </h1>
+<article className = 'monthArticle' >
+  <h2>Select Month</h2>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(0)}> January </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(1)}> February </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(2)}> March </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(3)}> April </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(4)}> May </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(5)}> June </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(6)}> July </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(7)}> August </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(8)}> September </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(9)}> October </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(10)}> November </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(11)}> December </button>
+</article>
 
+<article className = 'activeDateTitle'>
+  <h1> You are currently looking at:  { monthToName() } { activeYear }     </h1>
+</article>
 
     {/* {NUDE TABLE FOR UNLOCKS} */}
-
+<article>
 <table className='tableNude'>
-
-    <tbody>
+  <tbody>
     <tr>
       <th className='thNude'></th>
       <th className='thNude'></th>
-
-
-        <th className ='thNude'>
-          <button onClick={()=>
-        setUnlock(prev=>{return {...prev, user1Unlock: !unlock.user1Unlock};})} 
-        className={ unlock.user1Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
-        > { unlock.user1Unlock ? 'Locked' : 'Unlocked'} </button></th>
+      <th className ='thNude'>
+        <button onClick={()=>
+          setUnlock(prev=>{return {...prev, user1Unlock: !unlock.user1Unlock};})} 
+          className={ unlock.user1Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
+          > { unlock.user1Unlock ? 'Locked' : 'Unlocked'} 
+        </button>
+      </th>
 
       <th className ='thNude'>
         <button onClick={()=>
-        setUnlock(prev=>{return {...prev, user2Unlock: !unlock.user2Unlock}})} 
-        className={ unlock.user2Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
-        > { unlock.user2Unlock ? 'Locked' : 'Unlocked'} </button></th>
+          setUnlock(prev=>{return {...prev, user2Unlock: !unlock.user2Unlock}})} 
+          className={ unlock.user2Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
+          > { unlock.user2Unlock ? 'Locked' : 'Unlocked'} 
+        </button>
+      </th>
       
       <th className ='thNude'>
         <button onClick={()=>
-        setUnlock(prev=>{return {...prev, user3Unlock: !unlock.user3Unlock}})} 
-        className={ unlock.user3Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
-        > { unlock.user3Unlock ? 'Locked' : 'Unlocked'} </button></th>
+          setUnlock(prev=>{return {...prev, user3Unlock: !unlock.user3Unlock}})} 
+          className={ unlock.user3Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
+          > { unlock.user3Unlock ? 'Locked' : 'Unlocked'} 
+        </button>
+      </th>
       
       <th className ='thNude'>
         <button onClick={()=>
-        setUnlock(prev=>{return {...prev, user4Unlock: !unlock.user4Unlock}})} 
-        className={ unlock.user4Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
-        > { unlock.user4Unlock ? 'Locked' : 'Unlocked'} </button></th>
+          setUnlock(prev=>{return {...prev, user4Unlock: !unlock.user4Unlock}})} 
+          className={ unlock.user4Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
+          > { unlock.user4Unlock ? 'Locked' : 'Unlocked'} 
+        </button>
+      </th>
     </tr> 
 
                 {/* {NUDE TABLE FOR SET ALL AVAILABLE} */}
 
-                <tr>
+    <tr>
       <th className='thNude'></th>
       <th className='thNude'></th>
-      <th className='thNude'><button disabled={ unlock.user1Unlock } 
-        className='myButtonSetAllAvail' 
+      <th className='thNude'>
+        <button disabled={ unlock.user1Unlock } 
+          className='myButtonSetAllAvail' 
           onClick={ setAllAvailUser1 }>
-            Set All Available <br></br> { user1Name }
-            </button></th>
+          Set All Available <br></br> { user1Name }
+        </button>
+      </th>
       
-      <th className='thNude'><button disabled={ unlock.user2Unlock } 
-        className='myButtonSetAllAvail' 
+      <th className='thNude'>
+        <button disabled={ unlock.user2Unlock } 
+          className='myButtonSetAllAvail' 
           onClick={ setAllAvailUser2 }>
-            Set All Available <br></br> { user2Name }
-            </button></th>
+          Set All Available <br></br> { user2Name }
+        </button>
+      </th>
       
       <th className='thNude'><button disabled={ unlock.user3Unlock } 
-        className='myButtonSetAllAvail' 
+          className='myButtonSetAllAvail' 
           onClick={ setAllAvailUser3 }>
-            Set All Available <br></br> { user3Name }
-            </button></th>
+          Set All Available <br></br> { user3Name }
+        </button>
+      </th>
       
-      <th className='thNude'><button disabled={ unlock.user4Unlock } 
-        className='myButtonSetAllAvail' 
+      <th className='thNude'>
+        <button disabled={ unlock.user4Unlock } 
+          className='myButtonSetAllAvail' 
           onClick={ setAllAvailUser4 }>
-            Set All Available <br></br>{ user4Name }
-            </button></th> 
+          Set All Available <br></br>{ user4Name }
+        </button>
+      </th> 
     </tr>
             {/* {NUDE TABLE FOR SET ALL UNAVAILABLE} */}
 
     <tr>
       <th className='thNude'></th>
       <th className='thNude'></th>
-      <th className='thNude'><button disabled={ unlock.user1Unlock } 
-      className='myButtonSetAllUnavail' 
-        onClick={ setAllUnAvailUser1 }>
+      <th className='thNude'>
+        <button disabled={ unlock.user1Unlock } 
+          className='myButtonSetAllUnavail' 
+          onClick={ setAllUnAvailUser1 }>
           Set All Unavailable <br></br> { user1Name }
-          </button></th>
+        </button>
+      </th>
       
-      <th className='thNude'><button disabled={ unlock.user2Unlock } 
-      className='myButtonSetAllUnavail' 
-        onClick={ setAllUnAvailUser2 }>
+      <th className='thNude'>
+        <button disabled={ unlock.user2Unlock } 
+          className='myButtonSetAllUnavail' 
+          onClick={ setAllUnAvailUser2 }>
           Set All Unavailable <br></br> { user2Name }
-          </button></th>
+        </button>
+      </th>
       
-      <th className='thNude'><button disabled={ unlock.user3Unlock } 
-      className='myButtonSetAllUnavail' 
-        onClick={ setAllUnAvailUser3 }>
+      <th className='thNude'>
+        <button disabled={ unlock.user3Unlock } 
+          className='myButtonSetAllUnavail' 
+          onClick={ setAllUnAvailUser3 }>
           Set All Unavailable <br></br> { user3Name }
-          </button></th>
+        </button>
+      </th>
       
-      <th className='thNude'><button disabled={ unlock.user4Unlock } 
-      className='myButtonSetAllUnavail' 
-        onClick={ setAllUnAvailUser4 }>
+      <th className='thNude'>
+        <button disabled={ unlock.user4Unlock } 
+          className='myButtonSetAllUnavail' 
+          onClick={ setAllUnAvailUser4 }>
           Set All Unavailable <br></br>{ user4Name }
-          </button></th> 
+        </button>
+      </th> 
     </tr>
-
-    </tbody>
+  </tbody>
 </table>
+</article>
 
-    <table className='tableDefault'>
-    
-
-    <tbody>
+<article>
+<table className='tableDefault'>
+  <tbody>
     <tr>
       <th scope="topRow"> Date </th>
       <th scope="topRow"> Day </th>
@@ -2639,14 +2662,11 @@ return (
             > { hide31 ? 'N/A' : users.user4.day31 ? 'Available' : 'Unavailable' } 
             </button>      
         </td>
-    </tr>
-    
-    </tbody>
-    </table>
-
-    </div>
-
-  
+    </tr>    
+  </tbody>
+</table>
+</article>
+</div> 
 );
 }
 

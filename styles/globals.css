@@ -1,37 +1,4 @@
-.h1Jam {
-  font-size: 15px;
-  text-align: left;
-  background: none;
-  width: 100vw;
-  font-weight: normal;
-  /* height: 100vw; */
-}
-
-h1 {
-  text-align: center;
-  background: none;
-  width: 100vw;
-  /* height: 100vw; */
-}
-
-h2 {
-  /* position: center; */
-  text-align: center;
-  color: red;
-}
-  
-.headerImg {
-  position: relative;
-  z-index: auto;
-  left: 0%;
-  width: 100vw;
-  /* height: 100vw; */
-  opacity: 1;
-}
-
-/* .mainDiv {
-  background: solid black;
-} */
+/* Main Tags */
 
 .myDiv {
   /* background: linear-gradient(0deg, #3e1c1c, #c20909 50%, #3e1c1c );  */
@@ -45,7 +12,6 @@ h2 {
   color: white;
   font-family: Segoe UI;
 }
-
   html,
   body {
     padding: 0;
@@ -72,22 +38,210 @@ h2 {
   box-sizing: border-box;
   }
 
+h1 {
+  text-align: center;
+  background: none;
+  width: 100%;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  color: red;
+}
+
+caption {
+  padding: 0;
+  caption-side: bottom;
+}
+
+/* Jam Booker Header */
+.h1Jam {
+  font-size: 15px;
+  text-align: left;
+  background: yellow;
+  width: 100%;
+  font-weight: normal;
+  padding: 0;
+}
+
+/* Header Image */
+.headerImg {
+  position: relative;
+  z-index: auto;
+  left: 0%;
+  width: 100%;
+  opacity: 1;
+  padding: 0;
+}
+
+.bandLogoArticle {
+  background: white;
+}
+
+/* Select Year */
+.h2Year{
+  text-align: center;
+  color: blue;
+}
+
+.yearArticle {
+  padding: 0;
+  left: 0%;
+  background: brown;
+  width: 100%;
+  margin: auto;
+}
+
+.buttonYear {
+  font-weight: bold;
+  align-self: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 88px;
+  height: 66px;
+  background-color: rgb(216,203,203);
+  border: 1px solid black;
+  position: relative;
+  left: 0%;
+}
+
+
+/* Select Month */
+.monthArticle {
+padding: 0;
+background: green;
+margin: auto;
+}
+
+.buttonMonth {
+  font-weight: bold;
+  width: 88px;
+  height: 66px;
+  border-radius: 5px;
+  background-color: rgb(216, 203, 203);
+  border: 1px solid black;
+  /* margin: auto; */
+  /* position: relative; */
+  /* left: 0%; */
+}
+
+/* Active Year/Month Currently Looking At */
+.activeDateTitle {
+  background: pink;
+}
+
+
+/* Nude Table */
 .tableNude {
   table-layout: fixed;
   margin: auto;
   border-collapse: collapse;
   border: none;
-  background-color: none;
+  background-color: orange;
   letter-spacing: 1px;
   font-family: sans-serif;
   font-size: .8rem;
   width: 100%;
-  width: 120px;
+  /* width: 120px; */
   height: 80px; 
   }
+
+.thNude {
+  margin: auto;
+  border: none;
+  padding: 5px;
+  width: 120px;
+  height: 60px;    
+}
+
+/* Lock & Unlock */
+
+.myButtonUnlocked {
+  background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%); 
+  padding: 12px 12px; 
+  border: none;
+  border-radius: 30px;
+  color: black;
+  font-weight: bold;
+  font-family: Segoe UI, sans-serif;
+  width: 115px; 
+  height: 55px;
+  opacity: 0.95;
+  outline: 1px solid black;
+  }
+
+.myButtonUnlocked:hover{
+  opacity: 1;
+  outline: 2px solid black;
+  color: rgb(118, 9, 9);
+}
   
-  .tableDefault {
-  table-layout: fixed;
+.myButtonLocked {
+  background: linear-gradient(91.4deg, #b54900 0%, #ff0505 100%); 
+  padding: 12px 12px; 
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-family: Segoe UI, sans-serif;
+  width: 115px; 
+  height: 55px;
+  opacity: 0.95;
+  outline: 1px solid black;
+}
+
+.myButtonLocked:hover {
+  opacity:1;
+  outline: 2px solid black;
+  color: rgb(241, 201, 201);
+}
+
+/* Set All Available */
+.myButtonSetAllAvail {
+  padding: 2px 2px; 
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: green;
+  font-weight: normal;
+  font-family: Segoe UI, sans-serif;
+  width: 115px; 
+  height: 60px;
+  outline: 1px solid black;
+  opacity: 0.95;
+}
+
+  .myButtonSetAllAvail:hover {
+    opacity: 1;
+    outline: 2px solid black;
+    color: rgb(118, 9, 9);
+  }
+/* Set All Unavailable */
+.myButtonSetAllUnavail {
+  padding: 2px 2px;  
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: red;
+  font-weight: normal;
+  font-family: Segoe UI, sans-serif;
+  width: 115px; 
+  height: 60px; 
+  outline: 1px solid black;
+  opacity: 0.95;
+  }
+
+.myButtonSetAllUnavail:hover {
+  opacity: 1;
+  outline: 2px solid black;
+  color: rgb(118, 9, 9);
+}
+
+/* Toggle Avail Table */
+  
+.tableDefault {
+  table-layout: auto;
   margin: auto;
   border-collapse: collapse;
   border: 2px solid rgb(200, 200, 200);
@@ -96,7 +250,7 @@ h2 {
   font-family: sans-serif;
   font-size: .8rem;
   width: 100%;
-  width: 120px;
+  /* width: 220px; */
   height: 80px; 
   }
 
@@ -105,14 +259,6 @@ th {
   padding: 5px;
   width: 120px;
   height: 80px;    
-}
-
-.thNude {
-  margin: auto;
-  border: none;
-  padding: 5px;
-  width: 120px;
-  height: 60px;    
 }
 
 th[scope="colDate"] {
@@ -128,271 +274,63 @@ th[scope="topRow"] {
   width: 120px;
   height: 80px;
   font-size: 16px;
-  }
-  
-  
+}
+ 
 th[scope="rowDay"] {
   background-color: #2d2d30;
   height: 80px;
 }
 
 td {
-text-align: center;
-background-color: none;
-width: 120px;
-height: 60px;
-border: 1px solid rgb(190, 190, 190);
-padding: 5px;
-}
-
-.buttonYear {
-  font-weight: bold;
-  align-self: center;
-  align-items: center;
-  border-radius: 5px;
-  width: 88px;
-  height: 66px;
-  background-color: rgb(216,203,203);
-  border: 1px solid black;
-  /* margin: auto; */
-  position: relative;
-  left: 45%;
-  /* text-align: center; */
-}
-
-.buttonMonth {
-  font-weight: bold;
-  width: 88px;
-  height: 66px;
-  border-radius: 5px;
-  background-color: rgb(216, 203, 203);
-  border: 1px solid black;
-  /* margin: auto; */
-  position: relative;
-  left: 10%;
-}
-
-.myButtonUnlocked {
-  background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%); 
-  padding: 12px 12px; 
-  border: none;
-  border-radius: 30px;
-  color: black;
-  font-weight: bold;
-  font-family: Segoe UI, sans-serif;
-  width: 115px; 
-  height: 55px;
-  opacity: 0.95;
-  outline: 1px solid black;
-  /* border: 1px black; */
-  }
-
-  .myButtonUnlocked:hover{
-    /* -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2); */
-    opacity: 1;
-    outline: 2px solid black;
-    color: rgb(118, 9, 9);
-    }
-  
-  .myButtonLocked {
-  background: linear-gradient(91.4deg, #b54900 0%, #ff0505 100%); 
-  padding: 12px 12px; 
-  border: none;
-  border-radius: 30px;
-  color: white;
-  font-weight: bold;
-  font-family: Segoe UI, sans-serif;
-  width: 115px; 
-  height: 55px;
-  opacity: 0.95;
-  outline: 1px solid black;
-  /* border: 1px black; */
-
-  }
-
-  .myButtonLocked:hover {
-    opacity:1;
-    outline: 2px solid black;
-    color: rgb(241, 201, 201);
-  }
-  
-  .myButtonSetAllAvail {
-  padding: 2px 2px; 
-  border: none;
-  border-radius: 5px;
-  color: black;
-  background: rgb(124, 180, 124);
-  font-weight: bold;
-  font-family: Segoe UI, sans-serif;
-  width: 115px; 
+  text-align: center;
+  background-color: none;
+  width: 120px;
   height: 60px;
-  outline: 1px solid black;
-  opacity: 0.95;
-  }
+  border: 1px solid rgb(190, 190, 190);
+  padding: 5px;
+}
 
-  .myButtonSetAllAvail:hover {
-    opacity: 1;
-    outline: 2px solid black;
-    color: rgb(118, 9, 9);
-  }
-  
-  .myButtonSetAllUnavail {
-  padding: 2px 2px;  
-  border: none;
-  border-radius: 5px;
-  color: black;
-  background: rgb(228, 165, 165);
-  font-weight: bold;
-  font-family: Segoe UI, sans-serif;
-  width: 115px; 
-  height: 60px; 
-  outline: 1px solid black;
-  opacity: 0.95;
-  }
-
-  .myButtonSetAllUnavail:hover {
-    opacity: 1;
-    outline: 2px solid black;
-    color: rgb(118, 9, 9);
-  }
-  
-  
-  
-  .buttonAvail {
+/* Available Button */
+.buttonAvail {
   color: white;
   background-color:green;
   width: 110px;
   height: 75px;
   border: 1.5px solid black;
   opacity: 0.95;
-  }
+}
 
-  .buttonAvail:hover {
-    opacity:1;
-    outline: 4px solid rgb(81, 230, 81);
-  }
-  
-  .buttonUnavail {
+.buttonAvail:hover {
+  opacity:1;
+  outline: 4px solid rgb(81, 230, 81);
+}
+
+
+/* UnAvailable Button */
+
+.buttonUnavail {
   color: white;
   background-color:red;
   width: 110px;
   height: 75px;
   border: 1.5px solid black;
   opacity: 0.95;
-  }
-
-  .buttonUnavail:hover {
-    opacity: 1;
-    outline: 4px solid rgb(255, 211, 220);
-  }
-
-  .buttonUndefined {
-    color: white;
-    background-color:rgb(39, 37, 37);
-    width: 110px;
-    height: 75px;
-    border: 1.5px solid black;
-    opacity: 0.95;
-    }
-
-  caption {
-    padding: 10px;
-    caption-side: bottom;
-  }
-
-
-
-/* .thNudeSlim {
-margin: auto;
-border: none;
-padding: 5px;
-width: 120px;
-height: 80px;    
-} */
-
-/* th[scope="col"] {
-background-color: #696969;
-color: rgb(37, 32, 32);
-width: 120px;
-height: 80px;
-} */
-
-
-
-/* th[scope="colDay"] {
-background-color: #696969;
-color: rgb(37, 32, 32);
-width: 120px;
-height: 80px;
-} */
-
-
-
-
-
-
-
-
-
-/* .default {
-color: blue;
-background-color: yellow;
-} */
-
-/* .tableButton{
-background-color: none;
-border: none;
-width: 115px;
-height: 115px;
-padding: none;
-position: relative;
-border-radius: 10%;
-} */
-
-/*td:first{
-background-color: #4CAF50;
-text-align: center;
-color: black;
 }
-*/
 
-/* tr:nth-child(even) {
-  background-color: none;
-} */
+.buttonUnavail:hover {
+  opacity: 1;
+  outline: 4px solid rgb(255, 211, 220);
+}
 
-/* table {
-table-layout: fixed;
-margin: auto;
-border-collapse: collapse;
-border: 2px solid rgb(200, 200, 200);
-letter-spacing: 1px;
-font-family: sans-serif;
-font-size: .8rem;
-width: 100%;
-width: 120px;
-height: 80px; 
-background-color: none;
-} */
-
-
-
-/* .emptyButton{
-background-color: white;
-border: 0px white;
-border-collapse: collapse;
-color: white;
-padding: 5px 32px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-width: 115px;
-height: 115px;
-} */
-
-
+/* Undefined Button */
+.buttonUndefined {
+  color: white;
+  background-color:rgb(39, 37, 37);
+  width: 110px;
+  height: 75px;
+  border: 1.5px solid black;
+  opacity: 0.95;
+}
 
 /* @media (prefers-color-scheme: dark) {
 html {
