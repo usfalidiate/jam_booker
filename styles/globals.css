@@ -1,43 +1,163 @@
-/* Main Tags */
-
 .myDiv {
   /* background: linear-gradient(0deg, #3e1c1c, #c20909 50%, #3e1c1c );  */
-  /* background: rgb(40, 40, 40); */
   background: black;
-  /* outline: solid black;
-  border: solid black; */
   padding: 0;
   margin: auto;
   width: 100%;
-  /* height: 100vw; */
-  color: white;
-  font-family: Segoe UI;
 }
-  html,
-  body {
-    padding: 0;
-    margin: auto;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background: rgb(41, 39, 39);
-    color: white;
-    width: 100%;
-    /* height: 100%; */
-  }
-  
-  p {
-  font-size: 10px;
-  background: none;
-  }
-  
-  a {
-  color: inherit;
-  text-decoration: none;
-  }
-  
-  * {
+
+html,
+body {
+  padding: 0;
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: white;
+  width: 100%;
+}
+    
+* {
   box-sizing: border-box;
-  }
+}
+
+.tagLineArticle {
+  background: black;
+  margin: 0;
+  padding: 0;
+}
+
+.bandLogoArticle {
+  background: black;
+  padding: 0;
+  margin: 0;
+
+}
+  
+.monthArticle {
+  padding: 0;
+  background: black;
+  margin: auto;
+  width: 80%;
+}
+
+.yearArticle {
+  padding: 0;
+  background: black;
+  width: 80%;
+  margin: auto;
+}
+
+.activeDateArticle {
+  background: black;
+}
+
+.headerImg {
+  position: relative;
+  z-index: auto;
+  left: 0%;
+  width: 100%;
+  opacity: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.tableAvails {
+  table-layout: auto;
+  margin: auto;
+  border-collapse: collapse;
+  border: none;
+  background-color: black;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  width: 80%;
+  height: 80px; 
+}
+
+
+.tableNude {
+  table-layout: auto;
+  margin: auto;
+  border-collapse: collapse;
+  border: none;
+  background-color: black;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  font-size: .8rem;
+  width: 80%;
+  height: 70px; 
+}
+
+.thDateNude {
+  border: solid black 1px;
+  background: black;
+  width: 16.6666%;
+  height: 70px;
+}
+
+.thDayNude {
+  border: solid black 1px;
+  background: black;
+  width: 16.6666%;
+  height: 70px;
+
+}
+
+.tdUserNude {
+  border: solid black 1px;
+  background: black;
+  width: 16.6666%;
+  height: 70px;
+  text-align: center;
+}
+
+.thHeadDate {
+  border: solid black 1px;
+  background: rgb(50, 47, 47);
+  width: 16.6666%;
+  height: 80px;
+
+}
+
+.thHeadDay {
+  border: 1px solid black;
+  background: rgb(145, 137, 137);
+  width: 16.6666%;
+  height: 80px;
+
+}
+
+.thHeadUser {
+  border: 1px solid black;
+  background: rgb(167, 156, 156);
+  width: 16.6666%;
+  height: 80px;
+
+}
+
+.thDate {
+  border: solid black 1px;
+  background: rgb(50, 47, 47);
+  width: 16.6666%;
+  height: 80px;
+
+}
+
+.thDay {
+  border: 1px solid black;
+  background: rgb(145, 137, 137);
+  width: 16.6666%;
+  height: 80px;
+
+}
+
+.tdUser {
+  border: 1px solid black;
+  background: rgb(167, 156, 156);
+  width: 16.6666%;
+  height: 80px;
+  text-align: center;
+
+}
 
 h1 {
   text-align: center;
@@ -49,19 +169,7 @@ h1 {
   font-size: 2em;
 }
 
-h2 {
-  text-align: center;
-  color: white;
-  margin: 0;
-}
-
-caption {
-  padding: 0;
-  caption-side: bottom;
-}
-
-/* Jam Booker Header */
-.h1Jam {
+.h1TagLine {
   font-size: 15px;
   text-align: left;
   background: black;
@@ -70,38 +178,22 @@ caption {
   padding: 0;
   margin: 0;
   color: rgb(4, 4, 97);
-
 }
 
-/* Header Image */
-.headerImg {
-  position: relative;
-  z-index: auto;
-  left: 0%;
-  width: 100%;
-  opacity: 1;
-  padding: 0;
+h2 {
+  text-align: center;
+  color: white;
   margin: 0;
 }
 
-.bandLogoArticle {
-  background: black;
-  padding: 0;
-  margin: 0;
-
-}
-
-/* Select Year */
 .h2Year{
   text-align: center;
   color: white;
 }
 
-.yearArticle {
-  padding: 0;
-  background: black;
-  width: 80%;
-  margin: auto;
+.h2Month{
+  text-align: center;
+  color: white;
 }
 
 .buttonYear {
@@ -120,14 +212,6 @@ caption {
 }
 
 
-/* Select Month */
-.monthArticle {
-padding: 0;
-background: black;
-margin: auto;
-width: 80%;
-}
-
 .buttonMonth {
   font-weight: bold;
   width: 16.66666%;
@@ -136,56 +220,7 @@ width: 80%;
   background-color: rgb(216, 203, 203);
   border: 1px solid black;
  font-size: 1em;
-
-  /* margin: auto; */
-  /* position: relative; */
-  /* left: 0%; */
 }
-
-/* Active Year/Month Currently Looking At */
-.activeDateTitle {
-  background: black;
-}
-
-
-/* Nude Table */
-.tableNude {
-  table-layout: auto;
-  margin: auto;
-  border-collapse: collapse;
-  border: none;
-  background-color: black;
-  letter-spacing: 1px;
-  font-family: sans-serif;
-  font-size: .8rem;
-  width: 80%;
-  height: 80px; 
-  }
-
-
-
-.thNudeDate {
-  /* border: none; */
-  padding: 0.1px;
-  width: 10%;
-  height: 80px;    
-}
-
-.thNudeDay {
-  /* border: none; */
-  padding: 0.1px;
-  width: 5%;
-  height: 80px;    
-}
-
-.thNudeUser {
-  /* border: none; */
-  padding: 0.1px;
-  width: 17%;
-  height: 80px;    
-}
-
-/* Lock & Unlock Buttons */
 
 .myButtonUnlocked {
   background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%); 
@@ -193,13 +228,13 @@ width: 80%;
   font-size: 0.5em;
   font-weight: bold;
   font-family: Segoe UI, sans-serif;
-  width: 85%; 
+  width: 95%; 
   height: 55px;
   border: 0.5px solid black;
   border-radius: 30px;
   opacity: 0.95;
   
-  }
+}
 
 .myButtonUnlocked:hover{
   opacity: 1;
@@ -215,7 +250,7 @@ width: 80%;
   color: white;
   font-weight: bold;
   font-family: Segoe UI, sans-serif;
-  width: 55%; 
+  width: 95%; 
   height: 55px;
   opacity: 0.95;
   outline: 1px solid black;
@@ -229,7 +264,6 @@ width: 80%;
   color: rgb(241, 201, 201);
 }
 
-/* Set All Available Button */
 .myButtonSetAllAvail {
   padding: 0;  
   border: none;
@@ -238,7 +272,7 @@ width: 80%;
   background: green;
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
-  width: 85%; 
+  width: 95%; 
   height: 60px;
   outline: 1px solid black;
   opacity: 0.95;
@@ -252,7 +286,6 @@ width: 80%;
   color: rgb(118, 9, 9);
 }
 
-/* Set All Unavailable Button */
 .myButtonSetAllUnavail {
   padding: 0;  
   border: none;
@@ -261,7 +294,7 @@ width: 80%;
   background: red;
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
-  width: 85%; 
+  width: 95%; 
   height: 60px; 
   outline: 1px solid black;
   opacity: 0.95;
@@ -275,188 +308,18 @@ width: 80%;
   color: rgb(118, 9, 9);
 }
 
-/* Toggle Avail Table */
-  
-.tableDefault {
-  table-layout: auto;
-  margin: auto;
-  border-collapse: collapse;
-  border: 2px solid rgb(200, 200, 200);
-  background-color: #696969;
-  letter-spacing: 1px;
-  font-family: sans-serif;
-  /* font-size: 6px; */
-  width: 80%;
-  height: 80px; 
-  }
-
-  .tableToggle {
-    table-layout: auto;
-    margin: auto;
-    border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
-    background-color: #696969;
-    letter-spacing: 1px;
-    font-family: sans-serif;
-    /* font-size: 6px; */
-    width: 80%;
-    height: 80px; 
-    }
-
-th {
-  border: 1px solid rgb(190, 190, 190);
-  padding: 5px;
-  height: 80px;
-  font-size: 1em;
-}
-
-th[scope="colDate"] {
-  background-color: #4a4a4a;
-  color: rgb(196, 193, 193);
-  height: 80px;
-  font-size: 0.8em;
-
-}
-
-th[scope="topRowDate"] {
-  background-color: #1b1a1a;
-  color: rgb(218, 214, 214);
-  width: 10%;
-  height: 80px;
-  font-size: 1em;
-}
-
-th[scope="topRowDay"] {
-  background-color: #1b1a1a;
-  color: rgb(218, 214, 214);
-  width: 5%;
-  height: 80px;
-  font-size: 1em;
-}
-
-th[scope="topRowUser"] {
-  background-color: #1b1a1a;
-  color: rgb(218, 214, 214);
-  width: 17%;
-  height: 80px;
-  font-size: 1em;
-}
- 
-th[scope="colDay"] {
-  background-color: #2d2d30;
-  height: 80px;
-  font-size: 0.8em;
-
-}
-
-td {
-  text-align: center;
-  background-color: none;
-  /* width: 120px; */
-  height: 80px;
-  border: 1px solid rgb(190, 190, 190);
-  /* padding: 5px; */
-  font-size: 2em;
-
-}
-
-
-
-
-/**/
-.tableDefault2 {
-  table-layout: auto;
-  margin: auto;
-  border-collapse: collapse;
-  border: 2px solid rgb(200, 200, 200);
-  background-color: #696969;
-  letter-spacing: 1px;
-  font-family: sans-serif;
-  /* font-size: 6px; */
-  width: 80%;
-  height: 80px; 
-  }
-
-  .tableToggle2 {
-    table-layout: auto;
-    margin: auto;
-    border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
-    background-color: #696969;
-    letter-spacing: 1px;
-    font-family: sans-serif;
-    /* font-size: 6px; */
-    width: 80%;
-    height: 80px; 
-    }
-
-
-
-th[scope="colDate2"] {
-  background-color: #4a4a4a;
-  color: rgb(196, 193, 193);
-  height: 80px;
-  font-size: 0.8em;
-
-}
-
-th[scope="topRowDate2"] {
-  background-color: #1b1a1a;
-  color: rgb(218, 214, 214);
-  width: 10%;
-  height: 80px;
-  font-size: 1em;
-}
-
-th[scope="topRowDay2"] {
-  background-color: #1b1a1a;
-  color: rgb(218, 214, 214);
-  width: 5%;
-  height: 80px;
-  font-size: 1em;
-}
-
-th[scope="topRowUser2"] {
-  background-color: #1b1a1a;
-  color: rgb(218, 214, 214);
-  width: 17%;
-  height: 80px;
-  font-size: 1em;
-}
- 
-th[scope="colDay2"] {
-  background-color: #2d2d30;
-  height: 80px;
-  font-size: 0.8em;
-
-}
-
-td {
-  text-align: center;
-  background-color: none;
-  /* width: 120px; */
-  height: 80px;
-  border: 1px solid rgb(190, 190, 190);
-  /* padding: 5px; */
-  font-size: 2em;
-
-}
-
-/* Available Button */
 .buttonAvail {
   background-color:green;
   color: white;
   font-size: 0.3em;
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
-  width: 85%;
+  width: 95%;
   height: 75px;
   border: 1.5px solid black;
-  border-radius: 1px;
+  border-radius: 5px;
   opacity: 0.95;
-  
-
-}
+ }
 
 .buttonAvail:hover {
   opacity:1;
@@ -464,16 +327,16 @@ td {
 }
 
 
-/* UnAvailable Button */
-
 .buttonUnavail {
   color: white;
   background-color:red;
-  width: 85%;
+  width: 95%;
   height: 75px;
   border: 1.5px solid black;
   opacity: 0.95;
   font-size: 0.3em;
+  border-radius: 5px;
+
 
 }
 
@@ -482,11 +345,9 @@ td {
   outline: 4px solid rgb(255, 211, 220);
 }
 
-/* Undefined Button */
 .buttonUndefined {
   color: none;
   background-color:none;
-  /* width: 110px; */
   height: 75px;
   border: none;
   opacity: 0;
