@@ -1259,7 +1259,7 @@ return (
 
     {/* {NUDE TABLE FOR UNLOCKS} */}
 <article>
-<table className='tableToggle2'>
+<table className='tableToggle'>
   <tbody>
     <tr>
     <th scope="topRowDate2"> Date </th>
