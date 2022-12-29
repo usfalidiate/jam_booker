@@ -214,6 +214,23 @@ const monthToName = () => {
   if (activeMonth == undefined) { return currentDate.getMonth }  
 }
 
+//////   CHANGE MONTH NUMBERS TO NAMES - FULL NAME   //////
+const monthToNameLong = () => {
+  if (activeMonth == 0) { return 'January' }
+  if (activeMonth == 1) { return 'February' }
+  if (activeMonth == 2) { return 'March' }
+  if (activeMonth == 3) { return 'April' }
+  if (activeMonth == 4) { return 'May' }
+  if (activeMonth == 5) { return 'June' }
+  if (activeMonth == 6) { return 'July' }
+  if (activeMonth == 7) { return 'August' }
+  if (activeMonth == 8) { return 'September' }
+  if (activeMonth == 9) { return 'October' }
+  if (activeMonth == 10) { return 'November' }
+  if (activeMonth == 11) { return 'December' }
+  if (activeMonth == undefined) { return currentDate.getMonth }  
+}
+
 //////   CHANGE WEEK DAY NUMBERS TO NAMES   //////
 const tableDayNameArray = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ];
 
@@ -1254,7 +1271,7 @@ return (
 
 <article className = 'activeDateArticle'>
   <h2> You are currently booking for: </h2>
-  <h1> { monthToName() } { activeYear } </h1>
+  <h1> { monthToNameLong() } { activeYear } </h1>
 </article>
 
     {/* {NUDE TABLE FOR UNLOCKS} */}
