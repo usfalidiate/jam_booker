@@ -1605,7 +1605,7 @@ return (
       <td className='tdUserNude'>
         <button onClick={()=>
           setUnlock(prev=>{return {...prev, user1Unlock: !unlock.user1Unlock};})} 
-          className={ unlock.user1Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
+          className={ unlock.user1Unlock ? 'myButtonLocked' : 'myButtonUnlocked' }
           > { unlock.user1Unlock ? 'Locked' : 'Unlocked'} 
         </button>
       </td>
@@ -1613,7 +1613,7 @@ return (
       <td className='tdUserNude'>
         <button onClick={()=>
           setUnlock(prev=>{return {...prev, user2Unlock: !unlock.user2Unlock}})} 
-          className={ unlock.user2Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
+          className={ unlock.user2Unlock ? 'myButtonLocked' : 'myButtonUnlocked' }
           > { unlock.user2Unlock ? 'Locked' : 'Unlocked'} 
         </button>
       </td>
@@ -1621,7 +1621,7 @@ return (
       <td className='tdUserNude'>
         <button onClick={()=>
           setUnlock(prev=>{return {...prev, user3Unlock: !unlock.user3Unlock}})} 
-          className={ unlock.user3Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
+          className={ unlock.user3Unlock ? 'myButtonLocked' : 'myButtonUnlocked' }
           > { unlock.user3Unlock ? 'Locked' : 'Unlocked'} 
         </button>
       </td>
@@ -1629,7 +1629,7 @@ return (
       <td className='tdUserNude'>
         <button onClick={()=>
           setUnlock(prev=>{return {...prev, user4Unlock: !unlock.user4Unlock}})} 
-          className={ unlock.user4Unlock ? 'myButtonUnlocked' : 'myButtonLocked' }
+          className={ unlock.user4Unlock ? 'myButtonLocked' : 'myButtonUnlocked' }
           > { unlock.user4Unlock ? 'Locked' : 'Unlocked'} 
         </button>
       </td>
