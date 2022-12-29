@@ -171,7 +171,7 @@ margin: auto;
 .thNudeDate {
   margin: auto;
   border: none;
-  padding: 5px;
+  padding: 0px;
   width: 10%;
   height: 60px;    
 }
@@ -179,7 +179,7 @@ margin: auto;
 .thNudeDay {
   margin: auto;
   border: none;
-  padding: 5px;
+  padding: 0px;
   width: 5%;
   height: 60px;    
 }
@@ -187,7 +187,7 @@ margin: auto;
 .thNudeUser {
   margin: auto;
   border: none;
-  padding: 5px;
+  padding: 0px;
   width: 17%;
   height: 60px;    
 }
@@ -196,7 +196,7 @@ margin: auto;
 
 .myButtonUnlocked {
   background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%); 
-  padding: 12px 12px; 
+  padding: 0.5em 0.5em;  
   border: none;
   border-radius: 30px;
   color: black;
@@ -217,7 +217,7 @@ margin: auto;
   
 .myButtonLocked {
   background: linear-gradient(91.4deg, #b54900 0%, #ff0505 100%); 
-  padding: 12px 12px; 
+  padding: 0.5em 0.5em;  
   border: none;
   border-radius: 30px;
   color: white;
@@ -239,7 +239,7 @@ margin: auto;
 
 /* Set All Available */
 .myButtonSetAllAvail {
-  padding: 2px 2px; 
+  padding: 0.1em 0.1em;  
   border: none;
   border-radius: 5px;
   color: white;
@@ -261,7 +261,7 @@ margin: auto;
   }
 /* Set All Unavailable */
 .myButtonSetAllUnavail {
-  padding: 2px 2px;  
+  padding: 0.1em 0.1em;  
   border: none;
   border-radius: 5px;
   color: white;
