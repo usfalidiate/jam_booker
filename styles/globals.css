@@ -104,7 +104,7 @@ caption {
   border: 1px solid black;
   position: relative;
   left: 0%;
-  font-size: 12px;
+ font-size: 6px;
 
 }
 
@@ -123,7 +123,7 @@ margin: auto;
   border-radius: 5px;
   background-color: rgb(216, 203, 203);
   border: 1px solid black;
-  font-size: 12px;
+ font-size: 6px;
 
   /* margin: auto; */
   /* position: relative; */
@@ -214,7 +214,7 @@ margin: auto;
   height: 60px;
   outline: 1px solid black;
   opacity: 0.95;
-  font-size: 12px;
+ font-size: 6px;
 
 }
 
@@ -236,7 +236,7 @@ margin: auto;
   height: 60px; 
   outline: 1px solid black;
   opacity: 0.95;
-  font-size: 12px;
+ font-size: 6px;
 
   }
 
