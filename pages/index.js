@@ -1259,7 +1259,7 @@ return (
 
     {/* {NUDE TABLE FOR UNLOCKS} */}
 <article>
-<table className='tableNude'>
+<table className='tableToggle'>
   <tbody>
     <tr>
       <th className='thNudeDate'></th>
