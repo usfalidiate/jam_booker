@@ -173,6 +173,7 @@ margin: auto;
   height: 55px;
   opacity: 0.95;
   outline: 1px solid black;
+  font-size: 6px;
   }
 
 .myButtonUnlocked:hover{
@@ -193,6 +194,8 @@ margin: auto;
   height: 55px;
   opacity: 0.95;
   outline: 1px solid black;
+  font-size: 6px;
+
 }
 
 .myButtonLocked:hover {
@@ -256,7 +259,7 @@ margin: auto;
   background-color: #696969;
   letter-spacing: 1px;
   font-family: sans-serif;
-  font-size: .8rem;
+  font-size: 6px;
   width: 100%;
   /* width: 220px; */
   height: 80px; 
@@ -274,7 +277,7 @@ th[scope="colDate"] {
   color: rgb(37, 32, 32);
   /* width: 120px; */
   height: 80px;
- font-size: 12px;
+  font-size: 6px;
 
 }
 
@@ -283,14 +286,14 @@ th[scope="topRow"] {
   color: rgb(37, 32, 32);
   /* width: 120px; */
   height: 80px;
- font-size: 12px;
+  font-size: 6px;
 
 }
  
 th[scope="rowDay"] {
   background-color: #2d2d30;
   height: 80px;
- font-size: 12px;
+  font-size: 6px;
 
 }
 
@@ -301,7 +304,7 @@ td {
   height: 60px;
   border: 1px solid rgb(190, 190, 190);
   padding: 5px;
- font-size: 12px;
+  font-size: 6px;
 
 }
 
@@ -313,7 +316,7 @@ td {
   height: 75px;
   border: 1.5px solid black;
   opacity: 0.95;
- font-size: 12px;
+  font-size: 6px;
 
 }
 
@@ -332,7 +335,7 @@ td {
   height: 75px;
   border: 1.5px solid black;
   opacity: 0.95;
- font-size: 12px;
+  font-size: 6px;
 
 }
 
@@ -349,6 +352,8 @@ td {
   height: 75px;
   border: 1.5px solid black;
   opacity: 0.95;
+  font-size: 6px;
+
 }
 
 /* @media (prefers-color-scheme: dark) {
