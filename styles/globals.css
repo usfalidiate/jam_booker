@@ -163,7 +163,7 @@ margin: auto;
 .thNude {
   margin: auto;
   border: none;
-  padding: 5px;
+  padding: 0px;
   /* width: 120px; */
   height: 60px;    
 }
@@ -196,7 +196,7 @@ margin: auto;
 
 .myButtonUnlocked {
   background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%); 
-  padding: 0.5em 0.5em;  
+  padding: 0.3em 0.3em;  
   border: none;
   border-radius: 30px;
   color: black;
@@ -206,7 +206,7 @@ margin: auto;
   height: 55px;
   opacity: 0.95;
   outline: 1px solid black;
-  font-size: 6px;
+  font-size: 0.5em;
   }
 
 .myButtonUnlocked:hover{
@@ -227,7 +227,7 @@ margin: auto;
   height: 55px;
   opacity: 0.95;
   outline: 1px solid black;
-  font-size: 6px;
+  font-size: 0.5em;
 
 }
 
@@ -250,7 +250,7 @@ margin: auto;
   height: 60px;
   outline: 1px solid black;
   opacity: 0.95;
- font-size: 6px;
+  font-size: 0.5em;
 
 }
 
@@ -272,7 +272,7 @@ margin: auto;
   height: 60px; 
   outline: 1px solid black;
   opacity: 0.95;
- font-size: 6px;
+  font-size: 0.5em;
 
   }
 

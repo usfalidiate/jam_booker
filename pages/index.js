@@ -1305,7 +1305,7 @@ return (
         <button disabled={ unlock.user1Unlock } 
           className='myButtonSetAllAvail' 
           onClick={ setAllAvailUser1 }>
-          Set All Available <br></br> { user1Name }
+          Set All <br></br> Available <br></br> { user1Name }
         </button>
       </th>
       
@@ -1313,14 +1313,14 @@ return (
         <button disabled={ unlock.user2Unlock } 
           className='myButtonSetAllAvail' 
           onClick={ setAllAvailUser2 }>
-          Set All Available <br></br> { user2Name }
+          Set All <br></br> Available <br></br> { user2Name }
         </button>
       </th>
       
       <th className='thNude'><button disabled={ unlock.user3Unlock } 
           className='myButtonSetAllAvail' 
           onClick={ setAllAvailUser3 }>
-          Set All Available <br></br> { user3Name }
+          Set All <br></br> Available <br></br> { user3Name }
         </button>
       </th>
       
@@ -1328,7 +1328,7 @@ return (
         <button disabled={ unlock.user4Unlock } 
           className='myButtonSetAllAvail' 
           onClick={ setAllAvailUser4 }>
-          Set All Available <br></br>{ user4Name }
+          Set All <br></br> Available <br></br>{ user4Name }
         </button>
       </th> 
     </tr>
@@ -1341,7 +1341,7 @@ return (
         <button disabled={ unlock.user1Unlock } 
           className='myButtonSetAllUnavail' 
           onClick={ setAllUnAvailUser1 }>
-          Set All Unavailable <br></br> { user1Name }
+          Set All <br></br> Unavailable <br></br> { user1Name }
         </button>
       </th>
       
@@ -1349,7 +1349,7 @@ return (
         <button disabled={ unlock.user2Unlock } 
           className='myButtonSetAllUnavail' 
           onClick={ setAllUnAvailUser2 }>
-          Set All Unavailable <br></br> { user2Name }
+          Set All <br></br> Unavailable <br></br> { user2Name }
         </button>
       </th>
       
@@ -1357,7 +1357,7 @@ return (
         <button disabled={ unlock.user3Unlock } 
           className='myButtonSetAllUnavail' 
           onClick={ setAllUnAvailUser3 }>
-          Set All Unavailable <br></br> { user3Name }
+          Set All <br></br> Unavailable <br></br> { user3Name }
         </button>
       </th>
       
@@ -1365,7 +1365,7 @@ return (
         <button disabled={ unlock.user4Unlock } 
           className='myButtonSetAllUnavail' 
           onClick={ setAllUnAvailUser4 }>
-          Set All Unavailable <br></br>{ user4Name }
+          Set All <br></br> Unavailable <br></br>{ user4Name }
         </button>
       </th> 
     </tr>
