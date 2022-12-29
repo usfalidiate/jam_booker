@@ -350,7 +350,7 @@ td {
 .buttonAvail {
   background-color:green;
   color: white;
-  font-size: 0.4em;
+  font-size: 0.3em;
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
   width: 85%;
@@ -377,7 +377,7 @@ td {
   height: 75px;
   border: 1.5px solid black;
   opacity: 0.95;
-  font-size: 0.4em;
+  font-size: 0.3em;
 
 }
 
@@ -394,7 +394,7 @@ td {
   height: 75px;
   border: 1.5px solid black;
   opacity: 0.95;
-  font-size: 0.4em;
+  font-size: 0.3em;
 
 }
 
