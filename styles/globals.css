@@ -111,6 +111,7 @@ body {
 }
 
 .thHeadDate {
+  font-size: 6px;
   border: solid black 1px;
   background: rgb(50, 47, 47);
   width: 16.6666%;
@@ -119,6 +120,7 @@ body {
 }
 
 .thHeadDay {
+  font-size: 6px;
   border: 1px solid black;
   background: rgb(145, 137, 137);
   width: 16.6666%;
@@ -127,6 +129,7 @@ body {
 }
 
 .thHeadUser {
+  font-size: 6px;
   border: 1px solid black;
   background: rgb(167, 156, 156);
   width: 16.6666%;
@@ -135,6 +138,7 @@ body {
 }
 
 .thDate {
+  font-size: 6px;
   border: solid black 1px;
   background: rgb(50, 47, 47);
   width: 16.6666%;
@@ -143,6 +147,7 @@ body {
 }
 
 .thDay {
+  font-size: 6px;
   border: 1px solid black;
   background: rgb(145, 137, 137);
   width: 16.6666%;
@@ -151,6 +156,7 @@ body {
 }
 
 .tdUser {
+  font-size: 6px;
   border: 1px solid black;
   background: rgb(167, 156, 156);
   width: 16.6666%;
@@ -223,9 +229,9 @@ h2 {
 }
 
 .myButtonUnlocked {
+  font-size: 6px;
   background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%); 
   color: black;
-  font-size: 0.5em;
   font-weight: bold;
   font-family: Segoe UI, sans-serif;
   width: 95%; 
@@ -243,6 +249,7 @@ h2 {
 }
   
 .myButtonLocked {
+  font-size: 6px;
   background: linear-gradient(91.4deg, #b54900 0%, #ff0505 100%); 
   padding: 0;  
   border: none;
@@ -254,7 +261,6 @@ h2 {
   height: 55px;
   opacity: 0.95;
   outline: 1px solid black;
-  font-size: 0.5em;
 
 }
 
@@ -265,6 +271,7 @@ h2 {
 }
 
 .myButtonSetAllAvail {
+  font-size: 6px;
   padding: 0;  
   border: none;
   border-radius: 5px;
@@ -276,7 +283,6 @@ h2 {
   height: 60px;
   outline: 1px solid black;
   opacity: 0.95;
-  font-size: 0.5em;
 
 }
 
@@ -287,6 +293,7 @@ h2 {
 }
 
 .myButtonSetAllUnavail {
+  font-size: 6px;
   padding: 0;  
   border: none;
   border-radius: 5px;
@@ -298,7 +305,6 @@ h2 {
   height: 60px; 
   outline: 1px solid black;
   opacity: 0.95;
-  font-size: 0.5em;
 
   }
 
@@ -309,9 +315,9 @@ h2 {
 }
 
 .buttonAvail {
+  font-size: 6px;
   background-color:green;
   color: white;
-  font-size: 0.3em;
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
   width: 95%;
@@ -323,18 +329,18 @@ h2 {
 
 .buttonAvail:hover {
   opacity:1;
-  outline: 4px solid rgb(81, 230, 81);
+  outline: 3px solid rgb(81, 230, 81);
 }
 
 
 .buttonUnavail {
+  font-size: 6px;
   color: white;
   background-color:red;
   width: 95%;
   height: 75px;
   border: 1.5px solid black;
   opacity: 0.95;
-  font-size: 0.3em;
   border-radius: 5px;
 
 
@@ -342,7 +348,7 @@ h2 {
 
 .buttonUnavail:hover {
   opacity: 1;
-  outline: 4px solid rgb(255, 211, 220);
+  outline: 3px solid rgb(255, 211, 220);
 }
 
 .buttonUndefined {
@@ -351,8 +357,6 @@ h2 {
   height: 75px;
   border: none;
   opacity: 0;
-  font-size: 0.3em;
-
 }
 
 /* @media (prefers-color-scheme: dark) {
