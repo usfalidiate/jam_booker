@@ -1243,6 +1243,7 @@ return (
     <button className = 'buttonMonth' onClick ={()=> setActiveMonth(3)}> Apr </button>
     <button className = 'buttonMonth' onClick ={()=> setActiveMonth(4)}> May </button>
     <button className = 'buttonMonth' onClick ={()=> setActiveMonth(5)}> Jun </button>
+    <br></br>
     <button className = 'buttonMonth' onClick ={()=> setActiveMonth(6)}> Jul </button>
     <button className = 'buttonMonth' onClick ={()=> setActiveMonth(7)}> Aug </button>
     <button className = 'buttonMonth' onClick ={()=> setActiveMonth(8)}> Sep </button>
