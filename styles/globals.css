@@ -41,6 +41,7 @@
 h1 {
   text-align: center;
   background: none;
+  color: red;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -49,7 +50,7 @@ h1 {
 
 h2 {
   text-align: center;
-  color: red;
+  color: white;
   margin: 0;
 }
 
@@ -67,6 +68,7 @@ caption {
   font-weight: normal;
   padding: 0;
   margin: 0;
+  color: rgb(4, 4, 97);
 
 }
 
@@ -91,7 +93,7 @@ caption {
 /* Select Year */
 .h2Year{
   text-align: center;
-  color: blue;
+  color: white;
 }
 
 .yearArticle {
@@ -113,7 +115,7 @@ caption {
   border: 1px solid black;
   position: relative;
   left: 0%;
- font-size: 6px;
+ font-size: 1em;
 
 }
 
@@ -132,7 +134,7 @@ margin: auto;
   border-radius: 5px;
   background-color: rgb(216, 203, 203);
   border: 1px solid black;
- font-size: 6px;
+ font-size: 1em;
 
   /* margin: auto; */
   /* position: relative; */
@@ -148,7 +150,7 @@ margin: auto;
 /* Nude Table */
 .tableNude {
   table-layout: fixed;
-  margin: auto;
+  /* margin: auto; */
   border-collapse: collapse;
   background-color: black;
   letter-spacing: 1px;
@@ -162,21 +164,21 @@ margin: auto;
 
 
 .thNudeDate {
-  margin: auto;
+  /* margin: auto; */
   padding: 0px;
   width: 10%;
   height: 100px;    
 }
 
 .thNudeDay {
-  margin: auto;
+  /* margin: auto; */
   padding: 0px;
   width: 5%;
   height: 100px;    
 }
 
 .thNudeUser {
-  margin: auto;
+  /* margin: auto; */
   padding: 0px;
   width: 17%;
   height: 100px;    
@@ -188,7 +190,7 @@ margin: auto;
   background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%); 
   padding: 0.3em 0.3em;  
   border: none;
-  border-radius: 0px;
+  border-radius: 30px;
   color: black;
   font-weight: bold;
   font-family: Segoe UI, sans-serif;
@@ -209,7 +211,7 @@ margin: auto;
   background: linear-gradient(91.4deg, #b54900 0%, #ff0505 100%); 
   padding: 0.5em 0.5em;  
   border: none;
-  border-radius: 0px;
+  border-radius: 30px;
   color: white;
   font-weight: bold;
   font-family: Segoe UI, sans-serif;
@@ -231,7 +233,7 @@ margin: auto;
 .myButtonSetAllAvail {
   padding: 0.1em 0.1em;  
   border: none;
-  border-radius: 0px;
+  border-radius: 5px;
   color: white;
   background: green;
   font-weight: normal;
@@ -253,7 +255,7 @@ margin: auto;
 .myButtonSetAllUnavail {
   padding: 0.1em 0.1em;  
   border: none;
-  border-radius: 0px;
+  border-radius: 5px;
   color: white;
   background: red;
   font-weight: normal;
