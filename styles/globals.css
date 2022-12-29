@@ -2,7 +2,8 @@
 
 .myDiv {
   /* background: linear-gradient(0deg, #3e1c1c, #c20909 50%, #3e1c1c );  */
-  background: rgb(40, 40, 40);
+  /* background: rgb(40, 40, 40); */
+  background: black;
   /* outline: solid black;
   border: solid black; */
   padding: 0;
@@ -98,9 +99,8 @@ caption {
 
 .yearArticle {
   padding: 0;
-  left: 0%;
   background: black;
-  width: 100%;
+  width: 80%;
   margin: auto;
 }
 
@@ -114,8 +114,8 @@ caption {
   background-color: rgb(216,203,203);
   border: 1px solid black;
   position: relative;
-  left: 0%;
- font-size: 1em;
+  margin: auto;
+  font-size: 1em;
 
 }
 
@@ -125,6 +125,7 @@ caption {
 padding: 0;
 background: black;
 margin: auto;
+width: 80%;
 }
 
 .buttonMonth {
@@ -157,7 +158,7 @@ margin: auto;
   letter-spacing: 1px;
   font-family: sans-serif;
   font-size: .8rem;
-  width: 100%;
+  width: 80%;
   height: 80px; 
   }
 
@@ -285,7 +286,7 @@ margin: auto;
   letter-spacing: 1px;
   font-family: sans-serif;
   /* font-size: 6px; */
-  width: 100%;
+  width: 80%;
   height: 80px; 
   }
 
