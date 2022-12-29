@@ -1270,8 +1270,8 @@ return (
       <th scope="topRowUser"> Troy </th>
     </tr>
     <tr>
-      <th scope='thNudeDate'></th>
-      <th scope='thNudeDay'></th>
+      <th scope='colDate2'></th>
+      <th scope='colDay2'></th>
       <th scope='thNudeUser'>
         <button onClick={()=>
           setUnlock(prev=>{return {...prev, user1Unlock: !unlock.user1Unlock};})} 
@@ -1308,8 +1308,8 @@ return (
                 {/* {NUDE TABLE FOR SET ALL AVAILABLE} */}
 
     <tr>
-      <th className='thNudeDate'></th>
-      <th className='thNudeDay'></th>
+    <th scope='colDate2'></th>
+      <th scope='colDay2'></th>
       <th className='thNudeUser'>
         <button disabled={ unlock.user1Unlock } 
           className='myButtonSetAllAvail' 
@@ -1344,8 +1344,8 @@ return (
             {/* {NUDE TABLE FOR SET ALL UNAVAILABLE} */}
 
     <tr>
-      <th className='thNudeDate'></th>
-      <th className='thNudeDay'></th>
+    <th scope='colDate2'></th>
+      <th scope='colDay2'></th>
       <th className='thNudeUser'>
         <button disabled={ unlock.user1Unlock } 
           className='myButtonSetAllUnavail' 
