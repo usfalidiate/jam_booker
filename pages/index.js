@@ -1252,7 +1252,8 @@ return (
 </article>
 
 <article className = 'activeDateTitle'>
-  <h1> You are currently looking at:  { monthToName() } { activeYear }     </h1>
+  <h2> You are currently booking for: </h2>
+  <h1> { monthToName() } { activeYear } </h1>
 </article>
 
     {/* {NUDE TABLE FOR UNLOCKS} */}

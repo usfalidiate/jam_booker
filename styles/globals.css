@@ -43,11 +43,14 @@ h1 {
   background: none;
   width: 100%;
   padding: 0;
+  margin: 0;
+  font-size: 2em;
 }
 
 h2 {
   text-align: center;
   color: red;
+  margin: 0;
 }
 
 caption {
@@ -59,10 +62,12 @@ caption {
 .h1Jam {
   font-size: 15px;
   text-align: left;
-  background: yellow;
+  background: black;
   width: 100%;
   font-weight: normal;
   padding: 0;
+  margin: 0;
+
 }
 
 /* Header Image */
@@ -73,10 +78,14 @@ caption {
   width: 100%;
   opacity: 1;
   padding: 0;
+  margin: 0;
 }
 
 .bandLogoArticle {
-  background: white;
+  background: black;
+  padding: 0;
+  margin: 0;
+
 }
 
 /* Select Year */
