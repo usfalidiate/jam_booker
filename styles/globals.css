@@ -32,6 +32,21 @@ body {
   margin: 0;
 
 }
+
+.availSumTitleArticle {
+  padding: 0;
+  background: black;
+  margin: auto;
+  width: 80%; 
+}
+
+.availSumDatesArticle {
+  padding: 0;
+  background: rgb(41, 40, 40);
+  border-radius: 5px;
+  margin: auto;
+  width: 80%; 
+}
   
 .monthArticle {
   padding: 0;
@@ -189,6 +204,23 @@ h2 {
   color: white;
   margin: 0;
 }
+
+.h2AvailSum {
+  text-align: center;
+  color: white;
+}
+
+.h2AvailSumMonth {
+  text-align: center;
+  color: red;
+}
+
+.h2AllAvailDates {
+  font-size: 1em;
+  text-align: center;
+  color: rgb(174, 163, 9);
+}
+
 
 .h2Year{
   text-align: center;

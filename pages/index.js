@@ -246,6 +246,18 @@ function tableDayName (i) {
       if (activeDate.getDay() == 6) { return 'Sat' }
 }
 
+function tableDayNameLong (i) {
+  let activeDate = new Date(activeYear, activeMonth, tableDayNameArray[i]);
+      activeDate.getDay();
+      if (activeDate.getDay() == 0) { return 'Sunday' }
+      if (activeDate.getDay() == 1) { return 'Monday' }
+      if (activeDate.getDay() == 2) { return 'Tuesday' }
+      if (activeDate.getDay() == 3) { return 'Wednesday' }
+      if (activeDate.getDay() == 4) { return 'Thursday' }
+      if (activeDate.getDay() == 5) { return 'Friday' }
+      if (activeDate.getDay() == 6) { return 'Saturday' }
+}
+
 //////   SET INIT DATA FROM FIRESTORE ON LOAD   //////
 useEffect(()=> {
     const loadDoc = async () => {
@@ -1229,6 +1241,260 @@ useEffect(() => {
       
 },[ trig, activeMonth, activeYear ]);
 
+//////   DATES WHERE ALL ARE FREE   //////
+const allFree1 = () => {  
+  if ((users.user1.day1 && users.user2.day1 && users.user3.day1 && users.user4.day1) == true ) {
+    return [tableDayNameLong(0) , ' ', tableDayNameArray[0], ' ', monthToNameLong()]
+  } else {
+    
+  }   
+};
+
+const allFree2 = () => {  
+  if ((users.user1.day2 && users.user2.day2 && users.user3.day2 && users.user4.day2) == true ) {
+    return [tableDayNameLong(1) , ' ', tableDayNameArray[1], ' ', monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree3 = () => {  
+  if ((users.user1.day3 && users.user2.day3 && users.user3.day3 && users.user4.day3) == true ) {
+    return [tableDayNameLong(2) , ' ', tableDayNameArray[2], ' ', monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree4 = () => {  
+  if ((users.user1.day4 && users.user2.day4 && users.user3.day4 && users.user4.day4) == true ) {
+    return [tableDayNameLong(3) , ' ', tableDayNameArray[3], ' ', monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree5 = () => {  
+  if ((users.user1.day5 && users.user2.day5 && users.user3.day5 && users.user4.day5) == true ) {
+    return [tableDayNameLong(4) , ' ', tableDayNameArray[4], ' ', monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree6 = () => {  
+  if ((users.user1.day6 && users.user2.day6 && users.user3.day6 && users.user4.day6) == true ) {
+    return [tableDayNameLong(5) , ' ', tableDayNameArray[5], ' ', monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree7 = () => {  
+  if ((users.user1.day7 && users.user2.day7 && users.user3.day7 && users.user4.day7) == true ) {
+    return [tableDayNameLong(6) , ' ', tableDayNameArray[6], ' ', monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree8 = () => {  
+  if ((users.user1.day8 && users.user2.day8 && users.user3.day8 && users.user4.day8) == true ) {
+    return [tableDayNameLong(7) , ' ', tableDayNameArray[7], ' ', monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree9 = () => {  
+  if ((users.user1.day9 && users.user2.day9 && users.user3.day9 && users.user4.day9) == true ) {
+    return [tableDayNameLong(8) , ' ', tableDayNameArray[8], ' ', monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree10 = () => {  
+  if ((users.user1.day10 && users.user2.day10 && users.user3.day10 && users.user4.day10) == true ) {
+    return [tableDayNameLong(9) , ' ', tableDayNameArray[9], ' ', monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree11 = () => {  
+  if ((users.user1.day11 && users.user2.day11 && users.user3.day11 && users.user4.day11) == true ) {
+    return [tableDayNameLong(10), ' ', tableDayNameArray[10], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree12 = () => {  
+  if ((users.user1.day12 && users.user2.day12 && users.user3.day12 && users.user4.day12) == true ) {
+    return [tableDayNameLong(11), ' ', tableDayNameArray[11], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree13 = () => {  
+  if ((users.user1.day13 && users.user2.day13 && users.user3.day13 && users.user4.day13) == true ) {
+    return [tableDayNameLong(12), ' ', tableDayNameArray[12], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree14 = () => {  
+  if ((users.user1.day14 && users.user2.day14 && users.user3.day14 && users.user4.day14) == true ) {
+    return [tableDayNameLong(13), ' ', tableDayNameArray[13], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree15 = () => {  
+  if ((users.user1.day15 && users.user2.day15 && users.user3.day15 && users.user4.day15) == true ) {
+    return [tableDayNameLong(14), ' ', tableDayNameArray[14], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree16 = () => {  
+  if ((users.user1.day16 && users.user2.day16 && users.user3.day16 && users.user4.day16) == true ) {
+    return [tableDayNameLong(15), ' ', tableDayNameArray[15], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree17 = () => {  
+  if ((users.user1.day17 && users.user2.day17 && users.user3.day17 && users.user4.day17) == true ) {
+    return [tableDayNameLong(16), ' ', tableDayNameArray[16], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree18 = () => {  
+  if ((users.user1.day18 && users.user2.day18 && users.user3.day18 && users.user4.day18) == true ) {
+    return [tableDayNameLong(17), ' ', tableDayNameArray[17], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree19 = () => {  
+  if ((users.user1.day19 && users.user2.day19 && users.user3.day19 && users.user4.day19) == true ) {
+    return [tableDayNameLong(18), ' ', tableDayNameArray[18], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree20 = () => {  
+  if ((users.user1.day20 && users.user2.day20 && users.user3.day20 && users.user4.day20) == true ) {
+    return [tableDayNameLong(19), ' ', tableDayNameArray[19], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree21 = () => {  
+  if ((users.user1.day21 && users.user2.day21 && users.user3.day21 && users.user4.day21) == true ) {
+    return [tableDayNameLong(20), ' ', tableDayNameArray[20], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree22 = () => {  
+  if ((users.user1.day22 && users.user2.day22 && users.user3.day22 && users.user4.day22) == true ) {
+    return [tableDayNameLong(21), ' ', tableDayNameArray[21], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree23 = () => {  
+  if ((users.user1.day23 && users.user2.day23 && users.user3.day23 && users.user4.day23) == true ) {
+    return [tableDayNameLong(22), ' ', tableDayNameArray[22], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree24 = () => {  
+  if ((users.user1.day24 && users.user2.day24 && users.user3.day24 && users.user4.day24) == true ) {
+    return [tableDayNameLong(23), ' ', tableDayNameArray[23], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree25 = () => {  
+  if ((users.user1.day25 && users.user2.day25 && users.user3.day25 && users.user4.day25) == true ) {
+    return [tableDayNameLong(24), ' ', tableDayNameArray[24], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree26 = () => {  
+  if ((users.user1.day26 && users.user2.day26 && users.user3.day26 && users.user4.day26) == true ) {
+    return [tableDayNameLong(25), ' ', tableDayNameArray[25], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree27 = () => {  
+  if ((users.user1.day27 && users.user2.day27 && users.user3.day27 && users.user4.day27) == true ) {
+    return [tableDayNameLong(26), ' ', tableDayNameArray[26], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree28 = () => {  
+  if ((users.user1.day28 && users.user2.day28 && users.user3.day28 && users.user4.day28) == true ) {
+    return [tableDayNameLong(27), ' ', tableDayNameArray[27], ' ',  monthToNameLong()]
+  } else {
+
+  }
+};
+
+const allFree29 = () => {  
+  if (hide29 == true) {
+  } else {  
+    if ((users.user1.day29 && users.user2.day29 && users.user3.day29 && users.user4.day29) == true ) {
+      return [tableDayNameLong(28), ' ', tableDayNameArray[28], ' ',  monthToNameLong()]
+    } else {
+    }
+  }
+};
+
+const allFree30 = () => {  
+  if (hide30 == true) {
+  } else {
+    if ((users.user1.day30 && users.user2.day30 && users.user3.day30 && users.user4.day30) == true ) {
+      return [tableDayNameLong(29), ' ', tableDayNameArray[29], ' ',  monthToNameLong()]
+    } else {
+    }
+  }
+};
+
+const allFree31 = () => {  
+  if (hide31 == true) {
+  } else {    
+    if ((users.user1.day31 && users.user2.day31 && users.user3.day31 && users.user4.day31) == true ) {
+      return [tableDayNameLong(30), ' ', tableDayNameArray[30], ' ',  monthToNameLong()]
+    } else {
+    }
+  }
+};
 
 //////   RETURN ELEMENTS   //////
 return (
@@ -1247,11 +1513,59 @@ return (
     />
 </article>
 
+<article className = 'availSumTitleArticle'>
+  <h2 className = 'h2AvailSum'>
+    For the month of <span className = 'h2AvailSumMonth'> {monthToNameLong()} {activeYear}</span>, everyone is free to jam on:
+  </h2>
+</article>
+
+<article className = 'availSumDatesArticle'>
+  <h2 className = 'h2AllAvailDates'>
+    {allFree1()} &nbsp; &nbsp; &nbsp;
+    {allFree2()} &nbsp; &nbsp; &nbsp;
+    {allFree3()} &nbsp; &nbsp; &nbsp;
+    {allFree4()} &nbsp; &nbsp; &nbsp;
+    {allFree5()} &nbsp; &nbsp; &nbsp;
+    {allFree6()} &nbsp; &nbsp; &nbsp;
+    {allFree7()} &nbsp; &nbsp; &nbsp;
+    {allFree8()} &nbsp; &nbsp; &nbsp;
+    {allFree9()} &nbsp; &nbsp; &nbsp;
+    {allFree10()} &nbsp; &nbsp; &nbsp;
+    {allFree11()} &nbsp; &nbsp; &nbsp;
+    {allFree12()} &nbsp; &nbsp; &nbsp;
+    {allFree13()} &nbsp; &nbsp; &nbsp;
+    {allFree14()} &nbsp; &nbsp; &nbsp;
+    {allFree15()} &nbsp; &nbsp; &nbsp;
+    {allFree16()} &nbsp; &nbsp; &nbsp;
+    {allFree17()} &nbsp; &nbsp; &nbsp;
+    {allFree18()} &nbsp; &nbsp; &nbsp;
+    {allFree19()} &nbsp; &nbsp; &nbsp;
+    {allFree20()} &nbsp; &nbsp; &nbsp;
+    {allFree21()} &nbsp; &nbsp; &nbsp;
+    {allFree22()} &nbsp; &nbsp; &nbsp;
+    {allFree23()} &nbsp; &nbsp; &nbsp;
+    {allFree24()} &nbsp; &nbsp; &nbsp;
+    {allFree25()} &nbsp; &nbsp; &nbsp;
+    {allFree26()} &nbsp; &nbsp; &nbsp;
+    {allFree27()} &nbsp; &nbsp; &nbsp;
+    {allFree28()} &nbsp; &nbsp; &nbsp;
+    {allFree29()} &nbsp; &nbsp; &nbsp;
+    {allFree30()} &nbsp; &nbsp; &nbsp;
+    {allFree31()} &nbsp; &nbsp; &nbsp;
+
+  </h2>
+
+</article>
+
+<br></br>
+
 <article className = 'yearArticle' >
   <h2 className = 'h2Year'>Select Year</h2>
     <button className = 'buttonYear' onClick={()=> setActiveYear(2022)}> 2022 </button>
     <button className = 'buttonYear' onClick={()=> setActiveYear(2023)}> 2023 </button>
 </article>
+
+<br></br>
 
 <article className = 'monthArticle' >
   <h2>Select Month</h2>
@@ -1270,10 +1584,15 @@ return (
     <button className = 'buttonMonth' onClick ={()=> setActiveMonth(11)}> Dec </button>
 </article>
 
+<br></br>
+
 <article className = 'activeDateArticle'>
   <h2> You are currently looking at: </h2>
   <h1> { monthToNameLong() } { activeYear } </h1>
 </article>
+
+<br></br>
+
 
     {/* {NUDE TABLE FOR UNLOCKS} */}
 <article>
