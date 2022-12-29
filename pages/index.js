@@ -1237,18 +1237,18 @@ return (
 
 <article className = 'monthArticle' >
   <h2>Select Month</h2>
-    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(0)}> January </button>
-    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(1)}> February </button>
-    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(2)}> March </button>
-    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(3)}> April </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(0)}> Jan </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(1)}> Feb </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(2)}> Mar </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(3)}> Apr </button>
     <button className = 'buttonMonth' onClick ={()=> setActiveMonth(4)}> May </button>
-    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(5)}> June </button>
-    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(6)}> July </button>
-    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(7)}> August </button>
-    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(8)}> September </button>
-    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(9)}> October </button>
-    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(10)}> November </button>
-    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(11)}> December </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(5)}> Jun </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(6)}> Jul </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(7)}> Aug </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(8)}> Sep </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(9)}> Oct </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(10)}> Nov </button>
+    <button className = 'buttonMonth' onClick ={()=> setActiveMonth(11)}> Dec </button>
 </article>
 
 <article className = 'activeDateTitle'>
