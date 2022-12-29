@@ -1363,7 +1363,7 @@ return (
         <button disabled={ unlock.user1Unlock } 
           className='myButtonSetAllUnavail' 
           onClick={ setAllUnAvailUser1 }>
-          Set All <br></br> Unavailable <br></br> { user1Name }
+          Set All <br></br> N/A <br></br> { user1Name }
         </button>
       </td>
       
@@ -1371,7 +1371,7 @@ return (
         <button disabled={ unlock.user2Unlock } 
           className='myButtonSetAllUnavail' 
           onClick={ setAllUnAvailUser2 }>
-          Set All <br></br> Unavailable <br></br> { user2Name }
+          Set All <br></br> N/A <br></br> { user2Name }
         </button>
       </td>
       
@@ -1379,7 +1379,7 @@ return (
         <button disabled={ unlock.user3Unlock } 
           className='myButtonSetAllUnavail' 
           onClick={ setAllUnAvailUser3 }>
-          Set All <br></br> Unavailable <br></br> { user3Name }
+          Set All <br></br> N/A <br></br> { user3Name }
         </button>
       </td>
       
@@ -1387,7 +1387,7 @@ return (
         <button disabled={ unlock.user4Unlock } 
           className='myButtonSetAllUnavail' 
           onClick={ setAllUnAvailUser4 }>
-          Set All <br></br> Unavailable <br></br>{ user4Name }
+          Set All <br></br> N/A <br></br>{ user4Name }
         </button>
       </td> 
     </tr>
@@ -1396,7 +1396,7 @@ return (
 </article>
 
 
-            {/* { TABLE FOR TOGGLE AVAILS } */}
+            {/* { MAIN TABLE FOR TOGGLE AVAILS } */}
 
 
 <article>
