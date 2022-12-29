@@ -1299,9 +1299,9 @@ return (
                 {/* {NUDE TABLE FOR SET ALL AVAILABLE} */}
 
     <tr>
-      <th className='thNude'></th>
-      <th className='thNude'></th>
-      <th className='thNude'>
+      <th className='thNudeDate'></th>
+      <th className='thNudeDay'></th>
+      <th className='thNudeUser'>
         <button disabled={ unlock.user1Unlock } 
           className='myButtonSetAllAvail' 
           onClick={ setAllAvailUser1 }>
@@ -1309,7 +1309,7 @@ return (
         </button>
       </th>
       
-      <th className='thNude'>
+      <th className='thNudeUser'>
         <button disabled={ unlock.user2Unlock } 
           className='myButtonSetAllAvail' 
           onClick={ setAllAvailUser2 }>
@@ -1317,14 +1317,14 @@ return (
         </button>
       </th>
       
-      <th className='thNude'><button disabled={ unlock.user3Unlock } 
+      <th className='thNudeUser'><button disabled={ unlock.user3Unlock } 
           className='myButtonSetAllAvail' 
           onClick={ setAllAvailUser3 }>
           Set All <br></br> Available <br></br> { user3Name }
         </button>
       </th>
       
-      <th className='thNude'>
+      <th className='thNudeUser'>
         <button disabled={ unlock.user4Unlock } 
           className='myButtonSetAllAvail' 
           onClick={ setAllAvailUser4 }>
@@ -1335,9 +1335,9 @@ return (
             {/* {NUDE TABLE FOR SET ALL UNAVAILABLE} */}
 
     <tr>
-      <th className='thNude'></th>
-      <th className='thNude'></th>
-      <th className='thNude'>
+      <th className='thNudeDate'></th>
+      <th className='thNudeDay'></th>
+      <th className='thNudeUser'>
         <button disabled={ unlock.user1Unlock } 
           className='myButtonSetAllUnavail' 
           onClick={ setAllUnAvailUser1 }>
@@ -1345,7 +1345,7 @@ return (
         </button>
       </th>
       
-      <th className='thNude'>
+      <th className='thNudeUser'>
         <button disabled={ unlock.user2Unlock } 
           className='myButtonSetAllUnavail' 
           onClick={ setAllUnAvailUser2 }>
@@ -1353,7 +1353,7 @@ return (
         </button>
       </th>
       
-      <th className='thNude'>
+      <th className='thNudeUser'>
         <button disabled={ unlock.user3Unlock } 
           className='myButtonSetAllUnavail' 
           onClick={ setAllUnAvailUser3 }>
@@ -1361,7 +1361,7 @@ return (
         </button>
       </th>
       
-      <th className='thNude'>
+      <th className='thNudeUser'>
         <button disabled={ unlock.user4Unlock } 
           className='myButtonSetAllUnavail' 
           onClick={ setAllUnAvailUser4 }>
