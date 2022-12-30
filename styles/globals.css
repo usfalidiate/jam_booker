@@ -74,6 +74,10 @@ body {
   background: black;
 }
 
+.disclaimerArticle {
+  background: black;
+}
+
 .headerImg {
   position: relative;
   z-index: auto;
@@ -121,7 +125,6 @@ body {
   background: black;
   width: 16.6666%;
   height: 70px;
-
 }
 
 .tdUserNude {
@@ -139,21 +142,18 @@ body {
   background: linear-gradient(0deg, rgb(20, 20, 20), rgb(50, 50, 50) 50%, rgb(20, 20, 20)); 
   width: 16.6666%;
   height: 80px;
-
 }
 
 .thHeadDay {
   font-size: 0.7em; 
   border: 1px solid black;
   background: linear-gradient(0deg, rgb(20, 20, 20), rgb(50, 50, 50) 50%, rgb(20, 20, 20));   height: 80px;
-
 }
 
 .thHeadUser {
   font-size: 0.7em;
   border: 1px solid black;
   background: linear-gradient(0deg, rgb(20, 20, 20), rgb(50, 50, 50) 50%, rgb(20, 20, 20));   height: 80px;
-
 }
 
 .thDate {
@@ -163,7 +163,6 @@ body {
   background: linear-gradient(90deg, rgb(47, 47, 47), rgb(67, 67, 67) 50%, rgb(47, 47, 47)); 
   width: 16.6666%;
   height: 80px;
-
 }
 
 .thDay {
@@ -173,27 +172,6 @@ body {
   background: linear-gradient(90deg, rgb(70, 70, 70), rgb(90, 90, 90) 50%, rgb(70, 70, 70)); 
   width: 16.6666%;
   height: 80px;
-
-}
-
-.thDateHidden {
-  font-size: 0em;
-  border: solid black 1px;
-  background: rgb(50, 47, 47);
-  background: linear-gradient(90deg, rgb(47, 47, 47), rgb(67, 67, 67) 50%, rgb(47, 47, 47)); 
-  width: 16.6666%;
-  height: 80px;
-
-}
-
-.thDayHidden {
-  font-size: 0em;
-  border: 1px solid black;
-  /* background: rgb(72, 72, 72); */
-  background: linear-gradient(90deg, rgb(70, 70, 70), rgb(90, 90, 90) 50%, rgb(70, 70, 70)); 
-  width: 16.6666%;
-  height: 80px;
-
 }
 
 .tdUser {
@@ -202,7 +180,28 @@ body {
   width: 16.6666%;
   height: 80px;
   text-align: center;
+}
 
+.thDateHidden {
+  font-size: 0em;
+  border: solid black 1px;
+  background: solid black;  width: 16.6666%;
+  height: 80px;
+}
+
+.thDayHidden {
+  font-size: 0em;
+  border: 1px solid black;
+  background: solid black;  width: 16.6666%;
+  height: 80px;
+}
+
+.tdUserHidden {
+  border: 1px solid black;
+  background: solid black;
+  width: 16.6666%;
+  height: 80px;
+  text-align: center;
 }
 
 h1 {
@@ -257,6 +256,13 @@ h2 {
 .h2Month{
   text-align: center;
   color: white;
+}
+
+.h3Disclaimer {
+  text-align: left;
+  font-size: 0.8em;
+  color: purple;
+  margin: 0px 0px;
 }
 
 .pSpace {

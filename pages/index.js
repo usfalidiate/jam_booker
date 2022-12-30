@@ -2913,7 +2913,7 @@ return (
     <tr>
       <th className={ hide29 ? "thDateHidden" : "thDate"}> { monthToName() } { tableDayNameArray[28] }</th>
       <th className={ hide29 ? "thDayHidden" : "thDay"}> { tableDayName(28) } </th>
-      <td className = "tdUser">    
+      <td className= {hide29 ? "thUserHidden" : "tdUser"}>    
           <button 
           disabled={unlock.user1Unlock || hide29 }
           onClick={ () => {
@@ -2922,7 +2922,7 @@ return (
             > { hide29 ? ' ' : users.user1.day29 ? 'Available' : 'N/A' } 
             </button>      
         </td>
-        <td className = "tdUser">    
+        <td className= {hide29 ? "thUserHidden" : "tdUser"}>    
           <button 
           disabled={unlock.user2Unlock || hide29 }
           onClick={ () => {
@@ -2931,7 +2931,7 @@ return (
             > { hide29 ? ' ' : users.user2.day29 ? 'Available' : 'N/A' } 
             </button>      
         </td>
-        <td className = "tdUser">    
+        <td className= {hide29 ? "thUserHidden" : "tdUser"}>    
           <button 
           disabled={unlock.user3Unlock || hide29 }
           onClick={ () => {
@@ -2940,7 +2940,7 @@ return (
             > { hide29 ? ' ' : users.user3.day29 ? 'Available' : 'N/A' } 
             </button>      
         </td>
-        <td className = "tdUser">    
+        <td className= {hide29 ? "thUserHidden" : "tdUser"}>    
           <button 
           disabled={unlock.user4Unlock || hide29 }
           onClick={ () => {
@@ -2954,7 +2954,7 @@ return (
     <tr>
       <th className={ hide30 ? "thDateHidden" : "thDate"}> { monthToName() } { tableDayNameArray[29] }</th>
       <th className={ hide30 ? "thDayHidden" : "thDay"}> { tableDayName(29) } </th>
-      <td className = "tdUser">    
+      <td className= {hide30 ? "thUserHidden" : "tdUser"}>    
           <button 
           disabled={unlock.user1Unlock || hide30 }
           onClick={ () => {
@@ -2963,7 +2963,7 @@ return (
             > { hide30 ? ' ' : users.user1.day30 ? 'Available' : 'N/A' } 
             </button>      
         </td>
-        <td className = "tdUser">    
+        <td className= {hide30 ? "thUserHidden" : "tdUser"}>    
           <button 
           disabled={unlock.user2Unlock || hide30}
           onClick={ () => {
@@ -2972,7 +2972,7 @@ return (
             > { hide30 ? ' ' : users.user2.day30 ? 'Available' : 'N/A' } 
             </button>      
         </td>
-        <td className = "tdUser">    
+        <td className= {hide30 ? "thUserHidden" : "tdUser"}>    
           <button 
           disabled={unlock.user3Unlock || hide30}
           onClick={ () => {
@@ -2981,7 +2981,7 @@ return (
             > { hide30 ? ' ' : users.user3.day30 ? 'Available' : 'N/A' } 
             </button>      
         </td>
-        <td className = "tdUser">    
+        <td className= {hide30 ? "thUserHidden" : "tdUser"}>    
           <button 
           disabled={unlock.user4Unlock || hide30}
           onClick={ () => {
@@ -2995,7 +2995,7 @@ return (
     <tr>
       <th className={ hide31 ? "thDateHidden" : "thDate"}> { monthToName() } { tableDayNameArray[30] }</th>
       <th className={ hide31 ? "thDayHidden" : "thDay"}> { tableDayName(30) } </th>
-      <td className = "tdUser">    
+      <td className= {hide31 ? "thUserHidden" : "tdUser"}>    
           <button 
           disabled={unlock.user1Unlock || hide31 }
           onClick={ () => {
@@ -3004,7 +3004,7 @@ return (
             > { hide31 ? ' ' : users.user1.day31 ? 'Available' : 'N/A' } 
             </button>      
         </td>
-        <td className = "tdUser">    
+        <td className= {hide31 ? "thUserHidden" : "tdUser"}>    
           <button 
           disabled={unlock.user2Unlock || hide31 }
           onClick={ () => {
@@ -3013,7 +3013,7 @@ return (
             > { hide31 ? ' ' : users.user2.day31 ? 'Available' : 'N/A' } 
             </button>      
         </td>
-        <td className = "tdUser">    
+        <td className= {hide31 ? "thUserHidden" : "tdUser"}>    
           <button 
           disabled={unlock.user3Unlock || hide31 }
           onClick={ () => {
@@ -3022,7 +3022,7 @@ return (
             > { hide31 ? ' ' : users.user3.day31 ? 'Available' : 'N/A' } 
             </button>      
         </td>
-        <td className = "tdUser">    
+        <td className= {hide31 ? "thUserHidden" : "tdUser"}>    
           <button 
           disabled={unlock.user4Unlock || hide31 }
           onClick={ () => {
@@ -3034,6 +3034,11 @@ return (
     </tr>    
   </tbody>
 </table>
+</article>
+<article classname = 'disclaimerArticle'>
+  <h3 className = 'h3Disclaimer'>
+    If you experience any problems using this website, please shove them up your ass.  <br></br>
+  </h3>
 </article>
 </div> 
 );
