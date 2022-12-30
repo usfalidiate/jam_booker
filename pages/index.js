@@ -1270,7 +1270,7 @@ const allFree3 = () => {
 
 const allFree4 = () => {  
   if ((users.user1.day4 && users.user2.day4 && users.user3.day4 && users.user4.day4) == true ) {
-    return [ '(', tableDayNameLong(3) , ' ', tableDayNameArray[3], ' ', monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(3) , ' ', tableDayNameArray[3], ' ', monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1278,7 +1278,7 @@ const allFree4 = () => {
 
 const allFree5 = () => {  
   if ((users.user1.day5 && users.user2.day5 && users.user3.day5 && users.user4.day5) == true ) {
-    return [ '(', tableDayNameLong(4) , ' ', tableDayNameArray[4], ' ', monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(4) , ' ', tableDayNameArray[4], ' ', monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1286,7 +1286,7 @@ const allFree5 = () => {
 
 const allFree6 = () => {  
   if ((users.user1.day6 && users.user2.day6 && users.user3.day6 && users.user4.day6) == true ) {
-    return [ '(', tableDayNameLong(5) , ' ', tableDayNameArray[5], ' ', monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(5) , ' ', tableDayNameArray[5], ' ', monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1294,7 +1294,7 @@ const allFree6 = () => {
 
 const allFree7 = () => {  
   if ((users.user1.day7 && users.user2.day7 && users.user3.day7 && users.user4.day7) == true ) {
-    return [ '(', tableDayNameLong(6) , ' ', tableDayNameArray[6], ' ', monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(6) , ' ', tableDayNameArray[6], ' ', monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1302,7 +1302,7 @@ const allFree7 = () => {
 
 const allFree8 = () => {  
   if ((users.user1.day8 && users.user2.day8 && users.user3.day8 && users.user4.day8) == true ) {
-    return [ '(', tableDayNameLong(7) , ' ', tableDayNameArray[7], ' ', monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(7) , ' ', tableDayNameArray[7], ' ', monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1310,7 +1310,7 @@ const allFree8 = () => {
 
 const allFree9 = () => {  
   if ((users.user1.day9 && users.user2.day9 && users.user3.day9 && users.user4.day9) == true ) {
-    return [ '(', tableDayNameLong(8) , ' ', tableDayNameArray[8], ' ', monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(8) , ' ', tableDayNameArray[8], ' ', monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1318,7 +1318,7 @@ const allFree9 = () => {
 
 const allFree10 = () => {  
   if ((users.user1.day10 && users.user2.day10 && users.user3.day10 && users.user4.day10) == true ) {
-    return [ '(', tableDayNameLong(9) , ' ', tableDayNameArray[9], ' ', monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(9) , ' ', tableDayNameArray[9], ' ', monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1326,7 +1326,7 @@ const allFree10 = () => {
 
 const allFree11 = () => {  
   if ((users.user1.day11 && users.user2.day11 && users.user3.day11 && users.user4.day11) == true ) {
-    return [ '(', tableDayNameLong(10), ' ', tableDayNameArray[10], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(10), ' ', tableDayNameArray[10], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1334,7 +1334,7 @@ const allFree11 = () => {
 
 const allFree12 = () => {  
   if ((users.user1.day12 && users.user2.day12 && users.user3.day12 && users.user4.day12) == true ) {
-    return [ '(', tableDayNameLong(11), ' ', tableDayNameArray[11], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(11), ' ', tableDayNameArray[11], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1342,7 +1342,7 @@ const allFree12 = () => {
 
 const allFree13 = () => {  
   if ((users.user1.day13 && users.user2.day13 && users.user3.day13 && users.user4.day13) == true ) {
-    return [ '(', tableDayNameLong(12), ' ', tableDayNameArray[12], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(12), ' ', tableDayNameArray[12], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1350,7 +1350,7 @@ const allFree13 = () => {
 
 const allFree14 = () => {  
   if ((users.user1.day14 && users.user2.day14 && users.user3.day14 && users.user4.day14) == true ) {
-    return [ '(', tableDayNameLong(13), ' ', tableDayNameArray[13], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(13), ' ', tableDayNameArray[13], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1358,7 +1358,7 @@ const allFree14 = () => {
 
 const allFree15 = () => {  
   if ((users.user1.day15 && users.user2.day15 && users.user3.day15 && users.user4.day15) == true ) {
-    return [ '(', tableDayNameLong(14), ' ', tableDayNameArray[14], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(14), ' ', tableDayNameArray[14], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1366,7 +1366,7 @@ const allFree15 = () => {
 
 const allFree16 = () => {  
   if ((users.user1.day16 && users.user2.day16 && users.user3.day16 && users.user4.day16) == true ) {
-    return [ '(', tableDayNameLong(15), ' ', tableDayNameArray[15], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(15), ' ', tableDayNameArray[15], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1374,7 +1374,7 @@ const allFree16 = () => {
 
 const allFree17 = () => {  
   if ((users.user1.day17 && users.user2.day17 && users.user3.day17 && users.user4.day17) == true ) {
-    return [ '(', tableDayNameLong(16), ' ', tableDayNameArray[16], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(16), ' ', tableDayNameArray[16], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1382,7 +1382,7 @@ const allFree17 = () => {
 
 const allFree18 = () => {  
   if ((users.user1.day18 && users.user2.day18 && users.user3.day18 && users.user4.day18) == true ) {
-    return [ '(', tableDayNameLong(17), ' ', tableDayNameArray[17], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(17), ' ', tableDayNameArray[17], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1390,7 +1390,7 @@ const allFree18 = () => {
 
 const allFree19 = () => {  
   if ((users.user1.day19 && users.user2.day19 && users.user3.day19 && users.user4.day19) == true ) {
-    return [ '(', tableDayNameLong(18), ' ', tableDayNameArray[18], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(18), ' ', tableDayNameArray[18], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1398,7 +1398,7 @@ const allFree19 = () => {
 
 const allFree20 = () => {  
   if ((users.user1.day20 && users.user2.day20 && users.user3.day20 && users.user4.day20) == true ) {
-    return [ '(', tableDayNameLong(19), ' ', tableDayNameArray[19], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(19), ' ', tableDayNameArray[19], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1406,7 +1406,7 @@ const allFree20 = () => {
 
 const allFree21 = () => {  
   if ((users.user1.day21 && users.user2.day21 && users.user3.day21 && users.user4.day21) == true ) {
-    return [ '(', tableDayNameLong(20), ' ', tableDayNameArray[20], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(20), ' ', tableDayNameArray[20], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1414,7 +1414,7 @@ const allFree21 = () => {
 
 const allFree22 = () => {  
   if ((users.user1.day22 && users.user2.day22 && users.user3.day22 && users.user4.day22) == true ) {
-    return [ '(', tableDayNameLong(21), ' ', tableDayNameArray[21], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(21), ' ', tableDayNameArray[21], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1422,7 +1422,7 @@ const allFree22 = () => {
 
 const allFree23 = () => {  
   if ((users.user1.day23 && users.user2.day23 && users.user3.day23 && users.user4.day23) == true ) {
-    return [ '(', tableDayNameLong(22), ' ', tableDayNameArray[22], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(22), ' ', tableDayNameArray[22], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1430,7 +1430,7 @@ const allFree23 = () => {
 
 const allFree24 = () => {  
   if ((users.user1.day24 && users.user2.day24 && users.user3.day24 && users.user4.day24) == true ) {
-    return [ '(', tableDayNameLong(23), ' ', tableDayNameArray[23], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(23), ' ', tableDayNameArray[23], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1438,7 +1438,7 @@ const allFree24 = () => {
 
 const allFree25 = () => {  
   if ((users.user1.day25 && users.user2.day25 && users.user3.day25 && users.user4.day25) == true ) {
-    return [ '(', tableDayNameLong(24), ' ', tableDayNameArray[24], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(24), ' ', tableDayNameArray[24], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1446,7 +1446,7 @@ const allFree25 = () => {
 
 const allFree26 = () => {  
   if ((users.user1.day26 && users.user2.day26 && users.user3.day26 && users.user4.day26) == true ) {
-    return [ '(', tableDayNameLong(25), ' ', tableDayNameArray[25], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(25), ' ', tableDayNameArray[25], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1454,7 +1454,7 @@ const allFree26 = () => {
 
 const allFree27 = () => {  
   if ((users.user1.day27 && users.user2.day27 && users.user3.day27 && users.user4.day27) == true ) {
-    return [ '(', tableDayNameLong(26), ' ', tableDayNameArray[26], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(26), ' ', tableDayNameArray[26], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1462,7 +1462,7 @@ const allFree27 = () => {
 
 const allFree28 = () => {  
   if ((users.user1.day28 && users.user2.day28 && users.user3.day28 && users.user4.day28) == true ) {
-    return [ '(', tableDayNameLong(27), ' ', tableDayNameArray[27], ' ',  monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(27), ' ', tableDayNameArray[27], ' ',  monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1472,7 +1472,7 @@ const allFree29 = () => {
   if (hide29 == true) {
   } else {  
     if ((users.user1.day29 && users.user2.day29 && users.user3.day29 && users.user4.day29) == true ) {
-      return [ '(', tableDayNameLong(28), ' ', tableDayNameArray[28], ' ',  monthToNameLong(), ')' ]
+      return [ '(', tableDayNameLong(28), ' ', tableDayNameArray[28], ' ',  monthToNameLong(), ')', br ]
     } else {
     }
   }
@@ -1482,7 +1482,7 @@ const allFree30 = () => {
   if (hide30 == true) {
   } else {
     if ((users.user1.day30 && users.user2.day30 && users.user3.day30 && users.user4.day30) == true ) {
-      return [ '(', tableDayNameLong(29), ' ', tableDayNameArray[29], ' ',  monthToNameLong(), ')' ]
+      return [ '(', tableDayNameLong(29), ' ', tableDayNameArray[29], ' ',  monthToNameLong(), ')', br ]
     } else {
     }
   }
@@ -1492,7 +1492,7 @@ const allFree31 = () => {
   if (hide31 == true) {
   } else {    
     if ((users.user1.day31 && users.user2.day31 && users.user3.day31 && users.user4.day31) == true ) {
-      return [ '(', tableDayNameLong(30), ' ',  tableDayNameArray[30], ' ',  monthToNameLong(), ')'  ]
+      return [ '(', tableDayNameLong(30), ' ',  tableDayNameArray[30], ' ',  monthToNameLong(), ')', br  ]
     } else {
     }
   }
@@ -1556,7 +1556,6 @@ return (
     {allFree29()} 
     {allFree30()} 
     {allFree31()} 
-    <br></br>
     &nbsp;
   </h2>
 
