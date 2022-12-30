@@ -42,7 +42,8 @@ body {
 
 .availSumDatesArticle {
   padding: 0;
-  background: rgb(41, 40, 40);
+  /* background: rgb(40, 40, 40); */
+  background: linear-gradient(0deg, #3e1c1c, #c20909 50%, #3e1c1c ); 
   border-radius: 5px;
   margin: auto;
   width: 80%; 
@@ -232,6 +233,10 @@ h2 {
   color: white;
 }
 
+.pSpace {
+  color: rgb(40, 40, 40);
+}
+
 .buttonYear {
   font-weight: bold;
   align-self: center;
@@ -309,8 +314,8 @@ outline: 2px solid rgb(180, 178, 178);
   padding: 0;  
   border: none;
   border-radius: 5px;
-  color: black;
-  background: linear-gradient(91.4deg, rgb(105, 180, 105) 0%, rgb(52, 176, 52) 100%); 
+  color: white;
+  background: linear-gradient(91.4deg, rgb(47, 149, 47) 0%, rgb(5, 99, 5) 100%); 
 
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
@@ -332,7 +337,7 @@ outline: 2px solid rgb(180, 178, 178);
   border-radius: 5px;
   color: white;
  
-  background: linear-gradient(91.4deg, rgb(157, 3, 3) 0%, rgb(116, 40, 40) 100%); 
+  background: linear-gradient(91.4deg, rgb(185, 37, 37) 0%, rgb(123, 22, 22) 100%); 
 
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
@@ -349,7 +354,8 @@ outline: 2px solid rgb(180, 178, 178);
 
 .buttonAvail {
   font-size: 0.6em;
-  background-color:green;
+  /* background-color:green; */
+  background: linear-gradient(91.4deg, rgb(47, 149, 47) 0%, rgb(5, 99, 5) 100%); 
   color: white;
   font-weight: normal;
   font-family: Segoe UI, sans-serif;
@@ -370,7 +376,8 @@ outline: 2px solid rgb(180, 178, 178);
 .buttonUnavail {
   font-size: 0.7em;
   color: white;
-  background-color:rgb(113, 5, 5);
+  /* background-color:rgb(113, 5, 5); */
+  background: linear-gradient(91.4deg, rgb(185, 37, 37) 0%, rgb(123, 22, 22) 100%); 
   width: 95%;
   height: 75px;
   border: 1.5px solid black;
@@ -383,7 +390,7 @@ outline: 2px solid rgb(180, 178, 178);
 
 .buttonUnavail:hover {
   opacity: 1;
-  outline: 3px solid rgb(255, 211, 220);
+  outline: 3px solid rgb(156, 30, 30);
 }
 
 .buttonUndefined {
