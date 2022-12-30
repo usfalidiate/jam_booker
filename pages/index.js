@@ -1244,7 +1244,7 @@ useEffect(() => {
 //////   DATES WHERE ALL ARE FREE   //////
 const allFree1 = () => {  
   if ((users.user1.day1 && users.user2.day1 && users.user3.day1 && users.user4.day1) == true ) {
-    return [ '(', tableDayNameLong(0) , ' ', tableDayNameArray[0], ' ', monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(0) , ' ', tableDayNameArray[0], ' ', monthToNameLong(), ')', <br></br> ]
   } else {
     
   }   
@@ -1252,7 +1252,7 @@ const allFree1 = () => {
 
 const allFree2 = () => {  
   if ((users.user1.day2 && users.user2.day2 && users.user3.day2 && users.user4.day2) == true ) {
-    return [ '(', tableDayNameLong(1), ' ',  tableDayNameArray[1], ' ', monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(1), ' ',  tableDayNameArray[1], ' ', monthToNameLong(), ')', <br></br> ]
   } else {
 
   }
@@ -1522,6 +1522,7 @@ return (
 <article className = 'availSumDatesArticle'>
   <h2 className = 'h2AllAvailDates'>
   
+    <br></br>
     {allFree1()} 
     {allFree2()} 
     {allFree3()} 
