@@ -43,7 +43,7 @@ body {
 .availSumDatesArticle {
   padding: 0;
   /* background: rgb(40, 40, 40); */
-  background: linear-gradient(0deg, #3e1c1c, #c20909 50%, #3e1c1c ); 
+  background: linear-gradient(0deg, #3e1c1c, #c20909 50%, #3e1c1c );
   border-radius: 5px;
   margin: auto;
   width: 80%; 
@@ -197,7 +197,7 @@ h1 {
   font-weight: normal;
   padding: 0;
   margin: 0;
-  color: rgb(45, 9, 82);
+  color: rgb(75, 11, 139);
 }
 
 h2 {
