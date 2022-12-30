@@ -1242,9 +1242,11 @@ useEffect(() => {
 },[ trig, activeMonth, activeYear ]);
 
 //////   DATES WHERE ALL ARE FREE   //////
+const br = <br></br>;
+
 const allFree1 = () => {  
   if ((users.user1.day1 && users.user2.day1 && users.user3.day1 && users.user4.day1) == true ) {
-    return [ '(', tableDayNameLong(0) , ' ', tableDayNameArray[0], ' ', monthToNameLong(), ')', <br></br> ]
+    return [ '(', tableDayNameLong(0) , ' ', tableDayNameArray[0], ' ', monthToNameLong(), ')', br ]
   } else {
     
   }   
@@ -1252,7 +1254,7 @@ const allFree1 = () => {
 
 const allFree2 = () => {  
   if ((users.user1.day2 && users.user2.day2 && users.user3.day2 && users.user4.day2) == true ) {
-    return [ '(', tableDayNameLong(1), ' ',  tableDayNameArray[1], ' ', monthToNameLong(), ')', <br></br> ]
+    return [ '(', tableDayNameLong(1), ' ',  tableDayNameArray[1], ' ', monthToNameLong(), ')', br ]
   } else {
 
   }
@@ -1260,7 +1262,7 @@ const allFree2 = () => {
 
 const allFree3 = () => {  
   if ((users.user1.day3 && users.user2.day3 && users.user3.day3 && users.user4.day3) == true ) {
-    return [ '(', tableDayNameLong(2) , ' ', tableDayNameArray[2], ' ', monthToNameLong(), ')' ]
+    return [ '(', tableDayNameLong(2) , ' ', tableDayNameArray[2], ' ', monthToNameLong(), ')', br ]
   } else {
 
   }
