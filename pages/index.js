@@ -44,6 +44,9 @@ const user2Name = 'Theuns';
 const user3Name = 'Nathan';
 const user4Name = 'Troy';
 
+//////   TOP SOUND MOBILE NUMBER   //////
+const svenMobile = '0414911859';
+
 //////   INITIAL SET STATES   //////
 const [ activeMonth, setActiveMonth ] = useState( currentDate.getMonth() );
 const [ activeYear, setActiveYear ] = useState( currentDate.getFullYear() );
@@ -1558,10 +1561,15 @@ return (
     {allFree31()} 
     &nbsp;
   </h2>
+</article>
+<br></br>
 
+<article>
+  <button onclick="window.open('tel:900300400');" >
+    Phone: 900 300 400
+  </button>
 </article>
 
-<br></br>
 
 <article className = 'yearArticle' >
   <h2 className = 'h2Year'>Select Year</h2>
