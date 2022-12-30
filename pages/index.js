@@ -2911,8 +2911,8 @@ return (
     </tr>
     
     <tr>
-      <th className="thDate"> { monthToName() } { tableDayNameArray[28] }</th>
-      <th className="thDay"> { tableDayName(28) } </th>
+      <th className={ hide29 ? "thDateHidden" : "thDate"}> { monthToName() } { tableDayNameArray[28] }</th>
+      <th className={ hide29 ? "thDayHidden" : "thDay"}> { tableDayName(28) } </th>
       <td className = "tdUser">    
           <button 
           disabled={unlock.user1Unlock || hide29 }
@@ -2952,8 +2952,8 @@ return (
     </tr>
     
     <tr>
-      <th className="thDate"> { monthToName() } { tableDayNameArray[29] }</th>
-      <th className="thDay"> { tableDayName(29) } </th>
+      <th className={ hide30 ? "thDateHidden" : "thDate"}> { monthToName() } { tableDayNameArray[29] }</th>
+      <th className={ hide30 ? "thDayHidden" : "thDay"}> { tableDayName(29) } </th>
       <td className = "tdUser">    
           <button 
           disabled={unlock.user1Unlock || hide30 }
@@ -2993,8 +2993,8 @@ return (
     </tr>
     
     <tr>
-      <th className="thDate"> { monthToName() } { tableDayNameArray[30] }</th>
-      <th className="thDay"> { tableDayName(30) } </th>
+      <th className={ hide31 ? "thDateHidden" : "thDate"}> { monthToName() } { tableDayNameArray[30] }</th>
+      <th className={ hide31 ? "thDayHidden" : "thDay"}> { tableDayName(30) } </th>
       <td className = "tdUser">    
           <button 
           disabled={unlock.user1Unlock || hide31 }
