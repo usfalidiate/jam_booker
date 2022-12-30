@@ -1567,7 +1567,7 @@ return (
 <article className = 'telArticle' >
   <a href="tel:{0414911859}"> 
     <button className = 'buttonTel'>
-      Call Sven to Book <br></br> Top End, Unanderra
+      Call to Book <br></br> Top End, Unanderra
     </button>
   </a>
 
