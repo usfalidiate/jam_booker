@@ -3037,7 +3037,8 @@ return (
 </article>
 <article classname = 'disclaimerArticle'>
   <h3 className = 'h3Disclaimer'>
-    If you experience any problems using this website, please shove them up your ass.  <br></br>
+    <br></br>
+    If you experience any problems using this website, please put them in your bum. <3  <br></br>
   </h3>
 </article>
 </div> 
