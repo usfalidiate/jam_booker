@@ -1565,9 +1565,7 @@ return (
 <br></br>
 
 <article>
-  <button onclick="window.open('tel:900300400');" >
-    Phone: 900 300 400
-  </button>
+<a href="tel:8665562570">Call us at 866-556-2570</a>
 </article>
 
 
