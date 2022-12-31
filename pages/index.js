@@ -1583,7 +1583,7 @@ return (
 
 <article className = 'yearArticle' >
   <h2 className = 'h2Year'>Select Year</h2>
-    <button className = 'buttonYear' onClick={()=> setActiveYear(2022)}> 2022 </button>
+    {/* <button className = 'buttonYear' onClick={()=> setActiveYear(2022)}> 2022 </button> */}
     <button className = 'buttonYear' onClick={()=> setActiveYear(2023)}> 2023 </button>
 </article>
 
