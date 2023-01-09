@@ -20,6 +20,18 @@ import {
   documentId,
   querySnapshot,
 } from 'firebase/firestore';
+ 
+import { 
+  getAuth, 
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  login,
+  signup,
+  signOut,
+  signInWithEmailAndPassword
+} from 'firebase/auth';
+import { unstable_isMuiElement } from '@mui/utils';
+
 
 //////   FIRESTORE/FIREBASE CONFIG   //////
 const firebaseConfig = {
@@ -32,8 +44,80 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth();
+
+
+
 
 export default function App() {
+
+//////   LOGIN AND AUTH   //////
+const [loading, setLoading] = useState(false);
+const emailRef = useRef();
+const passwordRef = useRef();
+const currentUser = useAuth();
+
+
+function useAuth() {
+  const [currentUser, setCurrentUser] = useState();
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth, user =>  setCurrentUser(user));
+    return unsub;
+  }, [])
+
+  return currentUser;
+}
+
+function signup(email, password) {
+  return createUserWithEmailAndPassword(auth, email, password);
+}
+
+async function handleSignup() {
+  setLoading(true);
+  try {
+    await signup(emailRef.current.value, passwordRef.current.value);
+  } catch {
+    alert('that user already exists, or your PW was less than 6 characters, or something else fkuced up')
+  }
+  setLoading(false);
+}
+
+function login(email, password) {
+  return signInWithEmailAndPassword(auth, email, password);
+}
+
+async function handleLogin() {
+  setLoading(true);
+  try {
+    await login(emailRef.current.value, passwordRef.current.value);
+  } catch {
+    alert('the email and/or password was incorrect (or something else fkuced up')
+  }
+  setLoading(false);
+}
+
+function logout() {
+  return signOut(auth);
+}
+
+async function handleLogout() {
+  setLoading(true);
+  try {
+  await logout();
+} catch {
+  alert('error');
+}
+  setLoading(false);
+}
+
+const [passwordVisible, setPasswordVisible] = useState(false);
+
+function togglePasswordVisible() {
+  setPasswordVisible(!passwordVisible);
+}
+
+
+
 
 //////   CURRENT DATE   //////
 let currentDate = new Date();
@@ -1504,13 +1588,33 @@ const allFree31 = () => {
 //////   RETURN ELEMENTS   //////
 return (
 <div className = 'myDiv'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-      
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     
 <article className = 'tagLineArticle'>
   <h1 className = 'h1TagLine'> Powered by Jam Booker... </h1>
 </article>
 
+
+
+  <nav>
+    <div> Currently Logged In As: { currentUser?.email } </div>
+    <div id='fields'>
+      <input ref={emailRef} placeholder='Email'/>
+      <input ref={passwordRef} type={passwordVisible ? '' : 'password'} placeholder='Password'/>
+    </div>
+    {/* <button disabled={loading || currentUser != null } onClick={handleSignup} > Sign Up </button> */}
+    <button disabled={loading || currentUser != null } onClick={handleLogin} > Log In </button>
+    <button disabled={loading || !currentUser } onClick={handleLogout}> Log Out </button>
+    <button onClick={ togglePasswordVisible }> Show or Hide PW </button>
+
+  </nav>
+
+
+
+
+<div className= {currentUser ? 'mainDiv' : 'mainDivCollapse' }>
 <article className = 'bandLogoArticle'>
     <img className = 'headerImg'
       src= 'https://i.imgur.com/MJ7Wtvy.jpg' //black bg image
@@ -3035,13 +3139,14 @@ return (
   </tbody>
 </table>
 </article>
-<article classname = 'disclaimerArticle'>
+<article className = 'disclaimerArticle'>
   <h3 className = 'h3Disclaimer'>
     <br></br>
     If you experience any problems using this website, please put them in your bum.   
     <br></br>
   </h3>
 </article>
+</div>
 </div> 
 );
 }

@@ -6,6 +6,27 @@
   width: 100%;
 }
 
+.mainDiv {
+  /* background: linear-gradient(0deg, #3e1c1c, #c20909 50%, #3e1c1c );  */
+  background: black;
+  padding: 0;
+  margin: auto;
+  width: 100%;
+}
+
+.mainDivCollapse {
+  /* background: linear-gradient(0deg, #3e1c1c, #c20909 50%, #3e1c1c );  */
+  background: black;
+  padding: 0;
+  margin: auto;
+  visibility: collapse;
+  width: 100%;
+}
+
+.fields {
+  background-color: black;
+}
+
 html,
 body {
   padding: 0;
