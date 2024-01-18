@@ -33,18 +33,9 @@ import {
 } from 'firebase/auth';
 // import { unstable_isMuiElement } from '@mui/utils';
 
+import { db } from '../pages/firebase/firebaseConfig'
 
-//////   FIRESTORE/FIREBASE CONFIG   //////
-const firebaseConfig = {
-  apiKey: "AIzaSyCZYEob1Y7WfewV1jcSeeCkiJ9PBBgwe4s",
-  authDomain: "jambooker-c1e75.firebaseapp.com",
-  projectId: "jambooker-c1e75",
-  storageBucket: "jambooker-c1e75.appspot.com",
-  messagingSenderId: "553558722528",
-  appId: "1:553558722528:web:2f9b3c8480ca632b248d85"
-};
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+
 const auth = getAuth();
 
 
@@ -1689,7 +1680,7 @@ return (
 <article className = 'yearArticle' >
   <h2 className = 'h2Year'>Select Year</h2>
     {/* <button className = 'buttonYear' onClick={()=> setActiveYear(2022)}> 2022 </button> */}
-    <button className = 'buttonYear' onClick={()=> setActiveYear(2023)}> 2023 </button>
+    <button className = 'buttonYear' onClick={()=> setActiveYear(2024)}> 2024 </button>
 </article>
 
 <br></br>
