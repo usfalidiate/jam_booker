@@ -33,9 +33,19 @@ import {
 } from 'firebase/auth';
 // import { unstable_isMuiElement } from '@mui/utils';
 
-import { db } from '../pages/firebase/firebaseConfig'
+const firebaseConfig = {
+  apiKey: "AIzaSyCZYEob1Y7WfewV1jcSeeCkiJ9PBBgwe4s",
+  authDomain: "jambooker-c1e75.firebaseapp.com",
+  projectId: "jambooker-c1e75",
+  storageBucket: "jambooker-c1e75.appspot.com",
+  messagingSenderId: "553558722528",
+  appId: "1:553558722528:web:2f9b3c8480ca632b248d85"
+};
 
+// import { db } from 'firebase/firebaseConfig'
 
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 const auth = getAuth();
 
 
